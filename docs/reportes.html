@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes | prueba-agente-po | Vicepresidencia Negocio y Tecnología</title>
+  <meta name="description" content="Índice de reportes del proyecto prueba-agente-po. Ecosistema Ciencuadras, Seguros Bolívar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f1419;
+      --bg-secondary: #1a2332;
+      --bg-card: #1e2a3a;
+      --accent: #00d4aa;
+      --text-primary: #e8edf4;
+      --text-secondary: #8b9cb3;
+      --border: #2d3d52;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+    .nav-link:hover { opacity: 0.85; }
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .card.primary {
+      border-color: rgba(0, 212, 170, 0.4);
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(0, 212, 170, 0.05) 100%);
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="nav-link">← Inicio</a>
+
+    <h1>Reportes del Proyecto</h1>
+    <p class="subtitle">prueba-agente-po · Vicepresidencia Negocio y Tecnología</p>
+
+    <a href="index.html" class="card primary">
+      <h2>Reporte Ejecutivo | Valor Entregado</h2>
+      <p>Resumen del valor entregado en el proyecto. Página principal.</p>
+    </a>
+
+    <a href="reporte-ejecutivo-valor-proyecto.html" class="card">
+      <h2>Reporte Ejecutivo | Valor Entregado (standalone)</h2>
+      <p>Mismo contenido en página independiente</p>
+    </a>
+
+    <a href="reporte-ciencuadras-marzo-2026.html" class="card">
+      <h2>Reporte Ciencuadras | Marzo 2026</h2>
+      <p>Reporte de Ciencuadras correspondiente a marzo 2026</p>
+    </a>
+  </div>
+</body>
+</html>
