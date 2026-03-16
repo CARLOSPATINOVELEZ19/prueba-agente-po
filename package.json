@@ -1,0 +1,25 @@
+{
+  "name": "prueba-agente-po",
+  "version": "1.0.0",
+  "description": "Workspace de pruebas E2E y auditoría para Ciencuadras",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "audit": "node scripts/audit-console-errors.js",
+    "lint": "eslint . --ext .js,.cjs --ignore-pattern audit-output --ignore-pattern ciencuadras-repos",
+    "format": "prettier --write \"**/*.{js,cjs,json,md}\""
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "ciencuadras"
+  ],
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.0"
+  }
+}

@@ -1,0 +1,114 @@
+/**
+ * Script de auditoría: navega por ciencuadras.com y captura errores de consola
+ * Genera reporte con capturas de pantalla y lista de errores priorizados
+ */
+
+const { firefox } = require('playwright');
+const path = require('path');
+const fs = require('fs');
+
+const BASE_URL = 'https://www.ciencuadras.com';
+const OUTPUT_DIR = path.join(__dirname, '../audit-output');
+const SCREENSHOTS_DIR = path.join(OUTPUT_DIR, 'screenshots');
+
+// Zonas principales a auditar
+const ZONES = [
+  { name: 'Home', url: '/' },
+  { name: 'Arriendo', url: '/arriendo' },
+  { name: 'Venta', url: '/venta' },
+  { name: 'Inmobiliarias', url: '/inmobiliarias' },
+  { name: 'Constructoras', url: '/constructoras' },
+  { name: 'Blog', url: '/blog' },
+  { name: 'Auth/Login', url: '/auth' },
+  { name: 'Productos', url: '/productos' },
+  { name: 'Remates', url: '/inmuebles-en-remate' },
+];
+
+async function runAudit() {
+  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  if (!fs.existsSync(SCREENSHOTS_DIR)) fs.mkdirSync(SCREENSHOTS_DIR, { recursive: true });
+
+  const report = {
+    timestamp: new Date().toISOString(),
+    zones: [],
+    allConsoleMessages: [],
+    summary: { errors: 0, warnings: 0, logs: 0 },
+  };
+
+  const browser = await firefox.launch({ headless: true });
+  const context = await browser.newContext({
+    viewport: { width: 1920, height: 1080 },
+    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+  });
+
+  for (const zone of ZONES) {
+    const page = await context.newPage();
+    const zoneMessages = [];
+
+    page.on('console', (msg) => {
+      const type = msg.type();
+      const text = msg.text();
+      const location = msg.location();
+      const entry = {
+        type,
+        text,
+        url: location?.url || '',
+        timestamp: new Date().toISOString(),
+      };
+      zoneMessages.push(entry);
+      report.allConsoleMessages.push({ ...entry, zone: zone.name });
+      if (type === 'error') report.summary.errors++;
+      else if (type === 'warning') report.summary.warnings++;
+      else report.summary.logs++;
+    });
+
+    try {
+      const fullUrl = `${BASE_URL}${zone.url}`;
+      console.log(`Navegando a ${zone.name}: ${fullUrl}`);
+      await page.goto(fullUrl, { waitUntil: 'networkidle', timeout: 30000 });
+      await page.waitForTimeout(3000);
+
+      const errors = zoneMessages.filter((m) => m.type === 'error' || m.type === 'warning');
+      const zoneResult = {
+        name: zone.name,
+        url: fullUrl,
+        status: 'ok',
+        errorCount: zoneMessages.filter((m) => m.type === 'error').length,
+        warningCount: zoneMessages.filter((m) => m.type === 'warning').length,
+        messages: zoneMessages,
+        errorsOnly: errors,
+      };
+
+      if (errors.length > 0) {
+        const safeName = zone.name.replace(/\s+/g, '-').toLowerCase();
+        const screenshotPath = path.join(SCREENSHOTS_DIR, `${safeName}-${Date.now()}.png`);
+        await page.screenshot({ path: screenshotPath, fullPage: false });
+        zoneResult.screenshot = path.relative(OUTPUT_DIR, screenshotPath);
+      }
+
+      report.zones.push(zoneResult);
+    } catch (err) {
+      report.zones.push({
+        name: zone.name,
+        url: `${BASE_URL}${zone.url}`,
+        status: 'error',
+        error: err.message,
+        messages: zoneMessages,
+      });
+      console.error(`Error en ${zone.name}:`, err.message);
+    } finally {
+      await page.close();
+    }
+  }
+
+  await browser.close();
+
+  const reportPath = path.join(OUTPUT_DIR, 'console-audit-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf-8');
+  console.log(`\nReporte guardado en: ${reportPath}`);
+  console.log(`Resumen: ${report.summary.errors} errores, ${report.summary.warnings} warnings`);
+
+  return report;
+}
+
+runAudit().catch(console.error);

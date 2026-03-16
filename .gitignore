@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Reportes y artefactos generados
+reporte-visual/
+
+# Repos externos (no subir a GitHub Pages)
+ciencuadras-repos/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

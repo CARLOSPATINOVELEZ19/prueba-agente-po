@@ -1,0 +1,2266 @@
+{
+  "timestamp": "2026-03-16T21:32:29.412Z",
+  "zones": [
+    {
+      "name": "Home",
+      "url": "https://www.ciencuadras.com/",
+      "status": "ok",
+      "errorCount": 3,
+      "warningCount": 4,
+      "messages": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"downloadable font: Glyph bbox was incorrect (glyph ids 5 8 9 14 15 17 18 19 21 22 23 24 28 29 32 34 35 36 37 39 42 43 45 50 52 53 54 55 60 61 63 67 69 70 79 81 82 83 87 92 96 98 100 101 107 118 124 134 135 137 160 163 165 168 169 170 171 172 173 177 178 179 186 188 191 192 193 195 199 226 228 232 233 234 235 240) (font-family: \"ciencuadras\" style:normal weight:400 stretch:100 src index:0) source: https://www.ciencuadras.com/home/ciencuadras.5f3b872c58f2721d.woff?2gteke\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:32:37.117Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/home/main.d695ad45427ac806.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:38.324Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/home/main.d695ad45427ac806.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:38.324Z"
+        },
+        {
+          "type": "warning",
+          "text": "UNCAUGTHER ERROR HOST LISTENER PRIVATE MENU ",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:38.382Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://api-backend.ciencuadras.com/prod/recomendados/api/v1/recientes. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 404.\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:32:39.485Z"
+        },
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:39.493Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://api-backend.ciencuadras.com/prod/recomendados/api/v1/recientes. (Reason: CORS request did not succeed). Status code: (null).\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:32:39.500Z"
+        }
+      ],
+      "errorsOnly": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"downloadable font: Glyph bbox was incorrect (glyph ids 5 8 9 14 15 17 18 19 21 22 23 24 28 29 32 34 35 36 37 39 42 43 45 50 52 53 54 55 60 61 63 67 69 70 79 81 82 83 87 92 96 98 100 101 107 118 124 134 135 137 160 163 165 168 169 170 171 172 173 177 178 179 186 188 191 192 193 195 199 226 228 232 233 234 235 240) (font-family: \"ciencuadras\" style:normal weight:400 stretch:100 src index:0) source: https://www.ciencuadras.com/home/ciencuadras.5f3b872c58f2721d.woff?2gteke\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:32:37.117Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/home/main.d695ad45427ac806.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:38.324Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/home/main.d695ad45427ac806.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:38.324Z"
+        },
+        {
+          "type": "warning",
+          "text": "UNCAUGTHER ERROR HOST LISTENER PRIVATE MENU ",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:38.382Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://api-backend.ciencuadras.com/prod/recomendados/api/v1/recientes. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 404.\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:32:39.485Z"
+        },
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+          "timestamp": "2026-03-16T21:32:39.493Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://api-backend.ciencuadras.com/prod/recomendados/api/v1/recientes. (Reason: CORS request did not succeed). Status code: (null).\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:32:39.500Z"
+        }
+      ],
+      "screenshot": "screenshots/home-1773696763159.png"
+    },
+    {
+      "name": "Arriendo",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "status": "ok",
+      "errorCount": 1,
+      "warningCount": 22,
+      "messages": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjYwODQ3L2JkZGJfMTc3MzQyMjk2Nzc1X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.435Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjU4MjI1L2JlYWFiMTc3MzM1MDU3MDkwX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.436Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTAxMzU0L2VmZGVhZmNfMTc1OTg0NjM2N was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.437Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDUzMTkyL2FmZGJlXzE3NTYzMTY5NzMyN was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.437Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzQ2ODg2L2JhY2FhZTE3NzMyNTAxMjQ2M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjYwNzUxL2JjYV8xNzczNDIwNzQyNzlfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMTY4NDkxL2NlXzE3MzE3NzQ5NTMzOF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ4MTkyL2JjYWExNzczNjc1NjA1NzFfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE4MDE2L2JlYmFhMTc3MzY5NDY1MDE4X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTY5OTU2L2NiZF8xNzY1MzA5NDYyNDlfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTkzMjg3L2IxNzY4MzE1NzE3OTBfcGxhb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTY0OTAxL2FlZmRfMTc2NDc3NDU2NDE3X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.459Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjAyNTE1L2JkY2JlYzE3NzM2NTcxMTU0M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ4MzMxL2FiYl8xNzcyNzMwNzU3NjVfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjI5OTc1L2FjYWQxNzcxMjc2MTg3MV9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ3OTU0L2FjZWFmXzE3NzI3MjE3OTgxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjI5NTg2L2FhMTc3MTI2MzgzMzkyX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjM5NjQ1L2ZhYWRiMTc3MjAzODcxNDg3X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTMyNDgzL2VjZWFfMTc2MjIwMzExNjM1X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTk1OTA2L2RiZDE3Njg1MDMzMjM0Ml9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "log",
+          "text": "ngOnInit",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:45.244Z"
+        },
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+          "timestamp": "2026-03-16T21:32:45.356Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:45.360Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:45.360Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:45.366Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:45.665Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:45.665Z"
+        },
+        {
+          "type": "log",
+          "text": "> init datalayer",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:45.746Z"
+        },
+        {
+          "type": "log",
+          "text": "DATA_DOG_SERVICE.....",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:45.748Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:45.758Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:45.759Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:46.835Z"
+        }
+      ],
+      "errorsOnly": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjYwODQ3L2JkZGJfMTc3MzQyMjk2Nzc1X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.435Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjU4MjI1L2JlYWFiMTc3MzM1MDU3MDkwX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.436Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTAxMzU0L2VmZGVhZmNfMTc1OTg0NjM2N was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.437Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDUzMTkyL2FmZGJlXzE3NTYzMTY5NzMyN was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.437Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzQ2ODg2L2JhY2FhZTE3NzMyNTAxMjQ2M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjYwNzUxL2JjYV8xNzczNDIwNzQyNzlfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMTY4NDkxL2NlXzE3MzE3NzQ5NTMzOF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ4MTkyL2JjYWExNzczNjc1NjA1NzFfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE4MDE2L2JlYmFhMTc3MzY5NDY1MDE4X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTY5OTU2L2NiZF8xNzY1MzA5NDYyNDlfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTkzMjg3L2IxNzY4MzE1NzE3OTBfcGxhb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.439Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTY0OTAxL2FlZmRfMTc2NDc3NDU2NDE3X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.459Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjAyNTE1L2JkY2JlYzE3NzM2NTcxMTU0M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ4MzMxL2FiYl8xNzcyNzMwNzU3NjVfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjI5OTc1L2FjYWQxNzcxMjc2MTg3MV9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ3OTU0L2FjZWFmXzE3NzI3MjE3OTgxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjI5NTg2L2FhMTc3MTI2MzgzMzkyX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjM5NjQ1L2ZhYWRiMTc3MjAzODcxNDg3X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTMyNDgzL2VjZWFfMTc2MjIwMzExNjM1X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTk1OTA2L2RiZDE3Njg1MDMzMjM0Ml9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+          "url": "https://www.ciencuadras.com/arriendo",
+          "timestamp": "2026-03-16T21:32:44.460Z"
+        },
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+          "timestamp": "2026-03-16T21:32:45.356Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:45.758Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:45.759Z"
+        }
+      ],
+      "screenshot": "screenshots/arriendo-1773696769789.png"
+    },
+    {
+      "name": "Venta",
+      "url": "https://www.ciencuadras.com/venta",
+      "status": "ok",
+      "errorCount": 1,
+      "warningCount": 3,
+      "messages": [
+        {
+          "type": "log",
+          "text": "ngOnInit",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:51.370Z"
+        },
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+          "timestamp": "2026-03-16T21:32:51.467Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:51.471Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:51.471Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:51.475Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:51.752Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:51.764Z"
+        },
+        {
+          "type": "log",
+          "text": "> init datalayer",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:51.831Z"
+        },
+        {
+          "type": "log",
+          "text": "DATA_DOG_SERVICE.....",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:51.834Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:51.849Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:51.849Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3VzYWRvX21vYmlsZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjkwLCJoZWlnaHQiOjYwLCJmaXQiOiJjb3ZlciJ9fX0=\" line: 0}]",
+          "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3VzYWRvX21vYmlsZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjkwLCJoZWlnaHQiOjYwLCJmaXQiOiJjb3ZlciJ9fX0=",
+          "timestamp": "2026-03-16T21:32:51.867Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:32:52.292Z"
+        }
+      ],
+      "errorsOnly": [
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+          "timestamp": "2026-03-16T21:32:51.467Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:51.849Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:32:51.849Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3VzYWRvX21vYmlsZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjkwLCJoZWlnaHQiOjYwLCJmaXQiOiJjb3ZlciJ9fX0=\" line: 0}]",
+          "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3VzYWRvX21vYmlsZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjkwLCJoZWlnaHQiOjYwLCJmaXQiOiJjb3ZlciJ9fX0=",
+          "timestamp": "2026-03-16T21:32:51.867Z"
+        }
+      ],
+      "screenshot": "screenshots/venta-1773696775573.png"
+    },
+    {
+      "name": "Inmobiliarias",
+      "url": "https://www.ciencuadras.com/inmobiliarias",
+      "status": "error",
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.ciencuadras.com/inmobiliarias\", waiting until \"networkidle\"\n",
+      "messages": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Empty string passed to getElementById().\" {file: \"resource://gre/modules/LoginManager.shared.sys.mjs\" line: 43}]",
+          "url": "resource://gre/modules/LoginManager.shared.sys.mjs",
+          "timestamp": "2026-03-16T21:32:57.093Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"downloadable font: Glyph bbox was incorrect (glyph ids 4 9 10 12 13 14 16 17 18 19 23 24 27 29 30 31 32 34 37 38 40 45 47 48 49 50 55 56 58 62 64 65 74 76 77 78 82 87 91 93 95 96 102 129 130 160 163 165 168 169 170 171 172 173 177 178 179 186 188 191 192 193 195 198 202 203 204 205 210) (font-family: \"ciencuadras\" style:normal weight:400 stretch:100 src index:1) source: https://www.ciencuadras.com/fonts/ciencuadras.ttf?ibnvzc\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:32:57.095Z"
+        },
+        {
+          "type": "startGroupCollapsed",
+          "text": "--- jQuery Typeahead Debug ---",
+          "url": "https://www.ciencuadras.com/js/libraries-sync.js?v=1723521924",
+          "timestamp": "2026-03-16T21:32:57.234Z"
+        },
+        {
+          "type": "table",
+          "text": "JSHandle@object",
+          "url": "https://www.ciencuadras.com/js/libraries-sync.js?v=1723521924",
+          "timestamp": "2026-03-16T21:32:57.234Z"
+        },
+        {
+          "type": "endGroup",
+          "text": "",
+          "url": "https://www.ciencuadras.com/js/libraries-sync.js?v=1723521924",
+          "timestamp": "2026-03-16T21:32:57.234Z"
+        },
+        {
+          "type": "log",
+          "text": "1-1",
+          "url": "https://www.ciencuadras.com/inmobiliarias line 1 > injectedScript",
+          "timestamp": "2026-03-16T21:32:57.280Z"
+        },
+        {
+          "type": "log",
+          "text": "MCP Ciencuadras v112",
+          "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+          "timestamp": "2026-03-16T21:32:57.937Z"
+        },
+        {
+          "type": "log",
+          "text": "MCP event:  JSHandle@object",
+          "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+          "timestamp": "2026-03-16T21:32:57.949Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmobiliarias",
+          "timestamp": "2026-03-16T21:32:58.087Z"
+        },
+        {
+          "type": "warning",
+          "text": "[Meta Pixel] - You are sending a non-standard event 'pageview'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+          "url": "https://connect.facebook.net/en_US/fbevents.js",
+          "timestamp": "2026-03-16T21:32:58.180Z"
+        },
+        {
+          "type": "warning",
+          "text": "[Meta Pixel] - Invalid parameter format for value. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications.",
+          "url": "https://connect.facebook.net/en_US/fbevents.js",
+          "timestamp": "2026-03-16T21:32:58.185Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmobiliarias",
+          "timestamp": "2026-03-16T21:32:58.223Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js\" line: 576}]",
+          "url": "https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js",
+          "timestamp": "2026-03-16T21:32:58.226Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cookie “_fbp” has been rejected for invalid domain.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmobiliarias",
+          "timestamp": "2026-03-16T21:32:58.238Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js\" line: 576}]",
+          "url": "https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js",
+          "timestamp": "2026-03-16T21:32:58.294Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cookie “_tt_enable_cookie” has been rejected for invalid domain.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmobiliarias",
+          "timestamp": "2026-03-16T21:32:58.845Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://cds.taboola.com/?uid=00fba336-777a-414a-812e-54c966fd0d9d-tuct10b1fc8a&dc=la. (Reason: CORS request did not succeed). Status code: (null).\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:33:02.260Z"
+        }
+      ]
+    },
+    {
+      "name": "Constructoras",
+      "url": "https://www.ciencuadras.com/constructoras",
+      "status": "ok",
+      "errorCount": 0,
+      "warningCount": 1,
+      "messages": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://s3.amazonaws.com/serv-img-lab/images/logos/frontend9099.JPG\" line: 0}]",
+          "url": "https://s3.amazonaws.com/serv-img-lab/images/logos/frontend9099.JPG",
+          "timestamp": "2026-03-16T21:33:26.975Z"
+        }
+      ],
+      "errorsOnly": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://s3.amazonaws.com/serv-img-lab/images/logos/frontend9099.JPG\" line: 0}]",
+          "url": "https://s3.amazonaws.com/serv-img-lab/images/logos/frontend9099.JPG",
+          "timestamp": "2026-03-16T21:33:26.975Z"
+        }
+      ],
+      "screenshot": "screenshots/constructoras-1773696811126.png"
+    },
+    {
+      "name": "Blog",
+      "url": "https://www.ciencuadras.com/blog",
+      "status": "error",
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.ciencuadras.com/blog\", waiting until \"networkidle\"\n",
+      "messages": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"downloadable font: Glyph bbox was incorrect (glyph ids 33 55 62 81 82 83 84 87 88 89 90 112 119 120 123 139 159 162 164 166 178 184 185 217 218 272 273 274 275 279 281 284 290 291 292 309 310 319 321 323 326 329 330 331 332 333 334 339 341 347 349 351 352 353 354 357 358 361 366 367 370 371 414 431 436 444 445 458 460 464 465 483 505 508 511 514 516 517 518 520 521 538 539 546 568 574 579 580 585 586 594 596 599 602 603 616 618 622 627 629 630 633 634 638 643 645 651 654 665 675 685 686 688 691) (font-family: \"FontAwesome\" style:normal weight:400 stretch:100 src index:1) source: https://www.ciencuadras.com/blog/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:33:33.197Z"
+        },
+        {
+          "type": "log",
+          "text": "MCP Ciencuadras v112",
+          "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+          "timestamp": "2026-03-16T21:33:33.281Z"
+        },
+        {
+          "type": "log",
+          "text": "MCP event:  JSHandle@object",
+          "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+          "timestamp": "2026-03-16T21:33:33.285Z"
+        },
+        {
+          "type": "log",
+          "text": "JQMIGRATE: Migrate is installed, version 3.4.1",
+          "url": "https://www.ciencuadras.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+          "timestamp": "2026-03-16T21:33:33.288Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/blog/\" line: 0}]",
+          "url": "https://www.ciencuadras.com/blog/",
+          "timestamp": "2026-03-16T21:33:33.363Z"
+        },
+        {
+          "type": "warning",
+          "text": "[Meta Pixel] - You are sending a non-standard event 'pageview'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+          "url": "https://connect.facebook.net/en_US/fbevents.js",
+          "timestamp": "2026-03-16T21:33:33.383Z"
+        },
+        {
+          "type": "warning",
+          "text": "[Meta Pixel] - Invalid parameter format for value. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications.",
+          "url": "https://connect.facebook.net/en_US/fbevents.js",
+          "timestamp": "2026-03-16T21:33:33.384Z"
+        },
+        {
+          "type": "log",
+          "text": "load custom GTM",
+          "url": "https://www.ciencuadras.com/blog/wp-content/themes/qualta/js/customGTM.js?ver=440868731",
+          "timestamp": "2026-03-16T21:33:33.793Z"
+        },
+        {
+          "type": "log",
+          "text": "JSHandle@object",
+          "url": "https://www.ciencuadras.com/blog/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js?ver=1.52.3",
+          "timestamp": "2026-03-16T21:33:33.818Z"
+        },
+        {
+          "type": "log",
+          "text": ">>>? JSHandle@object",
+          "url": "https://www.ciencuadras.com/blog/wp-content/themes/qualta-child/js/child-function.js",
+          "timestamp": "2026-03-16T21:33:33.827Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/blog/\" line: 0}]",
+          "url": "https://www.ciencuadras.com/blog/",
+          "timestamp": "2026-03-16T21:33:33.850Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/blog/\" line: 0}]",
+          "url": "https://www.ciencuadras.com/blog/",
+          "timestamp": "2026-03-16T21:33:33.855Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://cds.taboola.com/?uid=00fba336-777a-414a-812e-54c966fd0d9d-tuct10b1fc8a&dc=la. (Reason: CORS request did not succeed). Status code: (null).\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:33:37.587Z"
+        }
+      ]
+    },
+    {
+      "name": "Auth/Login",
+      "url": "https://www.ciencuadras.com/auth",
+      "status": "error",
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.ciencuadras.com/auth\", waiting until \"networkidle\"\n",
+      "messages": [
+        {
+          "type": "log",
+          "text": "MCP Ciencuadras v112",
+          "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+          "timestamp": "2026-03-16T21:34:02.815Z"
+        },
+        {
+          "type": "log",
+          "text": "MCP event:  JSHandle@object",
+          "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+          "timestamp": "2026-03-16T21:34:02.823Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js",
+          "timestamp": "2026-03-16T21:34:02.969Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js",
+          "timestamp": "2026-03-16T21:34:02.970Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/auth/\" line: 0}]",
+          "url": "https://www.ciencuadras.com/auth/",
+          "timestamp": "2026-03-16T21:34:03.009Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/auth/\" line: 0}]",
+          "url": "https://www.ciencuadras.com/auth/",
+          "timestamp": "2026-03-16T21:34:03.011Z"
+        },
+        {
+          "type": "warning",
+          "text": "[Meta Pixel] - You are sending a non-standard event 'pageview'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+          "url": "https://connect.facebook.net/en_US/fbevents.js",
+          "timestamp": "2026-03-16T21:34:03.056Z"
+        },
+        {
+          "type": "warning",
+          "text": "[Meta Pixel] - Invalid parameter format for value. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications.",
+          "url": "https://connect.facebook.net/en_US/fbevents.js",
+          "timestamp": "2026-03-16T21:34:03.058Z"
+        },
+        {
+          "type": "warning",
+          "text": "[Meta Pixel] - Duplicate Pixel ID: 1334695850505375.",
+          "url": "https://connect.facebook.net/en_US/fbevents.js",
+          "timestamp": "2026-03-16T21:34:03.061Z"
+        },
+        {
+          "type": "warning",
+          "text": "[TikTok Pixel] - Duplicate Pixel ID\nIssue: The pixel ID is duplicate. This could impact the pixel data accuracy.\nSuggestion: Please double check and delete any unnecessary pixel code.",
+          "url": "https://analytics.tiktok.com/i18n/pixel/static/main.MTEwMjY2ZTExMQ.js",
+          "timestamp": "2026-03-16T21:34:03.069Z"
+        },
+        {
+          "type": "error",
+          "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://cds.taboola.com/?uid=00fba336-777a-414a-812e-54c966fd0d9d-tuct10b1fc8a&dc=la. (Reason: CORS request did not succeed). Status code: (null).\"]",
+          "url": "",
+          "timestamp": "2026-03-16T21:34:06.515Z"
+        }
+      ]
+    },
+    {
+      "name": "Productos",
+      "url": "https://www.ciencuadras.com/productos",
+      "status": "ok",
+      "errorCount": 0,
+      "warningCount": 2,
+      "messages": [
+        {
+          "type": "log",
+          "text": "ngOnInit",
+          "url": "https://www.ciencuadras.com/products/4306.63f6e3e1fcff534fabbe.js",
+          "timestamp": "2026-03-16T21:34:32.616Z"
+        },
+        {
+          "type": "log",
+          "text": "> init datalayer",
+          "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+          "timestamp": "2026-03-16T21:34:32.726Z"
+        },
+        {
+          "type": "log",
+          "text": "DATA_DOG_SERVICE.....",
+          "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+          "timestamp": "2026-03-16T21:34:32.728Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+          "timestamp": "2026-03-16T21:34:32.732Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+          "timestamp": "2026-03-16T21:34:32.732Z"
+        }
+      ],
+      "errorsOnly": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+          "timestamp": "2026-03-16T21:34:32.732Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+          "timestamp": "2026-03-16T21:34:32.732Z"
+        }
+      ],
+      "screenshot": "screenshots/productos-1773696876802.png"
+    },
+    {
+      "name": "Remates",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "status": "ok",
+      "errorCount": 1,
+      "warningCount": 27,
+      "messages": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTQzNjgzL2ZhZmNjZV8xNzYyOTgyNjQ5M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.120Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjMwNzY1L2RhY18xNzcxMzQ1ODgyMTVfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.122Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjM2MDExL2NlYmNlXzE3NzE2ODc0NjQ4O was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTMwNzg5L3ZlbnRhX2liYWd1ZV9fMTcwO was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ1NDg1L2FiYmFfMTc3MjU1OTEyNzkxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4NDA1L2JlYTE3NzMyODkxMTAxMF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTAwNTU4L3ZlbnRhX21lZGVsbGluX18xN was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE2MTk0L2RmMTc2NzQxMjQ5NjI4X3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yNDMyNTgyL2FycmllbmRvLW8tdmVudGFfY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yNjgxODIzL3ZlbnRhX2JvZ290YV9fMTY4N was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE2NTYzL2JjYmExNzczMjkwNTM1MzRfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTExMzcxL3ZlbnRhX2ZsYW5kZXNfXzE3M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MTM3L2JlZWNkMTc3MzQxNjAwODIxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MzAzL2JmZWVmMTc3MzI4OTIzMDk4X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDM3NDI2L2FmYmVlXzE3NTYzMTc5ODQyM was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MDc3L2JhMTc3MzI4OTYwMjIwX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE5Mzc5L2JiZl8xNzQ1NTc2ODI0OF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMjU5ODkxL2NhZGJfMTc0MDY3OTYzNDkwX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDU3NjU5L2JfMTc1Njc2Mzc3NzkyX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MjY3L2JmYWYxNzczMjg5MjgwMjZfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE5MzQ5L2JlZl8xNzQ1NTU1OTQwMjZfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTI1MjkxL2JiY2NiMTc3MzI4ODMxMjg0X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzIxMzE1L2NlYmFfMTc0NTY0OTMzNDE5X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19\" line: 0}]",
+          "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19",
+          "timestamp": "2026-03-16T21:34:37.275Z"
+        },
+        {
+          "type": "log",
+          "text": "ngOnInit",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:34:37.587Z"
+        },
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+          "timestamp": "2026-03-16T21:34:37.629Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:34:37.631Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:34:37.631Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:34:37.632Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:34:37.785Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:34:37.785Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19\" line: 0}]",
+          "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19",
+          "timestamp": "2026-03-16T21:34:37.791Z"
+        },
+        {
+          "type": "log",
+          "text": "> init datalayer",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:34:37.827Z"
+        },
+        {
+          "type": "log",
+          "text": "DATA_DOG_SERVICE.....",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:34:37.829Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:34:37.841Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:34:37.841Z"
+        },
+        {
+          "type": "log",
+          "text": "Se envío el GT =>  JSHandle@object",
+          "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+          "timestamp": "2026-03-16T21:34:38.483Z"
+        }
+      ],
+      "errorsOnly": [
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTQzNjgzL2ZhZmNjZV8xNzYyOTgyNjQ5M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.120Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjMwNzY1L2RhY18xNzcxMzQ1ODgyMTVfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.122Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjM2MDExL2NlYmNlXzE3NzE2ODc0NjQ4O was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTMwNzg5L3ZlbnRhX2liYWd1ZV9fMTcwO was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ1NDg1L2FiYmFfMTc3MjU1OTEyNzkxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4NDA1L2JlYTE3NzMyODkxMTAxMF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTAwNTU4L3ZlbnRhX21lZGVsbGluX18xN was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE2MTk0L2RmMTc2NzQxMjQ5NjI4X3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yNDMyNTgyL2FycmllbmRvLW8tdmVudGFfY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yNjgxODIzL3ZlbnRhX2JvZ290YV9fMTY4N was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE2NTYzL2JjYmExNzczMjkwNTM1MzRfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTExMzcxL3ZlbnRhX2ZsYW5kZXNfXzE3M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MTM3L2JlZWNkMTc3MzQxNjAwODIxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MzAzL2JmZWVmMTc3MzI4OTIzMDk4X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDM3NDI2L2FmYmVlXzE3NTYzMTc5ODQyM was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MDc3L2JhMTc3MzI4OTYwMjIwX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE5Mzc5L2JiZl8xNzQ1NTc2ODI0OF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMjU5ODkxL2NhZGJfMTc0MDY3OTYzNDkwX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDU3NjU5L2JfMTc1Njc2Mzc3NzkyX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MjY3L2JmYWYxNzczMjg5MjgwMjZfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE5MzQ5L2JlZl8xNzQ1NTU1OTQwMjZfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTI1MjkxL2JiY2NiMTc3MzI4ODMxMjg0X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzIxMzE1L2NlYmFfMTc0NTY0OTMzNDE5X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+          "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+          "timestamp": "2026-03-16T21:34:37.133Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19\" line: 0}]",
+          "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19",
+          "timestamp": "2026-03-16T21:34:37.275Z"
+        },
+        {
+          "type": "error",
+          "text": "ERROR Error",
+          "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+          "timestamp": "2026-03-16T21:34:37.629Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19\" line: 0}]",
+          "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19",
+          "timestamp": "2026-03-16T21:34:37.791Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:34:37.841Z"
+        },
+        {
+          "type": "warning",
+          "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+          "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+          "timestamp": "2026-03-16T21:34:37.841Z"
+        }
+      ],
+      "screenshot": "screenshots/remates-1773696881487.png"
+    }
+  ],
+  "allConsoleMessages": [
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"downloadable font: Glyph bbox was incorrect (glyph ids 5 8 9 14 15 17 18 19 21 22 23 24 28 29 32 34 35 36 37 39 42 43 45 50 52 53 54 55 60 61 63 67 69 70 79 81 82 83 87 92 96 98 100 101 107 118 124 134 135 137 160 163 165 168 169 170 171 172 173 177 178 179 186 188 191 192 193 195 199 226 228 232 233 234 235 240) (font-family: \"ciencuadras\" style:normal weight:400 stretch:100 src index:0) source: https://www.ciencuadras.com/home/ciencuadras.5f3b872c58f2721d.woff?2gteke\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:32:37.117Z",
+      "zone": "Home"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/home/main.d695ad45427ac806.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+      "timestamp": "2026-03-16T21:32:38.324Z",
+      "zone": "Home"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/home/main.d695ad45427ac806.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+      "timestamp": "2026-03-16T21:32:38.324Z",
+      "zone": "Home"
+    },
+    {
+      "type": "warning",
+      "text": "UNCAUGTHER ERROR HOST LISTENER PRIVATE MENU ",
+      "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+      "timestamp": "2026-03-16T21:32:38.382Z",
+      "zone": "Home"
+    },
+    {
+      "type": "error",
+      "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://api-backend.ciencuadras.com/prod/recomendados/api/v1/recientes. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 404.\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:32:39.485Z",
+      "zone": "Home"
+    },
+    {
+      "type": "error",
+      "text": "ERROR Error",
+      "url": "https://www.ciencuadras.com/home/main.d695ad45427ac806.js",
+      "timestamp": "2026-03-16T21:32:39.493Z",
+      "zone": "Home"
+    },
+    {
+      "type": "error",
+      "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://api-backend.ciencuadras.com/prod/recomendados/api/v1/recientes. (Reason: CORS request did not succeed). Status code: (null).\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:32:39.500Z",
+      "zone": "Home"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjYwODQ3L2JkZGJfMTc3MzQyMjk2Nzc1X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.435Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjU4MjI1L2JlYWFiMTc3MzM1MDU3MDkwX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.436Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTAxMzU0L2VmZGVhZmNfMTc1OTg0NjM2N was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.437Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDUzMTkyL2FmZGJlXzE3NTYzMTY5NzMyN was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.437Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzQ2ODg2L2JhY2FhZTE3NzMyNTAxMjQ2M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.439Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjYwNzUxL2JjYV8xNzczNDIwNzQyNzlfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.439Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMTY4NDkxL2NlXzE3MzE3NzQ5NTMzOF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.439Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ4MTkyL2JjYWExNzczNjc1NjA1NzFfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.439Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE4MDE2L2JlYmFhMTc3MzY5NDY1MDE4X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.439Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTY5OTU2L2NiZF8xNzY1MzA5NDYyNDlfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.439Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTkzMjg3L2IxNzY4MzE1NzE3OTBfcGxhb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.439Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTY0OTAxL2FlZmRfMTc2NDc3NDU2NDE3X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.459Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjAyNTE1L2JkY2JlYzE3NzM2NTcxMTU0M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ4MzMxL2FiYl8xNzcyNzMwNzU3NjVfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjI5OTc1L2FjYWQxNzcxMjc2MTg3MV9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ3OTU0L2FjZWFmXzE3NzI3MjE3OTgxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjI5NTg2L2FhMTc3MTI2MzgzMzkyX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjM5NjQ1L2ZhYWRiMTc3MjAzODcxNDg3X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTMyNDgzL2VjZWFfMTc2MjIwMzExNjM1X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTk1OTA2L2RiZDE3Njg1MDMzMjM0Ml9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/arriendo\" line: 0}]",
+      "url": "https://www.ciencuadras.com/arriendo",
+      "timestamp": "2026-03-16T21:32:44.460Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "ngOnInit",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:45.244Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "error",
+      "text": "ERROR Error",
+      "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+      "timestamp": "2026-03-16T21:32:45.356Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:45.360Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:45.360Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:45.366Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:45.665Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:45.665Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "> init datalayer",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:45.746Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "DATA_DOG_SERVICE.....",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:45.748Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:45.758Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:45.759Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:46.835Z",
+      "zone": "Arriendo"
+    },
+    {
+      "type": "log",
+      "text": "ngOnInit",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:51.370Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "error",
+      "text": "ERROR Error",
+      "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+      "timestamp": "2026-03-16T21:32:51.467Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:51.471Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:51.471Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:51.475Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:51.752Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:51.764Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "> init datalayer",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:51.831Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "DATA_DOG_SERVICE.....",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:51.834Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:51.849Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:32:51.849Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3VzYWRvX21vYmlsZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjkwLCJoZWlnaHQiOjYwLCJmaXQiOiJjb3ZlciJ9fX0=\" line: 0}]",
+      "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3VzYWRvX21vYmlsZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjkwLCJoZWlnaHQiOjYwLCJmaXQiOiJjb3ZlciJ9fX0=",
+      "timestamp": "2026-03-16T21:32:51.867Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:32:52.292Z",
+      "zone": "Venta"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Empty string passed to getElementById().\" {file: \"resource://gre/modules/LoginManager.shared.sys.mjs\" line: 43}]",
+      "url": "resource://gre/modules/LoginManager.shared.sys.mjs",
+      "timestamp": "2026-03-16T21:32:57.093Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"downloadable font: Glyph bbox was incorrect (glyph ids 4 9 10 12 13 14 16 17 18 19 23 24 27 29 30 31 32 34 37 38 40 45 47 48 49 50 55 56 58 62 64 65 74 76 77 78 82 87 91 93 95 96 102 129 130 160 163 165 168 169 170 171 172 173 177 178 179 186 188 191 192 193 195 198 202 203 204 205 210) (font-family: \"ciencuadras\" style:normal weight:400 stretch:100 src index:1) source: https://www.ciencuadras.com/fonts/ciencuadras.ttf?ibnvzc\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:32:57.095Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "startGroupCollapsed",
+      "text": "--- jQuery Typeahead Debug ---",
+      "url": "https://www.ciencuadras.com/js/libraries-sync.js?v=1723521924",
+      "timestamp": "2026-03-16T21:32:57.234Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "table",
+      "text": "JSHandle@object",
+      "url": "https://www.ciencuadras.com/js/libraries-sync.js?v=1723521924",
+      "timestamp": "2026-03-16T21:32:57.234Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "endGroup",
+      "text": "",
+      "url": "https://www.ciencuadras.com/js/libraries-sync.js?v=1723521924",
+      "timestamp": "2026-03-16T21:32:57.234Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "log",
+      "text": "1-1",
+      "url": "https://www.ciencuadras.com/inmobiliarias line 1 > injectedScript",
+      "timestamp": "2026-03-16T21:32:57.280Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "log",
+      "text": "MCP Ciencuadras v112",
+      "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+      "timestamp": "2026-03-16T21:32:57.937Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "log",
+      "text": "MCP event:  JSHandle@object",
+      "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+      "timestamp": "2026-03-16T21:32:57.949Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmobiliarias",
+      "timestamp": "2026-03-16T21:32:58.087Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[Meta Pixel] - You are sending a non-standard event 'pageview'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "timestamp": "2026-03-16T21:32:58.180Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[Meta Pixel] - Invalid parameter format for value. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications.",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "timestamp": "2026-03-16T21:32:58.185Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmobiliarias",
+      "timestamp": "2026-03-16T21:32:58.223Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js\" line: 576}]",
+      "url": "https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js",
+      "timestamp": "2026-03-16T21:32:58.226Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "error",
+      "text": "[JavaScript Error: \"Cookie “_fbp” has been rejected for invalid domain.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmobiliarias",
+      "timestamp": "2026-03-16T21:32:58.238Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js\" line: 576}]",
+      "url": "https://www.gstatic.com/recaptcha/releases/QvLuXwupqtKCyjBw2xIzFLIf/recaptcha__en.js",
+      "timestamp": "2026-03-16T21:32:58.294Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "error",
+      "text": "[JavaScript Error: \"Cookie “_tt_enable_cookie” has been rejected for invalid domain.\" {file: \"https://www.ciencuadras.com/inmobiliarias\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmobiliarias",
+      "timestamp": "2026-03-16T21:32:58.845Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "error",
+      "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://cds.taboola.com/?uid=00fba336-777a-414a-812e-54c966fd0d9d-tuct10b1fc8a&dc=la. (Reason: CORS request did not succeed). Status code: (null).\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:33:02.260Z",
+      "zone": "Inmobiliarias"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://s3.amazonaws.com/serv-img-lab/images/logos/frontend9099.JPG\" line: 0}]",
+      "url": "https://s3.amazonaws.com/serv-img-lab/images/logos/frontend9099.JPG",
+      "timestamp": "2026-03-16T21:33:26.975Z",
+      "zone": "Constructoras"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"downloadable font: Glyph bbox was incorrect (glyph ids 33 55 62 81 82 83 84 87 88 89 90 112 119 120 123 139 159 162 164 166 178 184 185 217 218 272 273 274 275 279 281 284 290 291 292 309 310 319 321 323 326 329 330 331 332 333 334 339 341 347 349 351 352 353 354 357 358 361 366 367 370 371 414 431 436 444 445 458 460 464 465 483 505 508 511 514 516 517 518 520 521 538 539 546 568 574 579 580 585 586 594 596 599 602 603 616 618 622 627 629 630 633 634 638 643 645 651 654 665 675 685 686 688 691) (font-family: \"FontAwesome\" style:normal weight:400 stretch:100 src index:1) source: https://www.ciencuadras.com/blog/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:33:33.197Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "log",
+      "text": "MCP Ciencuadras v112",
+      "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+      "timestamp": "2026-03-16T21:33:33.281Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "log",
+      "text": "MCP event:  JSHandle@object",
+      "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+      "timestamp": "2026-03-16T21:33:33.285Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "log",
+      "text": "JQMIGRATE: Migrate is installed, version 3.4.1",
+      "url": "https://www.ciencuadras.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+      "timestamp": "2026-03-16T21:33:33.288Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/blog/\" line: 0}]",
+      "url": "https://www.ciencuadras.com/blog/",
+      "timestamp": "2026-03-16T21:33:33.363Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "warning",
+      "text": "[Meta Pixel] - You are sending a non-standard event 'pageview'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "timestamp": "2026-03-16T21:33:33.383Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "warning",
+      "text": "[Meta Pixel] - Invalid parameter format for value. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications.",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "timestamp": "2026-03-16T21:33:33.384Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "log",
+      "text": "load custom GTM",
+      "url": "https://www.ciencuadras.com/blog/wp-content/themes/qualta/js/customGTM.js?ver=440868731",
+      "timestamp": "2026-03-16T21:33:33.793Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "log",
+      "text": "JSHandle@object",
+      "url": "https://www.ciencuadras.com/blog/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js?ver=1.52.3",
+      "timestamp": "2026-03-16T21:33:33.818Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "log",
+      "text": ">>>? JSHandle@object",
+      "url": "https://www.ciencuadras.com/blog/wp-content/themes/qualta-child/js/child-function.js",
+      "timestamp": "2026-03-16T21:33:33.827Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/blog/\" line: 0}]",
+      "url": "https://www.ciencuadras.com/blog/",
+      "timestamp": "2026-03-16T21:33:33.850Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/blog/\" line: 0}]",
+      "url": "https://www.ciencuadras.com/blog/",
+      "timestamp": "2026-03-16T21:33:33.855Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "error",
+      "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://cds.taboola.com/?uid=00fba336-777a-414a-812e-54c966fd0d9d-tuct10b1fc8a&dc=la. (Reason: CORS request did not succeed). Status code: (null).\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:33:37.587Z",
+      "zone": "Blog"
+    },
+    {
+      "type": "log",
+      "text": "MCP Ciencuadras v112",
+      "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+      "timestamp": "2026-03-16T21:34:02.815Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "log",
+      "text": "MCP event:  JSHandle@object",
+      "url": "https://cdn.evgnet.com/beacon/segurosbolivar/cien_cuadras_prd/scripts/evergage.min.js",
+      "timestamp": "2026-03-16T21:34:02.823Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js",
+      "timestamp": "2026-03-16T21:34:02.969Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/auth/main.617b201497bc16ef8467.js",
+      "timestamp": "2026-03-16T21:34:02.970Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/auth/\" line: 0}]",
+      "url": "https://www.ciencuadras.com/auth/",
+      "timestamp": "2026-03-16T21:34:03.009Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"The value of the attribute “expires” for the cookie “_ga_7WNZ2STY39” has been overwritten.\" {file: \"https://www.ciencuadras.com/auth/\" line: 0}]",
+      "url": "https://www.ciencuadras.com/auth/",
+      "timestamp": "2026-03-16T21:34:03.011Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[Meta Pixel] - You are sending a non-standard event 'pageview'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "timestamp": "2026-03-16T21:34:03.056Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[Meta Pixel] - Invalid parameter format for value. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications.",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "timestamp": "2026-03-16T21:34:03.058Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[Meta Pixel] - Duplicate Pixel ID: 1334695850505375.",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "timestamp": "2026-03-16T21:34:03.061Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "warning",
+      "text": "[TikTok Pixel] - Duplicate Pixel ID\nIssue: The pixel ID is duplicate. This could impact the pixel data accuracy.\nSuggestion: Please double check and delete any unnecessary pixel code.",
+      "url": "https://analytics.tiktok.com/i18n/pixel/static/main.MTEwMjY2ZTExMQ.js",
+      "timestamp": "2026-03-16T21:34:03.069Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "error",
+      "text": "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://cds.taboola.com/?uid=00fba336-777a-414a-812e-54c966fd0d9d-tuct10b1fc8a&dc=la. (Reason: CORS request did not succeed). Status code: (null).\"]",
+      "url": "",
+      "timestamp": "2026-03-16T21:34:06.515Z",
+      "zone": "Auth/Login"
+    },
+    {
+      "type": "log",
+      "text": "ngOnInit",
+      "url": "https://www.ciencuadras.com/products/4306.63f6e3e1fcff534fabbe.js",
+      "timestamp": "2026-03-16T21:34:32.616Z",
+      "zone": "Productos"
+    },
+    {
+      "type": "log",
+      "text": "> init datalayer",
+      "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+      "timestamp": "2026-03-16T21:34:32.726Z",
+      "zone": "Productos"
+    },
+    {
+      "type": "log",
+      "text": "DATA_DOG_SERVICE.....",
+      "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+      "timestamp": "2026-03-16T21:34:32.728Z",
+      "zone": "Productos"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+      "timestamp": "2026-03-16T21:34:32.732Z",
+      "zone": "Productos"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/products/8726.288ecae7e8955e7049ea.js",
+      "timestamp": "2026-03-16T21:34:32.732Z",
+      "zone": "Productos"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTQzNjgzL2ZhZmNjZV8xNzYyOTgyNjQ5M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.120Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjMwNzY1L2RhY18xNzcxMzQ1ODgyMTVfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.122Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjM2MDExL2NlYmNlXzE3NzE2ODc0NjQ4O was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTMwNzg5L3ZlbnRhX2liYWd1ZV9fMTcwO was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNjQ1NDg1L2FiYmFfMTc3MjU1OTEyNzkxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4NDA1L2JlYTE3NzMyODkxMTAxMF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTAwNTU4L3ZlbnRhX21lZGVsbGluX18xN was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE2MTk0L2RmMTc2NzQxMjQ5NjI4X3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yNDMyNTgyL2FycmllbmRvLW8tdmVudGFfY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yNjgxODIzL3ZlbnRhX2JvZ290YV9fMTY4N was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE2NTYzL2JjYmExNzczMjkwNTM1MzRfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8yOTExMzcxL3ZlbnRhX2ZsYW5kZXNfXzE3M was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MTM3L2JlZWNkMTc3MzQxNjAwODIxX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MzAzL2JmZWVmMTc3MzI4OTIzMDk4X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDM3NDI2L2FmYmVlXzE3NTYzMTc5ODQyM was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MDc3L2JhMTc3MzI4OTYwMjIwX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE5Mzc5L2JiZl8xNzQ1NTc2ODI0OF9wb was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMjU5ODkxL2NhZGJfMTc0MDY3OTYzNDkwX was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNDU3NjU5L2JfMTc1Njc2Mzc3NzkyX3BsY was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTE4MjY3L2JmYWYxNzczMjg5MjgwMjZfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzE5MzQ5L2JlZl8xNzQ1NTU1OTQwMjZfc was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zNTI1MjkxL2JiY2NiMTc3MzI4ODMxMjg0X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Preload of https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5IjoiaW5tdWVibGVzL2ltYWdlcy8zMzIxMzE1L2NlYmFfMTc0NTY0OTMzNDE5X was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.\" {file: \"https://www.ciencuadras.com/inmuebles-en-remate\" line: 0}]",
+      "url": "https://www.ciencuadras.com/inmuebles-en-remate",
+      "timestamp": "2026-03-16T21:34:37.133Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19\" line: 0}]",
+      "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19",
+      "timestamp": "2026-03-16T21:34:37.275Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "ngOnInit",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:34:37.587Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "error",
+      "text": "ERROR Error",
+      "url": "https://www.ciencuadras.com/result/4788.e5a632d0eb6d42726dd8.js",
+      "timestamp": "2026-03-16T21:34:37.629Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:34:37.631Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:34:37.631Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:34:37.632Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:34:37.785Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:34:37.785Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"A resource is blocked by OpaqueResponseBlocking, please check browser console for details.\" {file: \"https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19\" line: 0}]",
+      "url": "https://images.ciencuadras.com/eyJidWNrZXQiOiJ3d3ctaW1nLWNjIiwia2V5Ijoic291cmNlcy9pbWFnZXMvc3ViYXN0YS9sb2dvX3JlbWF0ZV9tb2JpbGUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5MCwiaGVpZ2h0Ijo2MCwiZml0IjoiY292ZXIifX19",
+      "timestamp": "2026-03-16T21:34:37.791Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "> init datalayer",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:34:37.827Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "DATA_DOG_SERVICE.....",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:34:37.829Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: layout-shift.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:34:37.841Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Ignoring unsupported entryTypes: longtask.\" {file: \"https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js\" line: 1}]",
+      "url": "https://www.ciencuadras.com/result/8726.d42100f1f9eca4eefea1.js",
+      "timestamp": "2026-03-16T21:34:37.841Z",
+      "zone": "Remates"
+    },
+    {
+      "type": "log",
+      "text": "Se envío el GT =>  JSHandle@object",
+      "url": "https://www.ciencuadras.com/result/4883.48f6a57250bb2c15d1cc.js",
+      "timestamp": "2026-03-16T21:34:38.483Z",
+      "zone": "Remates"
+    }
+  ],
+  "summary": {
+    "errors": 11,
+    "warnings": 81,
+    "logs": 44
+  }
+}

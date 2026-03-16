@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte Ejecutivo | Valor Entregado - Proyecto prueba-agente-po | Vicepresidencia Negocio y Tecnología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f1419;
+      --bg-secondary: #1a2332;
+      --bg-card: #1e2a3a;
+      --accent: #00d4aa;
+      --accent-muted: #00a884;
+      --text-primary: #e8edf4;
+      --text-secondary: #8b9cb3;
+      --border: #2d3d52;
+      --success: #00d4aa;
+      --warning: #f0b429;
+      --critical: #e85d75;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+    header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .report-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    .report-meta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.85rem;
+      background: var(--bg-card);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .section { margin-bottom: 2.5rem; }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 1.2em;
+      background: linear-gradient(180deg, var(--accent), var(--accent-muted));
+      border-radius: 2px;
+    }
+
+    .summary-box {
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .summary-box h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .summary-box p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .value-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .value-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .value-card:hover { border-color: var(--accent-muted); }
+
+    .value-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .value-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .tool-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .tool-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(0, 212, 170, 0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-content h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .tool-content .tool-name {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-content p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .deliverables-list {
+      list-style: none;
+    }
+
+    .deliverables-list li {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .deliverables-list li:last-child { border-bottom: none; }
+
+    .deliverables-list li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .table-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+
+    th {
+      text-align: left;
+      padding: 1rem 1.25rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    tr:hover td { background: rgba(0, 212, 170, 0.04); }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .badge-qa { background: rgba(0, 212, 170, 0.2); color: var(--accent); }
+    .badge-obs { background: rgba(0, 168, 132, 0.2); color: var(--accent-muted); }
+    .badge-automation { background: rgba(240, 180, 41, 0.2); color: var(--warning); }
+    .badge-governance { background: rgba(139, 156, 179, 0.25); color: var(--text-secondary); }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    .highlight { color: var(--accent); font-weight: 600; }
+
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      .tools-grid { grid-template-columns: 1fr; }
+      th, td { padding: 0.75rem 1rem; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="report-title">Reporte Ejecutivo: Valor Entregado del Proyecto</h1>
+      <p class="report-subtitle">Workspace de pruebas E2E, auditoría y observabilidad para el ecosistema Ciencuadras (Seguros Bolívar)</p>
+      <span class="report-meta">Vicepresidencia de Negocio y Tecnología • Marzo 2026</span>
+    </header>
+
+    <section class="section">
+      <div class="summary-box">
+        <h3>Resumen Ejecutivo</h3>
+        <p>
+          El proyecto <strong>prueba-agente-po</strong> es un workspace integrado que centraliza la <span class="highlight">calidad de software</span>, 
+          la <span class="highlight">automatización de pruebas</span> y la <span class="highlight">observabilidad</span> del ecosistema Ciencuadras. 
+          Entrega valor mediante: (1) detección temprana de errores en producción mediante auditorías automatizadas, 
+          (2) validación continua de flujos críticos con tests E2E, (3) documentación operativa para respuesta a incidentes, 
+          y (4) orquestación de agentes de IA para acelerar el ciclo de desarrollo con trazabilidad a Jira y Datadog.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Valor Entregado</h2>
+      <div class="value-cards">
+        <div class="value-card">
+          <h4>🛡️ Calidad Proactiva</h4>
+          <p>Tests E2E automatizados (Home, Arriendo, Venta) y validación de ausencia de errores críticos de consola. Reduce riesgo de regresiones antes de producción.</p>
+        </div>
+        <div class="value-card">
+          <h4>🔍 Auditoría de Consola</h4>
+          <p>Script que navega 9 zonas críticas de ciencuadras.com, captura errores/warnings de JavaScript y genera reportes con capturas de pantalla para priorización.</p>
+        </div>
+        <div class="value-card">
+          <h4>📊 Observabilidad Documentada</h4>
+          <p>Runbooks operativos, SLOs recomendados, mapeo servicio-repositorio y especificación de dashboards en Datadog. Acelera la respuesta a incidentes.</p>
+        </div>
+        <div class="value-card">
+          <h4>🤖 Orquestación con IA</h4>
+          <p>Reglas de agente (Scout, Historian, Guardian) que integran Jira, GitHub y Playwright. Planificación en .cursor/plans antes de cambios de código.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Herramientas Utilizadas y su Valor</h2>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon">🎭</div>
+          <div class="tool-content">
+            <span class="tool-name">Playwright</span>
+            <h4>Tests E2E y Auditoría</h4>
+            <p>Framework de automatización para smoke tests en flujos críticos y script de auditoría de errores de consola. Genera reportes HTML y capturas de pantalla.</p>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📋</div>
+          <div class="tool-content">
+            <span class="tool-name">Jira (MCP Atlassian)</span>
+            <h4>Gestión y Trazabilidad</h4>
+            <p>Integración vía MCP para leer tickets, extraer requerimientos y vincular entregas. Permite al agente Scout contextualizar tareas desde el backlog.</p>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📈</div>
+          <div class="tool-content">
+            <span class="tool-name">Datadog (MCP)</span>
+            <h4>Monitoreo y Observabilidad</h4>
+            <p>Consultas a logs, métricas, monitores y traces. Documentación de SLOs, runbooks y dashboards para Ciencuadras. Soporta decisiones basadas en datos.</p>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🔧</div>
+          <div class="tool-content">
+            <span class="tool-name">ESLint + Prettier</span>
+            <h4>Calidad de Código</h4>
+            <p>Estándares de linting y formato en el proyecto raíz. Mantenibilidad y consistencia del código de pruebas y scripts.</p>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🤖</div>
+          <div class="tool-content">
+            <span class="tool-name">Cursor Rules / Agentes</span>
+            <h4>Orquestación de IA</h4>
+            <p>Reglas que coordinan fases: Análisis (Jira), Contexto (GitHub), Planificación (.cursor/plans), Validación (Playwright). Evita mezcla de contextos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Entregables Documentales</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Entregable</th>
+              <th>Descripción</th>
+              <th>Categoría</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Runbooks de alertas</td>
+              <td>Ausencia de tráfico, alta tasa de error, despliegue defectuoso</td>
+              <td><span class="badge badge-obs">Observabilidad</span></td>
+            </tr>
+            <tr>
+              <td>SLOs recomendaciones</td>
+              <td>Propuesta de SLOs para carrito, leads, listing-api, facturación</td>
+              <td><span class="badge badge-obs">Observabilidad</span></td>
+            </tr>
+            <tr>
+              <td>Mapeo servicio-repositorio</td>
+              <td>Correspondencia Datadog ↔ GitHub para Ciencuadras</td>
+              <td><span class="badge badge-obs">Observabilidad</span></td>
+            </tr>
+            <tr>
+              <td>Especificación dashboard</td>
+              <td>Dashboard de observabilidad Ciencuadras en Datadog</td>
+              <td><span class="badge badge-obs">Observabilidad</span></td>
+            </tr>
+            <tr>
+              <td>Tests E2E (ciencuadras.spec.js)</td>
+              <td>Smoke tests Home, Arriendo, Venta + validación errores consola</td>
+              <td><span class="badge badge-qa">QA</span></td>
+            </tr>
+            <tr>
+              <td>Script audit-console-errors</td>
+              <td>Auditoría automatizada de 9 zonas de ciencuadras.com</td>
+              <td><span class="badge badge-automation">Automatización</span></td>
+            </tr>
+            <tr>
+              <td>Planes .cursor/plans</td>
+              <td>Planificación previa a cambios (optimización, estructura)</td>
+              <td><span class="badge badge-governance">Gobernanza</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Impacto en Negocio y Tecnología</h2>
+      <ul class="deliverables-list">
+        <li><strong>Reducción de incidentes:</strong> Detección temprana de errores de consola y validación de flujos críticos antes de afectar usuarios.</li>
+        <li><strong>Respuesta más rápida:</strong> Runbooks y documentación de observabilidad acortan el tiempo de diagnóstico en incidentes.</li>
+        <li><strong>Visibilidad de SLOs:</strong> Propuesta de objetivos de nivel de servicio permite reportar disponibilidad con datos reales.</li>
+        <li><strong>Aceleración del desarrollo:</strong> Orquestación de agentes con trazabilidad a Jira y validación automática con Playwright.</li>
+        <li><strong>Estandarización:</strong> Calidad de código (ESLint/Prettier) y protocolos de ejecución para agentes.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>Reporte generado el 16 de marzo de 2026 • Proyecto prueba-agente-po</p>
+      <p style="margin-top: 0.5rem;">Ecosistema Ciencuadras • Seguros Bolívar</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+---
+description: Uso de observabilidad para depuración y análisis de impacto.
+globs: "*"
+alwaysApply: false
+---
+
+# Observabilidad con Datadog
+
+## Instrucciones
+Usa el MCP `datadog` cuando necesites:
+1. **Investigar Incidentes:** Si un ticket de Jira describe un error, consulta logs o monitores en Datadog para correlacionar con el código[cite: 1887, 4348].
+2. **Análisis de Desempeño:** Valida métricas críticas antes de proponer cambios arquitectónicos[cite: 129, 472].
+3. **Visualización:** Pide al MCP generar visualizaciones si es necesario para entender el flujo de tráfico en producción.
+
+## Runbooks Ciencuadras
+Para alertas de Ciencuadras, consultar los runbooks en `docs/observabilidad-ciencuadras/runbooks/`:
+- Ausencia de tráfico: `runbooks/ausencia-trafico.md`
+- Alta tasa de error: `runbooks/alta-tasa-error.md`
+- Despliegue defectuoso: `runbooks/despliegue-defectuoso.md`
