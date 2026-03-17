@@ -104,6 +104,8 @@ prueba-agente-po/
 │   ├── deploy-pages.js
 │   └── README.md
 ├── docs/                   # Documentación y reportes publicados
+│   ├── resumen-proyecto.md # Contexto principal para IA
+│   └── architecture/       # Diseño del sistema
 ├── Workspace/              # Resultados del trabajo de agentes (no versionados)
 │   ├── reports/            # HTML, MD de reportes
 │   ├── audit/              # Auditoría consola (JSON, screenshots)

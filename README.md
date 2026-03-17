@@ -13,7 +13,8 @@ prueba-agente-po/
 │   ├── seed-webhook-jobs.js  # Inyectar jobs de prueba
 │   └── trigger-webhook-cli.js # Disparar webhooks desde CLI
 ├── docs/                     # Documentación viva
-│   ├── architecture/        # Diseño del sistema
+│   ├── resumen-proyecto.md   # Contexto principal para IA
+│   ├── architecture/         # Diseño del sistema
 │   ├── decisions/            # ADRs (decisiones técnicas)
 │   ├── runbook/              # Guías operativas
 │   └── design-system.md     # Guía visual frontend
@@ -23,7 +24,6 @@ prueba-agente-po/
 │   ├── playwright/          # test-results, playwright-report
 │   └── plans/                # Planes generados por agentes
 ├── portal/                   # AgentCrew (orquestador de agentes)
-├── resumen-proyecto.md       # Contexto principal para IA
 └── .cursor/
     ├── rules/                # Reglas del orquestador
     └── skills/               # Skills reutilizables (prueba, construir)
@@ -55,4 +55,4 @@ prueba-agente-po/
 - **Monitoreo:** Datadog (MCP datadog)
 - **Tests:** Playwright para E2E
 
-Ver [resumen-proyecto.md](./resumen-proyecto.md) y [docs/architecture](./docs/architecture/) para más detalles.
+Ver [docs/resumen-proyecto.md](./docs/resumen-proyecto.md) y [docs/architecture](./docs/architecture/) para más detalles.

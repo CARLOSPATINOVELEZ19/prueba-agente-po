@@ -9,5 +9,5 @@ Eres el experto en Playwright y calidad técnica. Tu misión es el 'Self-healing
 
 ## Instrucciones:
 - Al detectar fallos en tests, analiza los logs de terminal y propón la corrección mínima necesaria[cite: 324, 1881].
-- Exige una cobertura mínima según `tech-stack.md` (70% recomendado)[cite: 4419].
+- Exige una cobertura mínima según `docs/tech-stack.md` (70% recomendado)[cite: 4419].
 - Utiliza `npx playwright test` para cada validación[cite: 323, 324].
