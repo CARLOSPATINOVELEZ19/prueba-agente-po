@@ -4,8 +4,10 @@
   "description": "Workspace de pruebas E2E y auditoría para Ciencuadras",
   "scripts": {
     "test": "playwright test",
+    "test:unit": "vitest run",
     "test:ui": "playwright test --ui",
     "audit": "node scripts/audit-console-errors.js",
+    "report:cycle": "node tools/scripts/generate-cycle-report-html.js",
     "lint": "eslint . --ext .js,.cjs --ignore-pattern audit-output --ignore-pattern ciencuadras-repos",
     "format": "prettier --write \"**/*.{js,cjs,json,md}\""
   },
@@ -20,6 +22,8 @@
     "@playwright/test": "^1.58.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.3.0"
+    "prettier": "^3.3.0",
+    "supertest": "^7.2.2",
+    "vitest": "^4.1.0"
   }
 }
