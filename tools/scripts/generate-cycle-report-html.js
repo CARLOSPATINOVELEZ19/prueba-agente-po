@@ -19,16 +19,22 @@ const PHASES = [
   { id: 'customfield_24748', label: 'Ciclo total (Por hacer → Producción)' },
 ];
 
+/**
+ * Formatea horas a "Xd Yh" o "Yh". Evita errores de punto flotante en módulo.
+ * Los valores de Jira vienen en horas decimales (ej. 48.5 = 2d 0.5h).
+ */
 function formatHours(h) {
   if (h == null || (typeof h === 'number' && isNaN(h))) return '—';
   const n = Number(h);
   if (n === 0) return '0 h';
   if (n >= 24) {
     const days = Math.floor(n / 24);
-    const rest = (n % 24).toFixed(1);
-    return rest > 0 ? `${days}d ${rest}h` : `${days}d`;
+    const remainderHours = n - days * 24;
+    const restRounded = Math.round(remainderHours * 10) / 10;
+    if (restRounded <= 0) return `${days}d`;
+    return `${days}d ${restRounded.toFixed(1)}h`;
   }
-  return `${n.toFixed(1)} h`;
+  return `${(Math.round(n * 10) / 10).toFixed(1)} h`;
 }
 
 function analyze(data) {
@@ -74,25 +80,38 @@ function generateHtml(dataPath, outPath) {
     .map((issue) => {
       const f = issue.fields || {};
       const key = issue.key;
-      const summary = escapeHtml(f.summary || '');
-      const project = f.project?.key || '—';
-      const issuetype = f.issuetype?.name || '—';
+      const summary = (f.summary || '').toLowerCase();
+      const project = f.project?.key || '';
+      const issuetype = (f.issuetype?.name || '').toLowerCase();
       const link = `${JIRA_BASE}/${key}`;
-      const cells = PHASES.map(
-        (p) => `<td class="num">${formatHours(f[p.id])}</td>`
-      ).join('');
+      const cells = PHASES.map((p, i) => {
+        const val = f[p.id];
+        const sortVal =
+          val != null && typeof val === 'number' && !isNaN(val) ? val : -1;
+        return `<td class="num" data-col="${4 + i}" data-sort="${sortVal}">${formatHours(val)}</td>`;
+      }).join('');
       return `
       <tr>
-        <td><a href="${link}" target="_blank" rel="noopener">${escapeHtml(key)}</a></td>
-        <td>${escapeHtml(summary)}</td>
-        <td><span class="badge">${escapeHtml(issuetype)}</span></td>
-        <td>${escapeHtml(project)}</td>
+        <td data-col="0" data-sort="${escapeHtml(key)}"><a href="${link}" target="_blank" rel="noopener">${escapeHtml(key)}</a></td>
+        <td data-col="1" data-sort="${escapeHtml(summary)}">${escapeHtml(f.summary || '')}</td>
+        <td data-col="2" data-sort="${escapeHtml(issuetype)}"><span class="badge">${escapeHtml(f.issuetype?.name || '—')}</span></td>
+        <td data-col="3" data-sort="${escapeHtml(project)}">${escapeHtml(project || '—')}</td>
         ${cells}
       </tr>`;
     })
     .join('');
 
-  const phaseHeaders = PHASES.map((p) => `<th>${escapeHtml(p.label)}</th>`).join('');
+  const phaseHeaders = PHASES.map(
+    (p, i) =>
+      `<th class="sortable" data-col="${4 + i}" data-type="num" title="Clic para ordenar">${escapeHtml(p.label)}</th>`
+  ).join('');
+
+  const textHeaders = [
+    '<th class="sortable" data-col="0" data-type="text" title="Clic para ordenar">Incidencia</th>',
+    '<th class="sortable" data-col="1" data-type="text" title="Clic para ordenar">Resumen</th>',
+    '<th class="sortable" data-col="2" data-type="text" title="Clic para ordenar">Tipo</th>',
+    '<th class="sortable" data-col="3" data-type="text" title="Clic para ordenar">Proyecto</th>',
+  ].join('');
 
   const html = `<!DOCTYPE html>
 <html lang="es">
@@ -241,6 +260,10 @@ function generateHtml(dataPath, outPath) {
       text-align: center;
     }
     .footer a { color: var(--accent); }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { color: var(--accent); }
+    th.sorted-asc::after { content: ' ↑'; color: var(--accent); font-size: 0.7em; }
+    th.sorted-desc::after { content: ' ↓'; color: var(--accent); font-size: 0.7em; }
     @media (max-width: 768px) {
       .container { padding: 1rem; }
       .phases-grid { grid-template-columns: repeat(2, 1fr); }
@@ -283,13 +306,10 @@ function generateHtml(dataPath, outPath) {
         Haz clic en la clave de la incidencia para abrirla en Jira.
       </p>
       <div class="table-wrapper">
-        <table>
+        <table id="issues-table">
           <thead>
             <tr>
-              <th>Incidencia</th>
-              <th>Resumen</th>
-              <th>Tipo</th>
-              <th>Proyecto</th>
+              ${textHeaders}
               ${phaseHeaders}
             </tr>
           </thead>
@@ -306,6 +326,48 @@ function generateHtml(dataPath, outPath) {
       <p style="margin-top: 1rem;"><a href="reportes.html">Ver todos los reportes</a></p>
     </footer>
   </div>
+  <script>
+    (function() {
+      var table = document.getElementById('issues-table');
+      if (!table) return;
+      var tbody = table.querySelector('tbody');
+      var headers = table.querySelectorAll('th.sortable');
+      var currentCol = -1;
+      var currentDir = 1;
+
+      function sort(colIndex, dir) {
+        var rows = Array.from(tbody.querySelectorAll('tr'));
+        var isNum = headers[colIndex] && headers[colIndex].dataset.type === 'num';
+        rows.sort(function(a, b) {
+          var cellA = a.querySelector('td[data-col="' + colIndex + '"]');
+          var cellB = b.querySelector('td[data-col="' + colIndex + '"]');
+          if (!cellA || !cellB) return 0;
+          var valA = cellA.dataset.sort;
+          var valB = cellB.dataset.sort;
+          if (isNum) {
+            valA = parseFloat(valA);
+            valB = parseFloat(valB);
+            return dir * (valA - valB);
+          }
+          valA = (valA || '').toLowerCase();
+          valB = (valB || '').toLowerCase();
+          return dir * valA.localeCompare(valB);
+        });
+        rows.forEach(function(r) { tbody.appendChild(r); });
+      }
+
+      headers.forEach(function(th, i) {
+        th.addEventListener('click', function() {
+          var colIndex = parseInt(th.dataset.col, 10);
+          if (currentCol === colIndex) currentDir = -currentDir;
+          else { currentCol = colIndex; currentDir = 1; }
+          headers.forEach(function(h) { h.classList.remove('sorted-asc', 'sorted-desc'); });
+          th.classList.add(currentDir === 1 ? 'sorted-asc' : 'sorted-desc');
+          sort(colIndex, currentDir);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>`;
 
