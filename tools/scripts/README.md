@@ -7,6 +7,7 @@ Scripts reutilizables para el proyecto.
 | Script | Descripción |
 |--------|-------------|
 | `generate-cycle-report-html.js` | Genera reporte HTML del ciclo de desarrollo |
+| `analyze-cycle-time.js` | Analiza tiempo por fase del ciclo (Jira); genera MD en `Workspace/reports/` |
 | `deploy-pages.js` | Regenera reportes y copia a `docs/` para GitHub Pages |
 
 ## Uso
@@ -17,7 +18,15 @@ Scripts reutilizables para el proyecto.
 npm run report:cycle
 ```
 
-Genera el reporte en `Workspace/reports/`.
+Genera el reporte HTML en `Workspace/reports/analisis-ciclo-desarrollo.html`. Lee datos de `docs/data/jira-cycle-2025.json`.
+
+### Análisis de tiempo por fase
+
+```bash
+node tools/scripts/analyze-cycle-time.js [ruta-json]
+```
+
+Analiza HUs de Jira y genera `Workspace/reports/analisis-ciclo-desarrollo.md`. Por defecto usa `docs/data/jira-cycle-2025.json`.
 
 ### Desplegar a GitHub Pages
 

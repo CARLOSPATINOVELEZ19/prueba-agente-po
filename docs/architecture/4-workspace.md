@@ -6,13 +6,15 @@ Workspace almacena los resultados del trabajo de cada agente (scripts, tests, ag
 
 ```
 Workspace/
-├── config/       # Configuración por plataforma (URLs, Jira, Datadog)
+├── config/         # Configuración por plataforma (URLs, Jira, Datadog)
 │   └── platforms.json   # Creado en onboarding; plantilla en docs/templates/
-├── reports/      # Reportes HTML y MD (análisis ciclo, etc.)
-├── audit/        # Auditoría de consola (JSON, screenshots)
-├── playwright/   # test-results, playwright-report
-├── plans/        # Planes generados por agentes
-└── data/         # Datos exportados (opcional)
+├── reports/        # Reportes HTML y MD (análisis ciclo, auditoría, etc.)
+├── audit/          # Auditoría de consola (JSON, screenshots)
+├── observabilidad/ # Documentación de observabilidad (runbooks, mapeos)
+├── repos/          # Repos externos clonados (reemplaza ciencuadras-repos/)
+├── playwright/     # test-results, playwright-report
+├── plans/          # Planes generados por agentes
+└── data/           # Datos exportados (opcional)
 ```
 
 ## Configuración de plataformas
@@ -35,6 +37,8 @@ Se crea en la **primera interacción** siguiendo `docs/onboarding/01-flujo-prime
 | `audit/` | `scripts/audit-console-errors.js` | `console-audit-report.json`, `screenshots/` |
 | `playwright/` | Playwright | `test-results/`, `playwright-report/` |
 | `plans/` | Agentes IA (Cursor) | Planes generados por el orquestador |
+| `observabilidad/` | Análisis Datadog | Runbooks, mapeo servicio↔repo |
+| `repos/` | Clonación manual | Repos externos de la plataforma |
 | `data/` | Opcional | Datos exportados |
 
 ## Publicación en GitHub Pages

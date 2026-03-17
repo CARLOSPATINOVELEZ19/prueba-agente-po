@@ -13,7 +13,7 @@ Usa el MCP `datadog` cuando necesites:
 3. **Visualización:** Pide al MCP generar visualizaciones si es necesario para entender el flujo de tráfico en producción.
 
 ## Runbooks Ciencuadras
-Para alertas de Ciencuadras, consultar los runbooks en `docs/observabilidad-ciencuadras/runbooks/`:
+Para alertas de la plataforma configurada, consultar los runbooks en `Workspace/observabilidad/runbooks/`:
 - Ausencia de tráfico: `runbooks/ausencia-trafico.md`
 - Alta tasa de error: `runbooks/alta-tasa-error.md`
 - Despliegue defectuoso: `runbooks/despliegue-defectuoso.md`

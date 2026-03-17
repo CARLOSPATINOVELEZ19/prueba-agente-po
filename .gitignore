@@ -15,7 +15,7 @@ Workspace/
 # Obsoleto: auditorías van en Workspace/audit/
 audit-output/
 
-# Repos externos (no subir a GitHub Pages)
+# Repos externos: migrar a Workspace/repos/ (Workspace está ignorado)
 ciencuadras-repos/
 
 # Environment

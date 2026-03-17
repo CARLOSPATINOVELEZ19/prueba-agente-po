@@ -4,5 +4,11 @@ module.exports = {
   env: { node: true, es2022: true },
   extends: ['eslint:recommended', 'prettier'],
   parserOptions: { ecmaVersion: 2022, sourceType: 'script' },
-  ignorePatterns: ['Workspace/', 'ciencuadras-repos/', 'node_modules/'],
+  ignorePatterns: ['Workspace/', 'node_modules/'],
+  overrides: [
+    {
+      files: ['tests/unit/**/*.js'],
+      parserOptions: { sourceType: 'module' },
+    },
+  ],
 };

@@ -36,7 +36,13 @@ Incluye:
 ### Tests
 
 - **Playwright**: `tests/smoke.spec.js` — smoke tests E2E agnósticos (baseURL y rutas desde `Workspace/config/platforms.json`)
-- **Scripts**: `scripts/audit-console-errors.js` — auditoría de errores de consola (URL y zonas desde config)
+- **Vitest**: `tests/unit/` — tests unitarios (audit-data, helpers)
+
+### Scripts
+
+- **audit-console-errors.js** — auditoría de errores de consola (URL y zonas desde config)
+- **get-platform-config.js** — lee `Workspace/config/platforms.json`; usado por Playwright, audit y otros scripts
+- **audit-data.js** — datos y helpers para auditoría (ZONES por defecto, createEmptyReport, categorizeMessage)
 
 ---
 
@@ -71,9 +77,12 @@ prueba-agente-po/
 │   ├── smoke.spec.js       # E2E agnósticos (baseURL y smokePaths desde config)
 │   └── unit/               # Tests unitarios (Vitest)
 ├── scripts/
-│   └── audit-console-errors.js
+│   ├── audit-console-errors.js
+│   ├── get-platform-config.js
+│   └── audit-data.js
 ├── tools/scripts/
 │   ├── generate-cycle-report-html.js
+│   ├── analyze-cycle-time.js
 │   ├── deploy-pages.js
 │   └── README.md
 ├── docs/                   # Documentación y reportes publicados

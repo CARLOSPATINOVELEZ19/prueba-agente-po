@@ -11,8 +11,8 @@ const {
 } = require("../../scripts/audit-data.js");
 
 describe("ZONES (audit)", () => {
-  it("tiene zonas principales de ciencuadras", () => {
-    expect(ZONES.length).toBeGreaterThanOrEqual(5);
+  it("tiene al menos una zona por defecto", () => {
+    expect(ZONES.length).toBeGreaterThanOrEqual(1);
   });
 
   it("cada zona tiene name y url", () => {
@@ -24,11 +24,9 @@ describe("ZONES (audit)", () => {
     });
   });
 
-  it("incluye Home, Arriendo y Venta", () => {
+  it("incluye Home como zona por defecto", () => {
     const names = ZONES.map((z) => z.name);
     expect(names).toContain("Home");
-    expect(names).toContain("Arriendo");
-    expect(names).toContain("Venta");
   });
 
   it("urls comienzan con /", () => {
