@@ -53,6 +53,10 @@ Los reportes se generan en `Workspace/reports/` (área de staging, no versionada
 
 **Importante:** `deploy:pages` es el paso obligatorio antes de commit. Sin ejecutarlo, los reportes en `docs/` quedarían desactualizados y GitHub Pages no mostraría los estilos correctamente para los reportes generados.
 
+## Filtro por plataforma
+
+La página `reportes.html` incluye un selector de plataforma que carga desde `docs/data/platforms.json`. Este archivo se copia automáticamente desde `Workspace/config/platforms.json` al ejecutar `deploy:pages`. Si no existe `platforms.json`, el filtro no se muestra.
+
 ## Flujo de publicación (deploy:pages)
 
 Los reportes se generan en `Workspace/reports/` (no versionado). Para publicarlos en GitHub Pages:

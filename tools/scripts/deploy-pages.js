@@ -13,7 +13,9 @@ const { execSync } = require('child_process');
 const ROOT = path.join(__dirname, '../..');
 const WORKSPACE_REPORTS = path.join(ROOT, 'Workspace/reports');
 const WORKSPACE_AUDIT = path.join(ROOT, 'Workspace/audit');
+const WORKSPACE_CONFIG = path.join(ROOT, 'Workspace/config/platforms.json');
 const DOCS = path.join(ROOT, 'docs');
+const DOCS_DATA = path.join(DOCS, 'data');
 
 function main() {
   console.log('Regenerando reportes...');
@@ -38,6 +40,16 @@ function main() {
       fs.copyFileSync(src, dest);
       console.log(`  ${file} -> docs/${file}`);
     }
+  }
+
+  // Copiar platforms.json para filtros en reportes (GitHub Pages)
+  if (fs.existsSync(WORKSPACE_CONFIG)) {
+    if (!fs.existsSync(DOCS_DATA)) fs.mkdirSync(DOCS_DATA, { recursive: true });
+    const dest = path.join(DOCS_DATA, 'platforms.json');
+    fs.copyFileSync(WORKSPACE_CONFIG, dest);
+    console.log('  platforms.json -> docs/data/platforms.json');
+  } else {
+    console.log('  (Workspace/config/platforms.json no existe; filtros por plataforma deshabilitados)');
   }
 
   // Copiar screenshots de auditoría si existen (para auditoria-errores-consola.html)

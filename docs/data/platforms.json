@@ -1,0 +1,39 @@
+{
+  "platforms": [
+    {
+      "id": "ciencuadras",
+      "name": "Ciencuadras",
+      "urls": {
+        "app": "https://www.ciencuadras.com",
+        "staging": "https://staging.ciencuadras.com",
+        "docs": ""
+      },
+      "smokePaths": ["/", "/arriendo", "/venta"],
+      "auditZones": [
+        { "name": "Home", "url": "/" },
+        { "name": "Arriendo", "url": "/arriendo" },
+        { "name": "Venta", "url": "/venta" },
+        { "name": "Inmobiliarias", "url": "/inmobiliarias" },
+        { "name": "Constructoras", "url": "/constructoras" },
+        { "name": "Blog", "url": "/blog" },
+        { "name": "Auth/Login", "url": "/auth" },
+        { "name": "Productos", "url": "/productos" },
+        { "name": "Remates", "url": "/inmuebles-en-remate" }
+      ],
+      "jira": {
+        "cloudId": "",
+        "projectKey": "",
+        "projectUrl": "",
+        "boardId": "",
+        "incidentBoardId": "",
+        "securityIncidentBoardId": ""
+      },
+      "datadog": {
+        "site": "us1",
+        "dashboardIds": [],
+        "monitorTags": []
+      }
+    }
+  ],
+  "defaultPlatformId": "ciencuadras"
+}

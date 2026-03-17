@@ -18,6 +18,15 @@
     <h1>Reportes del Proyecto</h1>
     <p class="subtitle">prueba-agente-po · Vicepresidencia Negocio y Tecnología</p>
 
+    <!-- Filtro por plataforma (carga desde data/platforms.json en deploy) -->
+    <div class="platform-filter" id="platform-filter" style="display: none;">
+      <label for="platform-select">Plataforma:</label>
+      <select id="platform-select" aria-label="Filtrar por plataforma">
+        <option value="">Cargando...</option>
+      </select>
+      <span class="platform-url" id="platform-url"></span>
+    </div>
+
     <!-- Card principal (página de inicio) -->
     <a href="index.html" class="card primary">
       <h2>Reporte Ejecutivo | Valor Entregado</h2>

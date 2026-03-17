@@ -2,19 +2,33 @@
  * Lee la configuración de plataforma desde Workspace/config/platforms.json.
  * Usado por Playwright, audit y otros scripts para mantener el proyecto agnóstico.
  *
- * @returns {object|null} Config de la plataforma por defecto, o null si no existe
+ * @returns {object|null} Config de defecto, o null si no existe
  */
 const path = require('path');
 const fs = require('fs');
 
-function getPlatformConfig() {
-  const configPath = path.join(__dirname, '../Workspace/config/platforms.json');
-  if (!fs.existsSync(configPath)) return null;
+const CONFIG_PATH = path.join(__dirname, '../Workspace/config/platforms.json');
 
-  const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+function getPlatformsConfig() {
+  if (!fs.existsSync(CONFIG_PATH)) return null;
+  return JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf-8'));
+}
+
+function getPlatformConfig() {
+  const config = getPlatformsConfig();
+  if (!config) return null;
+
   const platform =
     config.platforms?.find((p) => p.id === config.defaultPlatformId) || config.platforms?.[0];
   return platform || null;
+}
+
+/**
+ * Obtiene todas las plataformas configuradas (para filtros, índices, etc.)
+ */
+function getAllPlatforms() {
+  const config = getPlatformsConfig();
+  return config?.platforms || [];
 }
 
 /**
@@ -42,4 +56,11 @@ function getAuditZones() {
   return [{ name: 'Home', url: '/' }];
 }
 
-module.exports = { getPlatformConfig, getBaseUrl, getSmokePaths, getAuditZones };
+module.exports = {
+  getPlatformConfig,
+  getBaseUrl,
+  getSmokePaths,
+  getAuditZones,
+  getAllPlatforms,
+  getPlatformsConfig,
+};

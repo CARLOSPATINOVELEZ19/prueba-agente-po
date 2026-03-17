@@ -28,6 +28,46 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* Filtro por plataforma */
+.platform-filter {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.platform-filter label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.platform-filter select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  min-width: 180px;
+}
+
+.platform-filter select:hover,
+.platform-filter select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.platform-filter .platform-url {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Cards del índice */
 .card {
   background: var(--bg-card);
