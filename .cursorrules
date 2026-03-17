@@ -2,6 +2,11 @@
 
 Lee el contexto completo en [docs/resumen-proyecto.md](./docs/resumen-proyecto.md).
 
+## Proyecto agnóstico
+
+- **Configuración por plataforma** en `Workspace/config/platforms.json` (URLs, Jira, Datadog).
+- **Primera interacción**: Validar MCPs/CLIs y crear config si no existe. Ver `docs/onboarding/01-flujo-primera-interaccion.md`.
+
 ## Reglas obligatorias
 
 - **No hagas build en cada cambio**: No ejecutes `npm run build` ni equivalentes tras cada modificación. Solo cuando sea explícitamente necesario (ej. antes de deploy).

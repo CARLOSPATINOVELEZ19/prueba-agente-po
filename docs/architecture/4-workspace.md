@@ -6,12 +6,24 @@ Workspace almacena los resultados del trabajo de cada agente (scripts, tests, ag
 
 ```
 Workspace/
+├── config/       # Configuración por plataforma (URLs, Jira, Datadog)
+│   └── platforms.json   # Creado en onboarding; plantilla en docs/templates/
 ├── reports/      # Reportes HTML y MD (análisis ciclo, etc.)
 ├── audit/        # Auditoría de consola (JSON, screenshots)
 ├── playwright/   # test-results, playwright-report
 ├── plans/        # Planes generados por agentes
 └── data/         # Datos exportados (opcional)
 ```
+
+## Configuración de plataformas
+
+`Workspace/config/platforms.json` contiene la configuración específica por producto:
+
+- **URLs**: app, staging, docs
+- **Jira**: projectKey, projectUrl, tablero de incidentes, tablero de incidentes de seguridad
+- **Datadog**: site, dashboardIds, monitorTags
+
+Se crea en la **primera interacción** siguiendo `docs/onboarding/01-flujo-primera-interaccion.md`. Plantilla: `docs/templates/platforms.example.json`.
 
 ## Subcarpetas
 
