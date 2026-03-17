@@ -89,6 +89,7 @@ prueba-agente-po/
 ├── docs/                   # Documentación y reportes publicados
 │   ├── README.md           # Índice de documentación
 │   ├── resumen-proyecto.md # Contexto principal para IA
+│   ├── Asset/              # Plantillas CSS y HTML para reportes (GitHub Pages)
 │   ├── onboarding/         # Flujo primera interacción
 │   ├── templates/          # Plantillas de config (platforms.example.json)
 │   ├── architecture/       # Diseño del sistema

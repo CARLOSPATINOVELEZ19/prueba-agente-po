@@ -28,6 +28,14 @@ Los reportes HTML en `docs/` se publican en GitHub Pages para acceso desde la we
 | Auditoría errores consola | `auditoria-errores-consola.html` |
 | Reporte plataforma (ej. por plataforma) | `reporte-<plataforma>-<fecha>.html` (desde Workspace/reports/) |
 
+## Plantillas (docs/Asset/)
+
+Las plantillas CSS y HTML para reportes están en `docs/Asset/`:
+- `report-base.css` — variables y layout base
+- `report-components.css` — componentes (cards, tablas, badges, footer)
+- `report-index.css` — estilos del índice de reportes
+- `template-report.html` / `template-report-index.html` — plantillas HTML de referencia
+
 ## Flujo de publicación (deploy:pages)
 
 Los reportes se generan en `Workspace/reports/` (no versionado). Para publicarlos en GitHub Pages:

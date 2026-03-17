@@ -42,6 +42,7 @@
 | Recurso | Uso |
 |---------|-----|
 | [templates/platforms.example.json](./templates/platforms.example.json) | Plantilla para `Workspace/config/platforms.json` |
+| [Asset/](./Asset/) | Plantillas CSS y HTML para reportes publicados en GitHub Pages |
 | [data/jira-cycle-2025.json](./data/jira-cycle-2025.json) | Datos de referencia para reportes de ciclo |
 
 ### Otros
@@ -56,3 +57,5 @@
 ## Reportes HTML (GitHub Pages)
 
 Los reportes publicados en `docs/` se sirven desde GitHub Pages. Ver [runbook/github-pages.md](./runbook/github-pages.md) para el flujo de publicación.
+
+Las plantillas CSS y HTML reutilizables están en [Asset/](./Asset/).
