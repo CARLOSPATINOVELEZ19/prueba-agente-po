@@ -1,8 +1,8 @@
 # Runbook: Auditoría del proyecto
 
-## Auditoría de errores de consola (Ciencuadras)
+## Auditoría de errores de consola
 
-El script `scripts/audit-console-errors.js` navega por zonas del portal ciencuadras.com y captura errores, warnings y logs de la consola del navegador.
+El script `scripts/audit-console-errors.js` navega por las zonas configuradas en `Workspace/config/platforms.json` (auditZones) y captura errores, warnings y logs de la consola del navegador.
 
 ### Ejecución
 
@@ -17,10 +17,7 @@ npm run audit
 
 ### Zonas auditadas
 
-- Home, Arriendo, Venta
-- Inmobiliarias, Constructoras
-- Blog, Auth/Login
-- Productos, Remates
+Definidas en `Workspace/config/platforms.json` → `auditZones`. Ver plantilla en `docs/templates/platforms.example.json`.
 
 ### Interpretación
 

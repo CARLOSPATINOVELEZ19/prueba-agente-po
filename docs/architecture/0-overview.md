@@ -8,7 +8,7 @@
 
 | Componente | Estado | Notas |
 |------------|--------|-------|
-| `tests/ciencuadras.spec.js` | ✅ | E2E (baseURL configurable) |
+| `tests/smoke.spec.js` | ✅ | E2E agnósticos (config desde platforms.json) |
 | `scripts/audit-console-errors.js` | ✅ | Auditoría de consola |
 | `tools/scripts/generate-cycle-report-html.js` | ✅ | Reporte ciclo de desarrollo |
 | `tools/scripts/deploy-pages.js` | ✅ | Publicación a GitHub Pages |
@@ -16,7 +16,7 @@
 
 ## Tests E2E (implementados)
 
-- **Playwright**: `tests/ciencuadras.spec.js` — smoke tests contra la URL en `playwright.config.js` o `Workspace/config/platforms.json`
+- **Playwright**: `tests/smoke.spec.js` — smoke tests agnósticos; baseURL y rutas desde `Workspace/config/platforms.json`
 - **Config**: `playwright.config.js` — baseURL configurable por plataforma
 
 ## Separación código vs artefactos

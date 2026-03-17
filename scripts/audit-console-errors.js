@@ -1,14 +1,16 @@
 /**
- * Script de auditoría: navega por ciencuadras.com y captura errores de consola
- * Genera reporte con capturas de pantalla y lista de errores priorizados
+ * Script de auditoría: navega por la URL configurada y captura errores de consola.
+ * Genera reporte con capturas de pantalla y lista de errores priorizados.
+ * URL y zonas desde Workspace/config/platforms.json.
  */
 
 const { firefox } = require('playwright');
 const path = require('path');
 const fs = require('fs');
-const { ZONES } = require('./audit-data.js');
+const { getBaseUrl, getAuditZones } = require('./get-platform-config.js');
 
-const BASE_URL = 'https://www.ciencuadras.com';
+const BASE_URL = getBaseUrl() || process.env.BASE_URL || 'https://example.com';
+const ZONES = getAuditZones();
 const OUTPUT_DIR = path.join(__dirname, '../Workspace/audit');
 const SCREENSHOTS_DIR = path.join(OUTPUT_DIR, 'screenshots');
 

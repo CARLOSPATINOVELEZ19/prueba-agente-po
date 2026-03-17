@@ -1,18 +1,10 @@
 /**
- * Datos y helpers para auditoría de consola (ciencuadras.com)
+ * Datos y helpers para auditoría de consola.
+ * Zonas por defecto cuando no hay Workspace/config/platforms.json.
+ * Para plataformas específicas, definir auditZones en platforms.json.
  */
 
-const ZONES = [
-  { name: "Home", url: "/" },
-  { name: "Arriendo", url: "/arriendo" },
-  { name: "Venta", url: "/venta" },
-  { name: "Inmobiliarias", url: "/inmobiliarias" },
-  { name: "Constructoras", url: "/constructoras" },
-  { name: "Blog", url: "/blog" },
-  { name: "Auth/Login", url: "/auth" },
-  { name: "Productos", url: "/productos" },
-  { name: "Remates", url: "/inmuebles-en-remate" },
-];
+const ZONES = [{ name: "Home", url: "/" }];
 
 function createEmptyReport() {
   return {

@@ -35,8 +35,8 @@ Incluye:
 
 ### Tests
 
-- **Playwright**: `tests/ciencuadras.spec.js` — smoke tests E2E (baseURL en playwright.config.js o `Workspace/config/platforms.json`)
-- **Scripts**: `scripts/audit-console-errors.js` — auditoría de errores de consola en la URL configurada
+- **Playwright**: `tests/smoke.spec.js` — smoke tests E2E agnósticos (baseURL y rutas desde `Workspace/config/platforms.json`)
+- **Scripts**: `scripts/audit-console-errors.js` — auditoría de errores de consola (URL y zonas desde config)
 
 ---
 
@@ -68,7 +68,7 @@ Separación estricta entre **código fuente** (versionado) y **artefactos genera
 ```
 prueba-agente-po/
 ├── tests/
-│   ├── ciencuadras.spec.js # E2E (baseURL desde config)
+│   ├── smoke.spec.js       # E2E agnósticos (baseURL y smokePaths desde config)
 │   └── unit/               # Tests unitarios (Vitest)
 ├── scripts/
 │   └── audit-console-errors.js

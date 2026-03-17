@@ -43,8 +43,10 @@ Si no existe `Workspace/config/platforms.json`, crearlo a partir de `docs/templa
 
 | Dato | Descripción | Ejemplo |
 |------|-------------|---------|
-| **URLs** | App principal, staging, docs | `https://www.ciencuadras.com` |
-| **Jira - Proyecto** | Clave del proyecto, URL | `CC`, `https://bolivar.atlassian.net/browse/CC` |
+| **URLs** | App principal, staging, docs | `https://www.ejemplo.com` |
+| **smokePaths** | Rutas para smoke tests E2E | `["/", "/arriendo", "/venta"]` |
+| **auditZones** | Zonas para auditoría de consola | `[{ "name": "Home", "url": "/" }, ...]` |
+| **Jira - Proyecto** | Clave del proyecto, URL | `PROJ`, `https://sitio.atlassian.net/browse/PROJ` |
 | **Jira - Tablero de incidentes** | ID o URL del board | `123` |
 | **Jira - Tablero de incidentes de seguridad** | ID o URL del board | `456` |
 | **Datadog** | Site, IDs de dashboards relevantes | `us1`, `[12345, 67890]` |

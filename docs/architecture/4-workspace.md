@@ -20,6 +20,8 @@ Workspace/
 `Workspace/config/platforms.json` contiene la configuración específica por producto:
 
 - **URLs**: app, staging, docs
+- **smokePaths**: rutas para tests E2E (`tests/smoke.spec.js`)
+- **auditZones**: zonas para auditoría de consola (name, url)
 - **Jira**: projectKey, projectUrl, tablero de incidentes, tablero de incidentes de seguridad
 - **Datadog**: site, dashboardIds, monitorTags
 
@@ -51,5 +53,4 @@ Los scripts de reportes leen datos de `docs/data/` (ej. `jira-cycle-2025.json`).
 
 ## Nota sobre carpetas legacy
 
-- **`audit-output/`** (raíz): Ubicación antigua de auditoría. El script `audit-console-errors.js` escribe ahora en `Workspace/audit/`. Mantener en `.gitignore` por compatibilidad.
 - **`docs/screenshots-auditoria/`**: Ejemplos curados para documentación. La salida actual de auditoría está en `Workspace/audit/screenshots/`.

@@ -9,6 +9,12 @@
         "staging": "https://staging.ejemplo.com",
         "docs": ""
       },
+      "smokePaths": ["/", "/ruta1", "/ruta2"],
+      "auditZones": [
+        { "name": "Home", "url": "/" },
+        { "name": "Sección A", "url": "/ruta1" },
+        { "name": "Sección B", "url": "/ruta2" }
+      ],
       "jira": {
         "cloudId": "",
         "projectKey": "",

@@ -1,7 +1,7 @@
 {
   "name": "prueba-agente-po",
   "version": "1.0.0",
-  "description": "Workspace de pruebas E2E y auditoría para Ciencuadras",
+  "description": "Workspace agnóstico de pruebas E2E y auditoría para cualquier plataforma",
   "scripts": {
     "test": "playwright test",
     "test:unit": "vitest run",
@@ -15,7 +15,8 @@
   "keywords": [
     "playwright",
     "e2e",
-    "ciencuadras"
+    "smoke-tests",
+    "audit"
   ],
   "license": "ISC",
   "type": "commonjs",
