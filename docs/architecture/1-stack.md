@@ -12,7 +12,8 @@
 | Herramienta | Versión | Uso |
 |-------------|---------|-----|
 | @playwright/test | ^1.58.2 | Tests E2E (raíz) |
-| vitest | ^4.1.0 | Tests unitarios |
+| vitest | ^4.1.0 | Tests unitarios (tests/unit/**/*.test.js) |
+| supertest | ^7.2.2 | Tests de API (disponible, no usado aún) |
 | eslint | ^8.57.0 | Linting |
 | eslint-config-prettier | ^9.1.0 | Integración Prettier |
 | prettier | ^3.3.0 | Formateo |
@@ -21,4 +22,4 @@
 
 | Herramienta | Uso |
 |-------------|-----|
-| Playwright | Navegadores para E2E y auditoría |
+| Playwright | Navegadores para E2E y auditoría de consola |

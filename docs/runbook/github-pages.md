@@ -26,7 +26,7 @@ Los reportes HTML en `docs/` se publican en GitHub Pages para acceso desde la we
 | Índice de reportes | `reportes.html` |
 | Análisis ciclo de desarrollo | `analisis-ciclo-desarrollo.html` |
 | Auditoría errores consola | `auditoria-errores-consola.html` |
-| Reporte plataforma (ej. Ciencuadras) | `reporte-ciencuadras-marzo-2026.html` (desde Workspace/reports/) |
+| Reporte plataforma (ej. por plataforma) | `reporte-<plataforma>-<fecha>.html` (desde Workspace/reports/) |
 
 ## Flujo de publicación (deploy:pages)
 

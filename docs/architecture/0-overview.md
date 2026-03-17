@@ -8,11 +8,14 @@
 
 | Componente | Estado | Notas |
 |------------|--------|-------|
-| `tests/smoke.spec.js` | ✅ | E2E agnósticos (config desde platforms.json) |
-| `scripts/audit-console-errors.js` | ✅ | Auditoría de consola |
+| `tests/smoke.spec.js` | ✅ | E2E agnósticos (baseURL y smokePaths desde platforms.json) |
+| `tests/unit/audit.test.js` | ✅ | Tests unitarios Vitest (audit-data) |
+| `scripts/audit-console-errors.js` | ✅ | Auditoría de consola (URL y zonas desde config) |
+| `scripts/get-platform-config.js` | ✅ | Lee platforms.json; usado por Playwright, audit y scripts |
 | `tools/scripts/generate-cycle-report-html.js` | ✅ | Reporte ciclo de desarrollo |
-| `tools/scripts/deploy-pages.js` | ✅ | Publicación a GitHub Pages |
-| `Workspace/config/platforms.json` | ⚙️ | Config por plataforma (onboarding) |
+| `tools/scripts/analyze-cycle-time.js` | ✅ | Análisis tiempo por fase (Jira) → MD en Workspace/reports/ |
+| `tools/scripts/deploy-pages.js` | ✅ | Regenera reportes y copia a docs/ para GitHub Pages |
+| `Workspace/config/platforms.json` | ⚙️ | Config por plataforma (crear en onboarding) |
 
 ## Tests E2E (implementados)
 
@@ -32,14 +35,17 @@ flowchart TB
         cursorRules[.cursor/rules/]
         cursorSkills[.cursor/skills/]
         rules[rules/]
-        docsSource["docs/architecture runbook decisions"]
+        docsSource["docs/"]
     end
 
     subgraph workspace [Workspace - resultados de agentes - .gitignore]
+        config[Workspace/config/]
         reports[Workspace/reports/]
         audit[Workspace/audit/]
         playwright[Workspace/playwright/]
         plans[Workspace/plans/]
+        observabilidad[Workspace/observabilidad/]
+        repos[Workspace/repos/]
     end
 
     scripts --> reports

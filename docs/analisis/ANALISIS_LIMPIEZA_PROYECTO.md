@@ -1,7 +1,9 @@
 # Análisis de Limpieza — Proyecto Agnóstico
 
-> **Estado:** Limpieza completada.  
+> **Estado:** Histórico — Limpieza completada. El proyecto es agnóstico.  
 > **Objetivo:** Identificar archivos a eliminar o modificar para tener un proyecto agnóstico, sin historial de pruebas realizadas (Jelpit, Seguros Bolívar, etc.).
+
+**Nota:** La estructura actual difiere en parte: las reglas de agentes viven en `.cursor/rules/` y `rules/`; los planes en `Workspace/plans/`. Ver [resumen-proyecto.md](../resumen-proyecto.md) y [architecture/4-workspace.md](../architecture/4-workspace.md).
 
 ---
 

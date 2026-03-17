@@ -24,10 +24,11 @@ Incluye:
 | Tecnología | Versión | Uso |
 |------------|---------|-----|
 | Node.js | 18+ | Runtime |
-| Playwright | ^1.58.2 | Tests E2E y auditoría |
-| Vitest | ^4.1.0 | Tests unitarios |
+| Playwright | ^1.58.2 | Tests E2E y auditoría de consola |
+| Vitest | ^4.1.0 | Tests unitarios (audit-data, helpers) |
 | ESLint | ^8.57.0 | Linting |
 | Prettier | ^3.3.0 | Formateo |
+| supertest | ^7.2.2 | Tests de API (disponible, no usado aún) |
 
 ---
 
@@ -86,10 +87,13 @@ prueba-agente-po/
 │   ├── deploy-pages.js
 │   └── README.md
 ├── docs/                   # Documentación y reportes publicados
+│   ├── README.md           # Índice de documentación
 │   ├── resumen-proyecto.md # Contexto principal para IA
 │   ├── onboarding/         # Flujo primera interacción
 │   ├── templates/          # Plantillas de config (platforms.example.json)
-│   └── architecture/      # Diseño del sistema
+│   ├── architecture/       # Diseño del sistema
+│   ├── runbook/            # Guías operativas
+│   └── decisions/          # ADRs
 ├── Workspace/              # Resultados del trabajo de agentes (no versionados)
 │   ├── config/             # platforms.json (URLs, Jira, Datadog por plataforma)
 │   ├── reports/            # HTML, MD de reportes
@@ -98,7 +102,9 @@ prueba-agente-po/
 │   ├── plans/              # Planes generados por agentes
 │   └── data/               # Datos exportados (opcional)
 ├── playwright.config.js    # baseURL (o desde Workspace/config)
-└── .cursor/                # Reglas y skills de agentes (planes en Workspace/plans)
+├── vitest.config.js        # Config Vitest (tests/unit/**/*.test.js)
+├── .cursor/                # Reglas y skills de agentes (planes en Workspace/plans)
+└── rules/                  # Reglas técnicas (Playwright, Datadog, PRD, etc.)
 ```
 
 ---

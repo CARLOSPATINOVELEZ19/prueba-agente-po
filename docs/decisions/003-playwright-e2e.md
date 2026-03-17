@@ -6,7 +6,7 @@ Aceptado
 
 ## Contexto
 
-El workspace incluye tests E2E para el portal Ciencuadras (navegador). Se necesita un framework que cubra tests E2E y auditoría.
+El workspace es **agnóstico** y soporta tests E2E para cualquier plataforma web. Se necesita un framework que cubra tests E2E y auditoría de consola, con configuración por producto (URLs desde `Workspace/config/platforms.json`).
 
 ## Opciones consideradas
 
@@ -19,12 +19,13 @@ El workspace incluye tests E2E para el portal Ciencuadras (navegador). Se necesi
 Se eligió **Playwright** porque:
 
 - Soporta `page` (navegador) y `request` (API) en el mismo framework
-- El script de auditoría (`audit-console-errors.js`) ya usa Playwright (firefox) para capturar errores de consola
+- El script de auditoría (`audit-console-errors.js`) usa Playwright (Firefox) para capturar errores de consola
 - Traces y screenshots en fallos facilitan el debugging
 - Integración con CI (reporter `github`)
+- baseURL y rutas configurables por plataforma vía `get-platform-config.js`
 
 ## Consecuencias
 
 - Un solo framework para E2E y auditoría
 - Comando único: `npm test`
-- Base URL configurable (`baseURL` en playwright.config.js para Ciencuadras)
+- Base URL y smokePaths desde `Workspace/config/platforms.json` (o env `BASE_URL`)

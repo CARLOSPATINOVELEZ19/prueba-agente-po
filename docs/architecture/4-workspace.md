@@ -11,7 +11,7 @@ Workspace/
 ├── reports/        # Reportes HTML y MD (análisis ciclo, auditoría, etc.)
 ├── audit/          # Auditoría de consola (JSON, screenshots)
 ├── observabilidad/ # Documentación de observabilidad (runbooks, mapeos)
-├── repos/          # Repos externos clonados (reemplaza ciencuadras-repos/)
+├── repos/          # Repos externos clonados de la plataforma
 ├── playwright/     # test-results, playwright-report
 ├── plans/          # Planes generados por agentes
 └── data/           # Datos exportados (opcional)
