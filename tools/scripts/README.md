@@ -6,32 +6,23 @@ Scripts reutilizables para el proyecto.
 
 | Script | Descripción |
 |--------|-------------|
-| `seed-webhook-jobs.js` | Inyecta jobs de prueba vía webhook (seeding) |
-| `trigger-webhook-cli.js` | Dispara un webhook manualmente desde la terminal (admin CLI) |
+| `generate-cycle-report-html.js` | Genera reporte HTML del ciclo de desarrollo |
+| `deploy-pages.js` | Regenera reportes y copia a `docs/` para GitHub Pages |
 
 ## Uso
 
-### Seed (inyección de datos de prueba)
+### Reporte de ciclo
 
 ```bash
-# Con API en localhost:3003
-node tools/scripts/seed-webhook-jobs.js
-
-# Con API en otra URL
-AGENTCREW_URL=http://localhost:4000 node tools/scripts/seed-webhook-jobs.js
+npm run report:cycle
 ```
 
-### Trigger webhook (admin CLI)
+Genera el reporte en `Workspace/reports/`.
+
+### Desplegar a GitHub Pages
 
 ```bash
-# Job simple
-node tools/scripts/trigger-webhook-cli.js daily-report
-
-# Job con payload custom
-node tools/scripts/trigger-webhook-cli.js custom-job --payload '{"provider":"claude","message":"manual"}'
+npm run deploy:pages
 ```
 
-## Requisitos
-
-- API AgentCrew corriendo
-- NATS disponible (para que los jobs se encolen correctamente)
+Regenera los reportes y los copia a `docs/` para que GitHub Pages los sirva.

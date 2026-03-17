@@ -6,7 +6,7 @@ Aceptado
 
 ## Contexto
 
-El workspace incluye tests E2E para AgentCrew (API) y para el portal Ciencuadras (navegador). Se necesita un framework que cubra ambos escenarios.
+El workspace incluye tests E2E para el portal Ciencuadras (navegador). Se necesita un framework que cubra tests E2E y auditoría.
 
 ## Opciones consideradas
 
@@ -18,7 +18,7 @@ El workspace incluye tests E2E para AgentCrew (API) y para el portal Ciencuadras
 
 Se eligió **Playwright** porque:
 
-- Soporta tanto `request` (API) como `page` (navegador) en el mismo framework
+- Soporta `page` (navegador) y `request` (API) en el mismo framework
 - El script de auditoría (`audit-console-errors.js`) ya usa Playwright (firefox) para capturar errores de consola
 - Traces y screenshots en fallos facilitan el debugging
 - Integración con CI (reporter `github`)

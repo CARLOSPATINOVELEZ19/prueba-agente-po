@@ -34,21 +34,6 @@ npm run audit
 
 Genera reporte en `Workspace/audit/console-audit-report.json`.
 
----
-
-## Portal AgentCrew (estado incompleto)
-
-El servidor `portal/server` tiene un `index.js` que importa módulos no implementados (`triggers/`, `config/`, `agents/`). **No arranca** hasta que existan esos archivos.
-
-Cuando estén implementados:
-
-1. Instalar: `cd portal/server && npm install`
-2. Levantar NATS (Docker o `nats-server` local)
-3. Iniciar: `npm start`
-4. Verificar: `curl http://localhost:3003/health`
-
-No hay `docker-compose.yml` en el repo; NATS debe levantarse manualmente (ej. `brew install nats-server && nats-server`).
-
 ## Troubleshooting
 
 | Problema | Solución |

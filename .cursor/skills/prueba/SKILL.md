@@ -13,19 +13,10 @@ Verificar que la interfaz de usuario funciona correctamente tras cambios recient
 
 ### 1. Identificar qué probar
 
-- **AgentCrew API**: Tests de API con `npm test` (tests/agentcrew.spec.js)
 - **Ciencuadras**: Tests E2E contra ciencuadras.com (tests/ciencuadras.spec.js)
 - **UI específica**: Si se creó o modificó una página, ejecutar tests que la cubran
 
-### 2. Levantar dependencias (si aplica)
-
-Para AgentCrew:
-```bash
-cd portal && docker compose up -d nats
-npm run portal
-```
-
-### 3. Ejecutar tests con Playwright
+### 2. Ejecutar tests con Playwright
 
 ```bash
 npm test
@@ -36,29 +27,28 @@ O con UI interactiva:
 npm run test:ui
 ```
 
-### 4. Si falla
+### 3. Si falla
 
 1. Revisar el output de Playwright (trace, screenshot en `Workspace/playwright/test-results/`)
 2. Identificar la causa del fallo
 3. Corregir el código
-4. **Volver al paso 3** y ejecutar los tests de nuevo
+4. **Volver al paso 2** y ejecutar los tests de nuevo
 5. Repetir hasta que todos pasen
 
-### 5. MCP de Chrome (opcional)
+### 4. MCP de Chrome (opcional)
 
 Si el proyecto tiene MCP de Chrome/Puppeteer configurado, úsalo para:
 - Navegar a la URL de la interfaz
 - Verificar que elementos clave cargan
 - Capturar errores de consola
 
-### 6. Criterio de éxito
+### 5. Criterio de éxito
 
 - Todos los tests de Playwright pasan
 - No hay errores críticos en consola (si se audita con `npm run audit`)
 
 ## Checklist
 
-- [ ] Dependencias levantadas (NATS, API si aplica)
 - [ ] `npm test` ejecutado
 - [ ] Fallos corregidos y tests re-ejecutados
 - [ ] Resultado final: todos los tests pasan

@@ -18,7 +18,7 @@ Preparar y subir el proyecto a producción (o a la rama remota) de forma ordenad
 npm run build
 ```
 
-**Nota**: Este proyecto (prueba-agente-po) no tiene `build` en package.json. El portal usa `npm start` directamente. Si se añade build en el futuro, ejecutarlo aquí.
+**Nota**: Este proyecto (prueba-agente-po) no tiene `build` en package.json. Si se añade build en el futuro, ejecutarlo aquí.
 
 Para proyectos con build:
 - Frontend: `npm run build` o `npm run build:prod`

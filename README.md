@@ -10,8 +10,8 @@ prueba-agente-po/
 ├── scripts/                  # Scripts de auditoría y utilidades
 │   └── audit-console-errors.js
 ├── tools/scripts/            # Scripts de automatización
-│   ├── seed-webhook-jobs.js  # Inyectar jobs de prueba
-│   └── trigger-webhook-cli.js # Disparar webhooks desde CLI
+│   ├── generate-cycle-report-html.js
+│   └── deploy-pages.js
 ├── docs/                     # Documentación viva
 │   ├── resumen-proyecto.md   # Contexto principal para IA
 │   ├── architecture/         # Diseño del sistema
@@ -23,7 +23,6 @@ prueba-agente-po/
 │   ├── audit/                # Auditoría consola (JSON, screenshots)
 │   ├── playwright/          # test-results, playwright-report
 │   └── plans/                # Planes generados por agentes
-├── portal/                   # AgentCrew (orquestador de agentes)
 └── .cursor/
     ├── rules/                # Reglas del orquestador
     └── skills/               # Skills reutilizables (prueba, construir)
@@ -37,11 +36,9 @@ prueba-agente-po/
 | `npm run test:ui`  | Playwright con UI interactiva                      |
 | `npm run audit`    | Auditoría de errores de consola en ciencuadras.com |
 | `npm run lint`     | Ejecuta ESLint                                     |
-| `npm run format`   | Formatea código con Prettier                       |
+| `npm run format`   | Formatea código con Prettier                        |
 
-**Portal AgentCrew**: `cd portal/server && npm start` — el servidor requiere implementar los módulos `triggers/`, `config/` y `agents/` antes de arrancar. Ver [docs/architecture](./docs/architecture/0-overview.md).
-
-**Scripts de webhook** (requieren API en ejecución): `node tools/scripts/seed-webhook-jobs.js`, `node tools/scripts/trigger-webhook-cli.js <jobId>`
+Ver [docs/resumen-proyecto.md](./docs/resumen-proyecto.md) y [docs/architecture](./docs/architecture/) para más detalles.
 
 ## Requisitos
 
@@ -54,5 +51,3 @@ prueba-agente-po/
 - **Gestión:** Jira (MCP atlassian)
 - **Monitoreo:** Datadog (MCP datadog)
 - **Tests:** Playwright para E2E
-
-Ver [docs/resumen-proyecto.md](./docs/resumen-proyecto.md) y [docs/architecture](./docs/architecture/) para más detalles.
