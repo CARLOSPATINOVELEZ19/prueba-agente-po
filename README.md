@@ -17,7 +17,7 @@ prueba-agente-po/
 │   ├── architecture/         # Diseño del sistema
 │   ├── decisions/            # ADRs (decisiones técnicas)
 │   ├── runbook/              # Guías operativas
-│   └── design-system.md     # Guía visual frontend
+│   └── architecture/        # Diseño, stack, design-system
 ├── Workspace/                # Resultados de agentes (no versionado)
 │   ├── reports/              # Reportes HTML/MD
 │   ├── audit/                # Auditoría consola (JSON, screenshots)

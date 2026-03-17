@@ -90,10 +90,11 @@ prueba-agente-po/
 │   ├── README.md           # Índice de documentación
 │   ├── resumen-proyecto.md # Contexto principal para IA
 │   ├── Asset/              # Plantillas CSS y HTML para reportes (GitHub Pages)
+│   ├── architecture/       # Diseño, stack, design-system, workspace
 │   ├── onboarding/         # Flujo primera interacción
-│   ├── templates/          # Plantillas de config (platforms.example.json)
-│   ├── architecture/       # Diseño del sistema
 │   ├── runbook/            # Guías operativas
+│   ├── analisis/           # Análisis y reportes MD (ciclo, limpieza)
+│   ├── templates/          # Plantillas de config (platforms.example.json)
 │   └── decisions/          # ADRs
 ├── Workspace/              # Resultados del trabajo de agentes (no versionados)
 │   ├── config/             # platforms.json (URLs, Jira, Datadog por plataforma)

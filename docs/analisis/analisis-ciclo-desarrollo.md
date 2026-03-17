@@ -1,5 +1,7 @@
 # Análisis de tiempo por fase del ciclo de desarrollo
 
+> **Versión interactiva:** [analisis-ciclo-desarrollo.html](../analisis-ciclo-desarrollo.html) (tabla ordenable, enlaces a Jira)
+
 **Muestra:** 100 Historias de Usuario cerradas
 **Rango:** 1 enero - 30 marzo 2025
 **Proyectos:** 7 distintos
