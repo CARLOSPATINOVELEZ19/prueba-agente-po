@@ -100,6 +100,8 @@ Orquestador (00-swarm-orchestrator) → Plan en Workspace/plans/
                                     → Validación Playwright (agent-tech-guardian)
 ```
 
+📄 **Documento visual para negocio:** [architecture/5-agents-functional-architecture.md](./architecture/5-agents-functional-architecture.md)
+
 ---
 
 ## Separación código vs artefactos

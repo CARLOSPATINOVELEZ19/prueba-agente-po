@@ -18,7 +18,8 @@ docs/
 │   ├── 1-stack.md
 │   ├── 2-design-system.md
 │   ├── 3-tech-stack-org.md
-│   └── 4-workspace.md
+│   ├── 4-workspace.md
+│   └── 5-agents-functional-architecture.md   # Agentes (visual, para negocio)
 ├── Asset/                  # Plantillas CSS/HTML para reportes
 ├── onboarding/             # Flujo primera interacción
 ├── runbook/                # Guías operativas
@@ -44,6 +45,7 @@ docs/
 | [architecture/2-design-system.md](./architecture/2-design-system.md) | Sistema de diseño (tipografías, paleta, componentes) |
 | [architecture/3-tech-stack-org.md](./architecture/3-tech-stack-org.md) | Ecosistema tecnológico de la organización |
 | [architecture/4-workspace.md](./architecture/4-workspace.md) | Estructura del Workspace (resultados de agentes) |
+| [architecture/5-agents-functional-architecture.md](./architecture/5-agents-functional-architecture.md) | **Arquitectura funcional de agentes** (visual, para negocio) |
 
 ### Onboarding
 

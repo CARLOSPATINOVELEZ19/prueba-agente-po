@@ -4,6 +4,12 @@
 
 **prueba-agente-po** es un workspace **agnóstico** de pruebas E2E y auditoría para cualquier plataforma. La configuración por producto (URLs, Jira, Datadog) vive en `Workspace/config/platforms.json`.
 
+## Equipo de agentes (resumen ejecutivo)
+
+Un conjunto de agentes de IA coordina el ciclo de desarrollo en **4 fases**: Análisis (Scout + Jira) → Contexto (Historian + código) → Planificación → Validación (Guardian + Playwright).
+
+📄 **Para explicar a negocio:** [5-agents-functional-architecture.md](./5-agents-functional-architecture.md) — diagramas visuales y lenguaje sencillo.
+
 ## Estado actual del código
 
 | Componente | Estado | Notas |
@@ -62,3 +68,4 @@ Ver [4-workspace.md](./4-workspace.md) para detalles.
 - [../ESTRUCTURA.md](../ESTRUCTURA.md) — Estructura completa y flujos de lógica
 - [1-stack.md](./1-stack.md) — Tecnologías y versiones
 - [4-workspace.md](./4-workspace.md) — Estructura del Workspace (resultados de agentes)
+- [5-agents-functional-architecture.md](./5-agents-functional-architecture.md) — Arquitectura funcional de agentes (visual, para negocio)

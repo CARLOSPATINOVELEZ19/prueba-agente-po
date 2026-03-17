@@ -1,0 +1,140 @@
+# Arquitectura Funcional de Agentes
+
+> **Documento para negocio:** Explica cómo trabajan los agentes de IA en el proyecto y qué valor aportan.
+
+---
+
+## ¿Qué problema resolvemos?
+
+Las tareas de desarrollo suelen requerir **muchos pasos manuales**: leer tickets en Jira, revisar el código, planificar cambios, validar que todo funcione. Esto consume tiempo y puede generar errores por falta de contexto.
+
+**Los agentes automatizan y coordinan** estas fases, reduciendo tiempo y aumentando la trazabilidad entre negocio (Jira) y calidad (tests).
+
+---
+
+## El equipo de agentes en una imagen
+
+```mermaid
+flowchart LR
+    subgraph equipo ["Equipo de Agentes de IA"]
+        direction TB
+        O[🎯 Orquestador]
+        O --> S[🔍 Scout]
+        O --> H[📚 Historian]
+        O --> G[🛡️ Guardian]
+    end
+
+    subgraph fuentes ["Fuentes de información"]
+        J[Jira]
+        C[Código]
+        T[Tests]
+    end
+
+    S --> J
+    H --> C
+    G --> T
+```
+
+| Agente | Rol en lenguaje simple | ¿Qué hace? |
+|--------|------------------------|-------------|
+| **🎯 Orquestador** | El coordinador | Decide el orden de trabajo y asegura que cada fase se complete antes de pasar a la siguiente |
+| **🔍 Scout** | El explorador | Lee los tickets de Jira y extrae qué se necesita hacer (requerimientos) |
+| **📚 Historian** | El experto en historia | Revisa el código y los cambios recientes para evitar repetir errores del pasado |
+| **🛡️ Guardian** | El validador | Ejecuta pruebas automáticas y solo da por terminada la tarea cuando todo pasa |
+
+---
+
+## Flujo completo: de la idea al resultado validado
+
+```mermaid
+flowchart TB
+    subgraph entrada [Entrada]
+        U[👤 Usuario: "Necesito implementar X"]
+    end
+
+    subgraph fases [4 Fases del Protocolo]
+        F1[1️⃣ ANÁLISIS<br/>Scout lee Jira]
+        F2[2️⃣ CONTEXTO<br/>Historian revisa código]
+        F3[3️⃣ PLANIFICACIÓN<br/>Plan en Workspace/plans/]
+        F4[4️⃣ VALIDACIÓN<br/>Guardian ejecuta Playwright]
+    end
+
+    subgraph salida [Salida]
+        R[✅ Tarea completada con reporte de éxito]
+    end
+
+    U --> F1
+    F1 --> F2
+    F2 --> F3
+    F3 --> F4
+    F4 --> R
+```
+
+---
+
+## Detalle por fase (para explicar en reuniones)
+
+### 1️⃣ Fase de Análisis — Scout
+
+**Pregunta que responde:** *¿Qué quiere el negocio?*
+
+- Conecta con **Jira** (gestión de proyectos)
+- Lee el ticket asignado
+- Extrae los requerimientos en lenguaje claro
+
+**Valor para negocio:** Trazabilidad directa entre lo que pide Jira y lo que se implementa.
+
+---
+
+### 2️⃣ Fase de Contexto — Historian
+
+**Pregunta que responde:** *¿Qué impacto tendrá este cambio?*
+
+- Revisa el **código actual** del proyecto
+- Analiza **cambios recientes** (PRs, commits)
+- Identifica riesgos y dependencias
+
+**Valor para negocio:** Menos errores por falta de contexto; decisiones más informadas.
+
+---
+
+### 3️⃣ Fase de Planificación
+
+**Pregunta que responde:** *¿Cómo lo haremos paso a paso?*
+
+- Genera un **plan escrito** antes de tocar código
+- Se guarda en `Workspace/plans/`
+- Permite revisar la estrategia antes de ejecutar
+
+**Valor para negocio:** Transparencia y posibilidad de ajustar el enfoque antes de invertir tiempo en desarrollo.
+
+---
+
+### 4️⃣ Fase de Validación — Guardian
+
+**Pregunta que responde:** *¿Funciona correctamente?*
+
+- Ejecuta **pruebas automáticas** (Playwright)
+- Si algo falla, propone correcciones
+- Solo da por terminada la tarea cuando las pruebas pasan
+
+**Valor para negocio:** Calidad asegurada; menos bugs en producción.
+
+---
+
+## Resumen ejecutivo (una diapositiva)
+
+| Concepto | Explicación |
+|----------|-------------|
+| **Qué es** | Un equipo de agentes de IA que coordina análisis, planificación y validación de tareas de desarrollo |
+| **Cómo trabaja** | 4 fases secuenciales: Análisis (Jira) → Contexto (código) → Planificación → Validación (tests) |
+| **Beneficio principal** | Acelera el ciclo de desarrollo con trazabilidad a Jira y validación automática de calidad |
+| **Herramientas integradas** | Jira, GitHub, Playwright, Datadog |
+
+---
+
+## Documentos técnicos relacionados
+
+- [0-overview.md](./0-overview.md) — Visión general del proyecto
+- [4-workspace.md](./4-workspace.md) — Dónde se guardan los planes y reportes
+- [../ESTRUCTURA.md](../ESTRUCTURA.md) — Estructura completa del proyecto
