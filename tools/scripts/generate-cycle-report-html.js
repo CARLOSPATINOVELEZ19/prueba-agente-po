@@ -196,6 +196,17 @@ function generateHtml(dataPath, outPath) {
     }
     .summary-box h3 { font-size: 1.05rem; margin-bottom: 0.75rem; }
     .summary-box p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
+    .info-note {
+      background: rgba(0, 168, 132, 0.1);
+      border: 1px solid var(--accent-muted);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .info-note strong { color: var(--accent); }
     .phases-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -290,6 +301,12 @@ function generateHtml(dataPath, outPath) {
           El <strong>ciclo total promedio</strong> (Por hacer → Producción) es de <strong>${formatHours(stats.customfield_24748.avg)}</strong>.
           La fase con mayor tiempo promedio es <strong>En Progreso (Desarrollo)</strong> con ${formatHours(stats.customfield_24764.avg)}.
         </p>
+      </div>
+      <div class="info-note">
+        <strong>Importante:</strong> Los tiempos de cada fase y el ciclo total no se pueden sumar porque usan <strong>unidades distintas</strong> en Jira.
+        • <em>Tiempo en X</em> (por fase): suele estar en horas de calendario (24/7).
+        • <em>Ciclo total</em>: suele estar en horas de trabajo u otra métrica end-to-end.
+        El Ciclo total es una métrica independiente, no la suma de las fases.
       </div>
     </section>
 
