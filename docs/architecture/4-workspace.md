@@ -55,6 +55,6 @@ Este comando regenera los reportes y los copia a `docs/` para que GitHub Pages l
 
 Los scripts de reportes leen datos de `docs/data/` (ej. `jira-cycle-2025.json`). Esos archivos son datos de referencia versionados y no se consideran artefactos.
 
-## Nota sobre carpetas legacy
+## Screenshots de auditoría
 
-- **`docs/screenshots-auditoria/`**: Ejemplos curados para documentación. La salida actual de auditoría está en `Workspace/audit/screenshots/`.
+Las capturas de auditoría están en `Workspace/audit/screenshots/`. Al ejecutar `npm run deploy:pages`, se copian a `docs/screenshots-auditoria/` para publicación en GitHub Pages.
