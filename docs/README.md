@@ -50,6 +50,7 @@ docs/
 | Documento | Descripción |
 |----------|-------------|
 | [onboarding/01-flujo-primera-interaccion.md](./onboarding/01-flujo-primera-interaccion.md) | Flujo de primera interacción: validar MCPs/CLIs y crear platforms.json |
+| [onboarding/02-compartir-proyecto-sin-github.md](./onboarding/02-compartir-proyecto-sin-github.md) | Cómo compartir el proyecto sin GitHub (para abrir en Cursor) |
 
 ### Runbooks
 
