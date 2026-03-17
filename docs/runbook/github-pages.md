@@ -20,13 +20,16 @@ Los reportes HTML en `docs/` se publican en GitHub Pages para acceso desde la we
 
 ## Reportes disponibles
 
-| Reporte | URL relativa |
-|---------|--------------|
-| Inicio | `index.html` |
-| Índice de reportes | `reportes.html` |
-| Análisis ciclo de desarrollo | `analisis-ciclo-desarrollo.html` |
-| Auditoría errores consola | `auditoria-errores-consola.html` |
-| Reporte plataforma (ej. por plataforma) | `reporte-<plataforma>-<fecha>.html` (desde Workspace/reports/) |
+| Reporte | URL relativa | Estado |
+|---------|--------------|--------|
+| Inicio (Reporte Ejecutivo Entregables) | `index.html` | ✅ Publicado |
+| Índice de reportes | `reportes.html` | ✅ Publicado |
+| Reporte Ejecutivo standalone | `reporte-ejecutivo-valor-proyecto.html` | ✅ Publicado |
+| Análisis ciclo de desarrollo | `analisis-ciclo-desarrollo.html` | ✅ Generado por `deploy:pages` |
+| Auditoría errores consola | `auditoria-errores-consola.html` | ⏳ Pendiente (no hay generador HTML) |
+| Reporte Ciencuadras | `reporte-ciencuadras-marzo-2026.html` | ⏳ Pendiente (no existe) |
+
+**Importante:** No añadir enlaces en `reportes.html` ni `index.html` a páginas que no existan en `docs/`, para evitar 404 en GitHub Pages.
 
 ## Plantillas (docs/Asset/)
 
