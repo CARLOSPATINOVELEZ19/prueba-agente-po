@@ -13,7 +13,7 @@ Verificar que la interfaz de usuario funciona correctamente tras cambios recient
 
 ### 1. Identificar qué probar
 
-- **Ciencuadras**: Tests E2E contra ciencuadras.com (tests/ciencuadras.spec.js)
+- **Smoke tests**: Tests E2E agnósticos en `tests/smoke.spec.js` (baseURL y rutas desde `Workspace/config/platforms.json`)
 - **UI específica**: Si se creó o modificó una página, ejecutar tests que la cubran
 
 ### 2. Ejecutar tests con Playwright

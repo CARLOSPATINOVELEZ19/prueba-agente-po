@@ -70,7 +70,7 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
 
 ## Estructura de carpetas relevante
 
-Separación estricta entre **código fuente** (versionado) y **artefactos generados** (`.gitignore`):
+Separación estricta entre **código fuente** (versionado) y **artefactos generados** (`.gitignore`). Ver [docs/ESTRUCTURA.md](./ESTRUCTURA.md) para el árbol completo y flujos de lógica.
 
 ```
 prueba-agente-po/
@@ -89,12 +89,14 @@ prueba-agente-po/
 ├── docs/                   # Documentación y reportes publicados
 │   ├── README.md           # Índice de documentación
 │   ├── resumen-proyecto.md # Contexto principal para IA
+│   ├── ESTRUCTURA.md       # Estructura y lógica del proyecto
 │   ├── Asset/              # Plantillas CSS y HTML para reportes (GitHub Pages)
 │   ├── architecture/       # Diseño, stack, design-system, workspace
 │   ├── onboarding/         # Flujo primera interacción
 │   ├── runbook/            # Guías operativas
 │   ├── analisis/           # Análisis y reportes MD (ciclo, limpieza)
 │   ├── templates/          # Plantillas de config (platforms.example.json)
+│   ├── data/               # Datos de referencia (jira-cycle-*.json)
 │   └── decisions/          # ADRs
 ├── Workspace/              # Resultados del trabajo de agentes (no versionados)
 │   ├── config/             # platforms.json (URLs, Jira, Datadog por plataforma)
@@ -102,8 +104,10 @@ prueba-agente-po/
 │   ├── audit/              # Auditoría consola (JSON, screenshots)
 │   ├── playwright/         # test-results, playwright-report
 │   ├── plans/              # Planes generados por agentes
+│   ├── observabilidad/     # Runbooks Datadog, mapeos
+│   ├── repos/              # Repos externos clonados
 │   └── data/               # Datos exportados (opcional)
-├── playwright.config.js    # baseURL (o desde Workspace/config)
+├── playwright.config.js    # baseURL desde get-platform-config
 ├── vitest.config.js        # Config Vitest (tests/unit/**/*.test.js)
 ├── .cursor/                # Reglas y skills de agentes (planes en Workspace/plans)
 └── rules/                  # Reglas técnicas (Playwright, Datadog, PRD, etc.)

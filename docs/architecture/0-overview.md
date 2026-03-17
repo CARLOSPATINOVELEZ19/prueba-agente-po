@@ -59,5 +59,6 @@ Ver [4-workspace.md](./4-workspace.md) para detalles.
 
 ## Documentos relacionados
 
+- [../ESTRUCTURA.md](../ESTRUCTURA.md) — Estructura completa y flujos de lógica
 - [1-stack.md](./1-stack.md) — Tecnologías y versiones
 - [4-workspace.md](./4-workspace.md) — Estructura del Workspace (resultados de agentes)

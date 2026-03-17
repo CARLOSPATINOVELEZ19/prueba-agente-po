@@ -12,6 +12,7 @@ docs/
 ├── reportes.html           # Índice de reportes HTML
 ├── README.md               # Este índice
 ├── resumen-proyecto.md     # Contexto principal para IA
+├── ESTRUCTURA.md           # Estructura y lógica del proyecto
 ├── architecture/           # Diseño del sistema
 │   ├── 0-overview.md
 │   ├── 1-stack.md
@@ -24,7 +25,8 @@ docs/
 ├── decisions/              # ADRs
 ├── analisis/               # Análisis y reportes MD
 ├── templates/              # Plantillas de config
-└── data/                   # Datos de referencia
+├── data/                   # Datos de referencia (jira-cycle-*.json)
+└── *.html                  # Reportes publicados (analisis-ciclo-desarrollo, etc.)
 ```
 
 ---
@@ -36,6 +38,7 @@ docs/
 | Documento | Descripción |
 |----------|-------------|
 | [resumen-proyecto.md](./resumen-proyecto.md) | Contexto principal: stack, patrones, reglas, estructura |
+| [ESTRUCTURA.md](./ESTRUCTURA.md) | Estructura del proyecto y flujos de lógica |
 | [architecture/0-overview.md](./architecture/0-overview.md) | Visión general y estado del código |
 | [architecture/1-stack.md](./architecture/1-stack.md) | Tecnologías y versiones del proyecto |
 | [architecture/2-design-system.md](./architecture/2-design-system.md) | Sistema de diseño (tipografías, paleta, componentes) |

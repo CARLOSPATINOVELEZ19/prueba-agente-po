@@ -1,6 +1,6 @@
 ---
 description: "Especialista en Calidad. Se activa al trabajar con tests o validación."
-globs: ["**/tests/**", "playwright.config.ts", "**/*.spec.ts"]
+globs: ["**/tests/**", "playwright.config.js", "**/*.spec.js"]
 alwaysApply: false
 ---
 # AGENTE GUARDIAN (QA Specialist)
