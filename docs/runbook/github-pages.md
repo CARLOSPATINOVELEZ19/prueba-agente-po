@@ -36,6 +36,20 @@ Las plantillas CSS y HTML para reportes están en `docs/Asset/`:
 - `report-index.css` — estilos del índice de reportes
 - `template-report.html` / `template-report-index.html` — plantillas HTML de referencia
 
+## Staging y rutas Asset
+
+Los reportes se generan en `Workspace/reports/` (área de staging, no versionada). Los HTML usan rutas relativas:
+
+```html
+<link rel="stylesheet" href="Asset/report-base.css">
+<link rel="stylesheet" href="Asset/report-components.css">
+```
+
+- **En Workspace/reports/**: La ruta `Asset/` no resuelve (no existe `Workspace/reports/Asset/`). El reporte no mostrará estilos si se abre localmente desde ahí.
+- **En docs/**: La ruta `Asset/` resuelve a `docs/Asset/` correctamente. GitHub Pages sirve `docs/`, por lo que los estilos cargan bien.
+
+**Importante:** `deploy:pages` es el paso obligatorio antes de commit. Sin ejecutarlo, los reportes en `docs/` quedarían desactualizados y GitHub Pages no mostraría los estilos correctamente para los reportes generados.
+
 ## Flujo de publicación (deploy:pages)
 
 Los reportes se generan en `Workspace/reports/` (no versionado). Para publicarlos en GitHub Pages:
