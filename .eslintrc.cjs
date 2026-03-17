@@ -4,5 +4,5 @@ module.exports = {
   env: { node: true, es2022: true },
   extends: ['eslint:recommended', 'prettier'],
   parserOptions: { ecmaVersion: 2022, sourceType: 'script' },
-  ignorePatterns: ['audit-output/', 'ciencuadras-repos/', 'node_modules/'],
+  ignorePatterns: ['Workspace/', 'audit-output/', 'ciencuadras-repos/', 'node_modules/'],
 };

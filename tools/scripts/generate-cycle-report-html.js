@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Genera reporte HTML gerencial de análisis de ciclo de desarrollo
- * Lee JSON de Jira y produce docs/analisis-ciclo-desarrollo.html
+ * Lee JSON de Jira y produce Workspace/reports/analisis-ciclo-desarrollo.html
  */
 
 const fs = require('fs');
@@ -395,7 +395,7 @@ function generateHtml(dataPath, outPath) {
 
 const dataPath =
   process.argv[2] || path.join(__dirname, '../../docs/data/jira-cycle-2025.json');
-const outPath = path.join(__dirname, '../../docs/analisis-ciclo-desarrollo.html');
+const outPath = path.join(__dirname, '../../Workspace/reports/analisis-ciclo-desarrollo.html');
 
 if (!fs.existsSync(dataPath)) {
   console.error('No se encontró el archivo de datos. Uso: node generate-cycle-report-html.js <ruta-json>');

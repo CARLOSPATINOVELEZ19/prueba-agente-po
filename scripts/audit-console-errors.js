@@ -6,23 +6,11 @@
 const { firefox } = require('playwright');
 const path = require('path');
 const fs = require('fs');
+const { ZONES } = require('./audit-data.js');
 
 const BASE_URL = 'https://www.ciencuadras.com';
-const OUTPUT_DIR = path.join(__dirname, '../audit-output');
+const OUTPUT_DIR = path.join(__dirname, '../Workspace/audit');
 const SCREENSHOTS_DIR = path.join(OUTPUT_DIR, 'screenshots');
-
-// Zonas principales a auditar
-const ZONES = [
-  { name: 'Home', url: '/' },
-  { name: 'Arriendo', url: '/arriendo' },
-  { name: 'Venta', url: '/venta' },
-  { name: 'Inmobiliarias', url: '/inmobiliarias' },
-  { name: 'Constructoras', url: '/constructoras' },
-  { name: 'Blog', url: '/blog' },
-  { name: 'Auth/Login', url: '/auth' },
-  { name: 'Productos', url: '/productos' },
-  { name: 'Remates', url: '/inmuebles-en-remate' },
-];
 
 async function runAudit() {
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });

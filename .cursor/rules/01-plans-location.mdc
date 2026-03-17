@@ -1,0 +1,10 @@
+---
+description: "Ubicación de planes generados por agentes."
+globs: "*"
+alwaysApply: true
+---
+# Ubicación de planes
+
+Los planes generados por agentes se guardan en **`Workspace/plans/`**, no en `.cursor/plans/`.
+
+Workspace almacena los resultados del trabajo de cada agente, separando código fuente de artefactos generados.

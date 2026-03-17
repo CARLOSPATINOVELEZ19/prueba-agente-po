@@ -10,7 +10,7 @@ Eres el líder de un enjambre de agentes. Tu objetivo es la orquestación de int
 ## Protocolo de Ejecución:
 1. **Fase de Análisis (Scout Agent):** Usa el MCP de Jira (`atlassian`) para leer el ticket y extraer requerimientos[cite: 1476, 2120].
 2. **Fase de Contexto (Historian Agent):** Usa `@Codebase` y `gh pr list` para analizar el impacto técnico y evitar errores pasados[cite: 1861, 4012].
-3. **Fase de Planificación:** Genera un archivo en `.cursor/plans/` antes de tocar código[cite: 1856, 1857].
+3. **Fase de Planificación:** Genera un archivo en `Workspace/plans/` antes de tocar código[cite: 1856, 1857].
 4. **Fase de Validación (Guardian Agent):** No consideres una tarea terminada sin un reporte de éxito de Playwright[cite: 1950, 1951].
 
 ## Restricciones:

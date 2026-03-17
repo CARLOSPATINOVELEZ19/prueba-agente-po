@@ -9,6 +9,11 @@ playwright/.cache/
 # Reportes y artefactos generados
 reporte-visual/
 
+# Workspace: resultados del trabajo de agentes (separación estricta código/artifacts)
+Workspace/
+# audit-output: legacy; el script audit escribe ahora en Workspace/audit/
+audit-output/
+
 # Repos externos (no subir a GitHub Pages)
 ciencuadras-repos/
 

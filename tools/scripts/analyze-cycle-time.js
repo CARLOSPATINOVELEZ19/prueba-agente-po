@@ -182,10 +182,7 @@ function report({ stats, byProject, totalIssues }) {
 function main() {
   const dataPath =
     process.argv[2] ||
-    path.join(
-      __dirname,
-      '../../.cursor/projects/Users-carlosandrespatinovelez-Documents-prueba-agente-po/agent-tools/353684c8-2181-4ea7-aaea-7e80e05f4a2a.txt'
-    );
+    path.join(__dirname, '../../docs/data/jira-cycle-2025.json');
 
   if (!fs.existsSync(dataPath)) {
     console.error('No se encontró el archivo de datos. Uso: node analyze-cycle-time.js <ruta-json>');
@@ -196,7 +193,7 @@ function main() {
   const reportMd = report(result);
   console.log(reportMd);
 
-  const outPath = path.join(__dirname, '../../docs/analisis-ciclo-desarrollo.md');
+  const outPath = path.join(__dirname, '../../Workspace/reports/analisis-ciclo-desarrollo.md');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, reportMd, 'utf8');
   console.log('\n---\nReporte guardado en:', outPath);

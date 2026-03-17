@@ -1,0 +1,10 @@
+# Reglas del Proyecto prueba-agente-po
+
+Lee el contexto completo en [resumen-proyecto.md](./resumen-proyecto.md).
+
+## Reglas obligatorias
+
+- **No hagas build en cada cambio**: No ejecutes `npm run build` ni equivalentes tras cada modificación. Solo cuando sea explícitamente necesario (ej. antes de deploy).
+- **Planificación**: Para tareas complejas, genera un plan en `Workspace/plans/` antes de tocar código.
+- **Validación**: No consideres una tarea terminada sin reporte de éxito de Playwright cuando aplique.
+- **Documentación viva**: Lee y actualiza `docs/` cuando cambies arquitectura, decisiones o runbooks.
