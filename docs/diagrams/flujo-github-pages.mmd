@@ -1,0 +1,25 @@
+flowchart LR
+    subgraph staging ["Área de staging (no versionada)"]
+        W[Workspace/reports/]
+        W2[Workspace/audit/]
+    end
+
+    subgraph scripts ["Scripts"]
+        R[report:cycle]
+        D[deploy:pages]
+    end
+
+    subgraph published ["Publicado (versionado)"]
+        P[docs/*.html]
+        A[docs/Asset/]
+    end
+
+    J[docs/data/jira-cycle-*.json] --> R
+    R --> W
+    W --> D
+    D --> P
+    A -.-> P
+
+    W2 -.-> D
+
+    P --> GH[GitHub Pages]

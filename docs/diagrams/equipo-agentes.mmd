@@ -1,0 +1,18 @@
+flowchart LR
+    subgraph equipo ["Equipo de Agentes de IA"]
+        direction TB
+        O[🎯 Orquestador]
+        O --> S[🔍 Scout]
+        O --> H[📚 Historian]
+        O --> G[🛡️ Guardian]
+    end
+
+    subgraph fuentes ["Fuentes de información"]
+        J[Jira]
+        C[Código]
+        T[Tests]
+    end
+
+    S --> J
+    H --> C
+    G --> T

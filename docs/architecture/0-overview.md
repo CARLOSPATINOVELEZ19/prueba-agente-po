@@ -61,6 +61,8 @@ flowchart TB
     tools --> reports
 ```
 
+> **[Abrir en Draw.io](../diagrams/codigo-vs-artefactos.html)** — Editar diagrama en la aplicación
+
 Ver [4-workspace.md](./4-workspace.md) para detalles.
 
 ## Documentos relacionados

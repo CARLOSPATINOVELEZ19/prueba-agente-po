@@ -12,7 +12,8 @@ docs/
 ├── reportes.html           # Índice de reportes HTML
 ├── README.md               # Este índice
 ├── resumen-proyecto.md     # Contexto principal para IA
-├── ESTRUCTURA.md           # Estructura y lógica del proyecto
+├── ESTRUCTURA.md           # Estructura y lógica del proyecto (con diagrama de flujos)
+├── diagrams/               # Estrategia de diagramas (Mermaid + Draw.io)
 ├── architecture/           # Diseño del sistema
 │   ├── 0-overview.md
 │   ├── 1-stack.md
@@ -33,6 +34,19 @@ docs/
 ---
 
 ## Índice
+
+### Diagramas (Mermaid + Draw.io)
+
+Los diagramas están embebidos en Mermaid dentro de los documentos para renderizado en GitHub. Para editar versiones gráficas, usa el MCP `drawio-mcp` o [diagrams.net](https://app.diagrams.net/).
+
+| Ubicación | Diagrama |
+|-----------|----------|
+| [ESTRUCTURA.md](./ESTRUCTURA.md) | Flujos integrados (config, E2E, auditoría, reportes, agentes) |
+| [onboarding/01-flujo-primera-interaccion.md](./onboarding/01-flujo-primera-interaccion.md) | Flujo de onboarding (validación MCPs/CLIs → platforms.json) |
+| [architecture/4-workspace.md](./architecture/4-workspace.md) | Flujo de datos Workspace (generadores → carpetas → deploy) |
+| [architecture/0-overview.md](./architecture/0-overview.md) | Separación código vs artefactos |
+| [architecture/5-agents-functional-architecture.md](./architecture/5-agents-functional-architecture.md) | Equipo de agentes y fases del protocolo |
+| [runbook/github-pages.md](./runbook/github-pages.md) | Flujo de publicación deploy:pages → GitHub Pages |
 
 ### Contexto y arquitectura
 

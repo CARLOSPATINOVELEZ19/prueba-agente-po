@@ -2,6 +2,52 @@
 
 Workspace almacena los resultados del trabajo de cada agente (scripts, tests, agentes IA). Esta carpeta está en `.gitignore` para mantener la separación estricta entre código fuente y artefactos generados.
 
+## Diagrama: flujo de datos y generadores
+
+```mermaid
+flowchart TB
+    subgraph workspace ["Workspace (resultados de agentes - .gitignore)"]
+        config[config/ platforms.json]
+        reports[reports/]
+        audit[audit/]
+        playwright[playwright/]
+        plans[plans/]
+        observabilidad[observabilidad/]
+        repos[repos/]
+        data[data/]
+    end
+
+    subgraph generators ["Generadores"]
+        G1[generate-cycle-report-html.js]
+        G2[analyze-cycle-time.js]
+        G3[audit-console-errors.js]
+        G4[Playwright]
+        G5[Agentes IA]
+    end
+
+    subgraph input ["Entrada"]
+        I1[docs/data/jira-cycle-*.json]
+        I2[platforms.json]
+    end
+
+    I1 --> G1
+    I1 --> G2
+    I2 --> G3
+    I2 --> G4
+
+    G1 --> reports
+    G2 --> reports
+    G3 --> audit
+    G4 --> playwright
+    G5 --> plans
+    G5 --> observabilidad
+
+    reports --> deploy[deploy-pages.js]
+    deploy --> docs[docs/*.html GitHub Pages]
+```
+
+> **[Abrir en Draw.io](../diagrams/flujo-workspace.html)** — Editar diagrama en la aplicación
+
 ## Estructura
 
 ```

@@ -100,6 +100,47 @@ Orquestador (00-swarm-orchestrator) → Plan en Workspace/plans/
                                     → Validación Playwright (agent-tech-guardian)
 ```
 
+### Diagrama de flujos (vista integrada)
+
+```mermaid
+flowchart TB
+    subgraph config ["Flujo de configuración"]
+        A1[Onboarding] --> A2[platforms.json]
+        A2 --> A3[get-platform-config.js]
+        A3 --> A4[Scripts y tests]
+    end
+
+    subgraph e2e ["Flujo Tests E2E"]
+        B1[playwright.config.js] --> B2[getBaseUrl]
+        B2 --> B3[platforms.json]
+        B4[tests/smoke.spec.js] --> B5[getSmokePaths]
+        B5 --> B3
+    end
+
+    subgraph audit ["Flujo de auditoría"]
+        C1[npm run audit] --> C2[audit-console-errors.js]
+        C2 --> C3[getBaseUrl, getAuditZones]
+        C3 --> C4[Workspace/audit/]
+    end
+
+    subgraph reports ["Flujo de reportes"]
+        D1[docs/data/jira-cycle-*.json] --> D2[generate-cycle-report-html.js]
+        D2 --> D3[Workspace/reports/]
+        D3 --> D4[deploy-pages.js]
+        D4 --> D5[docs/*.html GitHub Pages]
+    end
+
+    subgraph agents ["Flujo de agentes"]
+        E1[Orquestador] --> E2[Plan en Workspace/plans/]
+        E2 --> E3[Guardian Playwright]
+    end
+
+    A2 -.-> B3
+    A2 -.-> C3
+```
+
+> **[Abrir en Draw.io](diagrams/flujo-estructura.html)** — Editar diagrama en la aplicación
+
 📄 **Documento visual para negocio:** [architecture/5-agents-functional-architecture.md](./architecture/5-agents-functional-architecture.md)
 
 ---

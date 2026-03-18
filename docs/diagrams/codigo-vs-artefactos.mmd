@@ -1,0 +1,26 @@
+flowchart TB
+    subgraph source [Código fuente - versionado]
+        tests[tests/]
+        scripts[scripts/]
+        tools[tools/]
+        cursorRules[.cursor/rules/]
+        cursorSkills[.cursor/skills/]
+        rules[rules/]
+        docsSource["docs/"]
+    end
+
+    subgraph workspace [Workspace - resultados de agentes - .gitignore]
+        config[Workspace/config/]
+        reports[Workspace/reports/]
+        audit[Workspace/audit/]
+        playwright[Workspace/playwright/]
+        plans[Workspace/plans/]
+        observabilidad[Workspace/observabilidad/]
+        repos[Workspace/repos/]
+    end
+
+    scripts --> reports
+    scripts --> audit
+    tests --> playwright
+    cursorRules --> plans
+    tools --> reports

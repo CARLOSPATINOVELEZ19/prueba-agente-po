@@ -59,6 +59,36 @@ La página `reportes.html` incluye un selector de plataforma que carga desde `do
 
 ## Flujo de publicación (deploy:pages)
 
+```mermaid
+flowchart LR
+    subgraph staging ["Área de staging (no versionada)"]
+        W[Workspace/reports/]
+        W2[Workspace/audit/]
+    end
+
+    subgraph scripts ["Scripts"]
+        R[report:cycle]
+        D[deploy:pages]
+    end
+
+    subgraph published ["Publicado (versionado)"]
+        P[docs/*.html]
+        A[docs/Asset/]
+    end
+
+    J[docs/data/jira-cycle-*.json] --> R
+    R --> W
+    W --> D
+    D --> P
+    A -.-> P
+
+    W2 -.-> D
+
+    P --> GH[GitHub Pages]
+```
+
+> **[Abrir en Draw.io](../diagrams/flujo-github-pages.html)** — Editar diagrama en la aplicación
+
 Los reportes se generan en `Workspace/reports/` (no versionado). Para publicarlos en GitHub Pages:
 
 1. **Regenerar y copiar a docs:**

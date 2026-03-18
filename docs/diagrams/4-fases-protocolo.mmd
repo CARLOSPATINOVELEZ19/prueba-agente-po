@@ -1,0 +1,21 @@
+flowchart TB
+    subgraph entrada [Entrada]
+        U[👤 Usuario: "Necesito implementar X"]
+    end
+
+    subgraph fases [4 Fases del Protocolo]
+        F1[1️⃣ ANÁLISIS<br/>Scout lee Jira]
+        F2[2️⃣ CONTEXTO<br/>Historian revisa código]
+        F3[3️⃣ PLANIFICACIÓN<br/>Plan en Workspace/plans/]
+        F4[4️⃣ VALIDACIÓN<br/>Guardian ejecuta Playwright]
+    end
+
+    subgraph salida [Salida]
+        R[✅ Tarea completada con reporte de éxito]
+    end
+
+    U --> F1
+    F1 --> F2
+    F2 --> F3
+    F3 --> F4
+    F4 --> R

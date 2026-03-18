@@ -35,6 +35,8 @@ flowchart LR
     G --> T
 ```
 
+> **[Abrir en Draw.io](../diagrams/equipo-agentes.html)** — Editar diagrama en la aplicación
+
 | Agente | Rol en lenguaje simple | ¿Qué hace? |
 |--------|------------------------|-------------|
 | **🎯 Orquestador** | El coordinador | Decide el orden de trabajo y asegura que cada fase se complete antes de pasar a la siguiente |
@@ -69,6 +71,8 @@ flowchart TB
     F3 --> F4
     F4 --> R
 ```
+
+> **[Abrir en Draw.io](../diagrams/4-fases-protocolo.html)** — Editar diagrama en la aplicación
 
 ---
 

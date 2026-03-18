@@ -8,6 +8,35 @@ Validar el entorno y capturar la configuración de plataformas para que el proye
 
 ---
 
+## Diagrama del flujo de onboarding
+
+```mermaid
+flowchart TB
+    Start([Inicio: Primera interacción]) --> Check{¿Existe platforms.json?}
+    Check -->|Sí| End([Usar config existente])
+    Check -->|No| Step1[Paso 1: Validar MCPs y CLIs]
+
+    Step1 --> MCP[MCPs: Atlassian, Datadog, GitHub]
+    Step1 --> CLI[CLIs: gh, node, npm, npx playwright]
+
+    MCP --> Step2[Paso 2: Identificar plataformas]
+    CLI --> Step2
+
+    Step2 --> Capture[Capturar: URLs, smokePaths, auditZones]
+    Capture --> Jira[Jira: projectKey, tableros]
+    Capture --> DD[Datadog: site, dashboards]
+
+    Jira --> Create[Crear Workspace/config/platforms.json]
+    DD --> Create
+
+    Create --> Checklist[Checklist: MCPs validados, CLIs OK, platforms.json]
+    Checklist --> End2([Onboarding completado])
+```
+
+> **[Abrir en Draw.io](../diagrams/flujo-onboarding.html)** — Editar diagrama en la aplicación
+
+---
+
 ## Paso 1: Validar configuración de MCPs y CLIs
 
 ### MCPs requeridos por Skills

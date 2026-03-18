@@ -61,7 +61,7 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
    No consideres una tarea terminada sin un reporte de éxito de Playwright cuando aplique.
 
 4. **Uso de MCP**  
-   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para análisis de PRs: `gh pr list`.
+   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para análisis de PRs: `gh pr list`.
 
 5. **No mezclar contextos**  
    Si la tarea es compleja, indica que abrirás un Subagente en lugar de mezclar contextos.
@@ -77,7 +77,9 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
 
 ## Estructura de carpetas relevante
 
-Separación estricta entre **código fuente** (versionado) y **artefactos generados** (`.gitignore`). Ver [docs/ESTRUCTURA.md](./ESTRUCTURA.md) para el árbol completo y flujos de lógica.
+Separación estricta entre **código fuente** (versionado) y **artefactos generados** (`.gitignore`). Ver [docs/ESTRUCTURA.md](./ESTRUCTURA.md) para el árbol completo, flujos de lógica y **diagramas Mermaid** integrados.
+
+> **Diagramas:** La documentación incluye diagramas gráficos (Mermaid) en ESTRUCTURA, onboarding, architecture y runbooks. Ver [docs/diagrams/README.md](./diagrams/README.md) para la estrategia y edición en Draw.io.
 
 ```
 prueba-agente-po/
