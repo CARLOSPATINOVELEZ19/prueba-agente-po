@@ -4,7 +4,9 @@ globs: "docs/*.md, requirements/*.md"
 alwaysApply: false
 ---
 
-# Estándar de Documentación SPECDD
+# Estándar de Documentación SPECDD (Spec Driven Development)
+
+Este estándar implementa el ciclo **Specify** de Spec Driven Development.
 
 ## Formato del PRD
 [cite_start]Cada vez que generes un análisis para una iniciativa, el archivo debe incluir: [cite: 125, 4136, 4139]

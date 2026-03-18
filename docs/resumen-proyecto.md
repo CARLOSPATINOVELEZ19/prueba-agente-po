@@ -66,6 +66,13 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
 5. **No mezclar contextos**  
    Si la tarea es compleja, indica que abrirás un Subagente en lugar de mezclar contextos.
 
+6. **Spec Driven Development (SDD)**  
+   La especificación es la fuente de verdad. Antes de implementar: (1) Define requisitos y criterios de aceptación, (2) Genera diseño técnico y plan en `Workspace/plans/`, (3) Descompón en tareas atómicas. El código se deriva de la spec; usa PRD/Confluence como input cuando aplique.
+
+### Framework de trabajo
+
+**Spec Driven Development (SDD)** es el framework de trabajo del proyecto. La especificación formal (PRD, Confluence, Jira) es la fuente de verdad; el código se deriva de ella. Referencias: `rules/process-prd-generation.mdc` (formato PRD) y `rules/AGENTS.md` (ciclo Problem/Design/Deliver).
+
 ---
 
 ## Estructura de carpetas relevante

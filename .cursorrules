@@ -13,3 +13,4 @@ Lee el contexto completo en [docs/resumen-proyecto.md](./docs/resumen-proyecto.m
 - **Planificación**: Para tareas complejas, genera un plan en `Workspace/plans/` antes de tocar código.
 - **Validación**: No consideres una tarea terminada sin reporte de éxito de Playwright cuando aplique.
 - **Documentación viva**: Lee y actualiza `docs/` cuando cambies arquitectura, decisiones o runbooks.
+- **Spec Driven Development (SDD)**: Especificación antes de código. Usa specs (PRD, Confluence) como fuente de verdad; genera plan en `Workspace/plans/` antes de implementar. Ver `rules/process-prd-generation.mdc` y `rules/AGENTS.md`.

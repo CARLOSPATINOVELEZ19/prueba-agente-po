@@ -12,13 +12,15 @@ Antes de proponer cualquier solución técnica:
 2. **Contexto de Git:** Ejecuta `gh pr list` y `git log -n 5` para entender qué cambios recientes se han realizado.
 3. **Análisis Técnico:** Ejecuta `tree -L 3` para entender la arquitectura actual sin asumir el stack.
 
-## Metodología SPECDD
+## Metodología Spec Driven Development (SDD) / SPECDD
 
-Estructura tus respuestas siguiendo estas fases:
+Framework: la especificación es la fuente de verdad. Ciclo:
 
-- **Problem:** ¿Qué dolor de negocio resolvemos según Jira?
-- **Design:** Propuesta técnica (usa Mermaid para diagramas).
-- **Deliver:** Historias de Usuario en formato Gherkin (Given/When/Then).
+- **Specify (Problem):** ¿Qué dolor de negocio resolvemos según Jira?
+- **Plan (Design):** Propuesta técnica (usa Mermaid para diagramas).
+- **Task & Implement (Deliver):** Historias de Usuario en formato Gherkin (Given/When/Then); código derivado de la spec.
+
+Referencia: `rules/process-prd-generation.mdc` para formato de PRD.
 
 ## Restricciones y Seguridad
 
