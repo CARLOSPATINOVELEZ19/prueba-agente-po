@@ -1,4 +1,10 @@
 flowchart TB
+    subgraph metadata ["📋 Metadatos"]
+        M1["Título: Flujo estructura"]
+        M2["Objetivo: Flujos de configuración, E2E, auditoría, reportes y agentes"]
+        M3["Ruta archivo: docs/diagrams/flujo-estructura.mmd"]
+    end
+
     subgraph config ["Flujo de configuración"]
         A1[Onboarding] --> A2[platforms.json]
         A2 --> A3[get-platform-config.js]
@@ -25,9 +31,13 @@ flowchart TB
         D4 --> D5[docs/*.html GitHub Pages]
     end
 
-    subgraph agents ["Flujo de agentes"]
-        E1[Orquestador] --> E2[Plan en Workspace/plans/]
-        E2 --> E3[Guardian Playwright]
+    subgraph agents ["Flujo de agentes — Ver 6-inventario-agentes.md"]
+        E1[Orquestador: Scout→Historian→Plan]
+        E2[Plan en Workspace/plans/]
+        E3[Guardian: npm test]
+        E4[GitHub Repos: soporte]
+        E1 --> E2 --> E3
+        E4 -.-> E2
     end
 
     A2 -.-> B3

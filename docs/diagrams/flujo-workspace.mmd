@@ -1,4 +1,10 @@
 flowchart TB
+    subgraph metadata ["📋 Metadatos"]
+        M1["Título: Flujo Workspace"]
+        M2["Objetivo: Generadores → Workspace → deploy"]
+        M3["Ruta archivo: docs/diagrams/flujo-workspace.mmd"]
+    end
+
     subgraph workspace ["Workspace (resultados de agentes - .gitignore)"]
         config[config/ platforms.json]
         reports[reports/]

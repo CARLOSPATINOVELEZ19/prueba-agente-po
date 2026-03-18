@@ -1,18 +1,35 @@
-flowchart LR
-    subgraph equipo ["Equipo de Agentes de IA"]
+flowchart TB
+    subgraph metadata ["📋 Metadatos"]
+        M1["Título: Equipo de agentes"]
+        M2["Objetivo: 6 agentes (Orquestador, Scout, Historian, Guardian, GitHub Repos, Cloud Agent)"]
+        M3["Ruta archivo: docs/diagrams/equipo-agentes.mmd"]
+    end
+
+    subgraph equipo ["Equipo de Agentes de IA — Validar con docs/architecture/6-inventario-agentes.md"]
         direction TB
-        O[🎯 Orquestador]
-        O --> S[🔍 Scout]
-        O --> H[📚 Historian]
-        O --> G[🛡️ Guardian]
+        O["🎯 Orquestador<br/>Regla: 00-swarm-orchestrator.mdc<br/>MCPs: atlassian"]
+        O --> S["🔍 Scout<br/>Fase Análisis: lee Jira<br/>MCPs: atlassian"]
+        O --> H["📚 Historian<br/>Fase Contexto: Codebase + gh<br/>Tools: @Codebase, gh pr list"]
+        O --> R["📂 GitHub Repos<br/>Regla: agent-github-repos.mdc<br/>MCPs: user-github"]
+        O --> G["🛡️ Guardian<br/>Regla: agent-tech-guardian.mdc<br/>Skills: prueba | Tools: npm test"]
+    end
+
+    subgraph cloud ["Cloud Agent autónomo"]
+        CA["☁️ Cloud Agent Datadog Alert<br/>Prompt: automation-datadog-alert-prompt.md<br/>MCPs: datadog, atlassian, github<br/>Trigger: Schedule 15 min"]
     end
 
     subgraph fuentes ["Fuentes de información"]
         J[Jira]
         C[Código]
+        GH[Repos GitHub]
         T[Tests]
+        DD[Datadog]
     end
 
     S --> J
     H --> C
+    R --> GH
     G --> T
+    CA --> DD
+    CA --> GH
+    CA --> J

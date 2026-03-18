@@ -1,4 +1,10 @@
 flowchart TB
+    subgraph metadata ["📋 Metadatos"]
+        M1["Título: Flujo onboarding"]
+        M2["Objetivo: Flujo de onboarding (validación → platforms.json)"]
+        M3["Ruta archivo: docs/diagrams/flujo-onboarding.mmd"]
+    end
+
     Start([Inicio: Primera interacción]) --> Check{¿Existe platforms.json?}
     Check -->|Sí| End([Usar config existente])
     Check -->|No| Step1[Paso 1: Validar MCPs y CLIs]
