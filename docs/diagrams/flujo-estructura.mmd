@@ -36,8 +36,12 @@ flowchart TB
         E2[Plan en Workspace/plans/]
         E3[Guardian: npm test]
         E4[GitHub Repos: soporte]
+        E5[PO-Agile-Master: HU para Jira]
+        E6[Doc Updater: docs vivos + pre-commit]
         E1 --> E2 --> E3
         E4 -.-> E2
+        E5 -.-> E2
+        E6 -.-> E2
     end
 
     A2 -.-> B3

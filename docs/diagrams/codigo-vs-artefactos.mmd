@@ -9,10 +9,12 @@ flowchart TB
         tests[tests/]
         scripts[scripts/]
         tools[tools/]
+        miniverse[miniverse/]
         cursorRules[.cursor/rules/]
         cursorSkills[.cursor/skills/]
         rules[rules/]
         docsSource["docs/"]
+        githooks[.githooks/]
     end
 
     subgraph workspace [Workspace - resultados de agentes - .gitignore]
@@ -30,3 +32,4 @@ flowchart TB
     tests --> playwright
     cursorRules --> plans
     tools --> reports
+    miniverse -.-> playwright

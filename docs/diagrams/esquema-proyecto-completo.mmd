@@ -12,6 +12,8 @@ flowchart TB
             tools[tools/scripts/]
             docs[docs/]
             cursorRules[.cursor/rules/]
+            miniverse[miniverse/]
+            githooks[.githooks/]
         end
 
         subgraph workspace ["Workspace - artefactos"]
@@ -26,6 +28,8 @@ flowchart TB
             ORQ[Orquestador + Scout + Historian]
             GUA[Guardian]
             GHR[GitHub Repos]
+            PO[PO-Agile-Master]
+            DOC[Doc Updater]
             CA[Cloud Agent Datadog]
         end
     end

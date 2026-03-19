@@ -7,11 +7,20 @@ Scripts reutilizables para el proyecto.
 | Script | Descripción |
 |--------|-------------|
 | `create-cursor-automation.js` | Automatiza la creación de la automation Datadog→Cursor en cursor.com/automations (Playwright) |
+| `regenerate-diagram-html.js` | Regenera los `.html` de `docs/diagrams/` desde los `.mmd` (codifica Mermaid para Draw.io) |
 | `generate-cycle-report-html.js` | Genera reporte HTML del ciclo de desarrollo |
 | `analyze-cycle-time.js` | Analiza tiempo por fase del ciclo (Jira); genera MD en `Workspace/reports/` |
 | `deploy-pages.js` | Regenera reportes y copia a `docs/` para GitHub Pages |
 
 ## Uso
+
+### Regenerar diagramas HTML
+
+```bash
+npm run diagrams:regenerate-html
+```
+
+Lee cada `.mmd` en `docs/diagrams/`, comprime el Mermaid (deflate+base64) y genera los `.html` que redirigen a Draw.io con el diagrama precargado. Útil tras actualizar diagramas.
 
 ### Crear automatización en Cursor (Playwright)
 
