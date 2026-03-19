@@ -10,7 +10,7 @@ Antes de dar por válido un diagrama, verificar:
 
 | # | Verificación | Referencia |
 |---|--------------|------------|
-| 1 | **Agentes** — Los 6 agentes están correctos y alineados con el inventario | [6-inventario-agentes.md](../architecture/6-inventario-agentes.md) |
+| 1 | **Agentes** — Los 7 agentes están correctos y alineados con el inventario | [6-inventario-agentes.md](../architecture/6-inventario-agentes.md) |
 | 2 | **Agnóstico vs Particular** — Flujos transversales vs acciones específicas del proyecto | [esquema-funcionamiento-agnostico](esquema-funcionamiento-agnostico.html), [esquema-acciones-particulares](esquema-acciones-particulares.html) |
 | 3 | **Archivos** — Rutas de código, reglas y prompts son las actuales | Inventario + reglas en `.cursor/rules/` |
 | 4 | **MCPs** — Datadog, Atlassian, GitHub usados según corresponda | Inventario sección MCPs por agente |
@@ -53,7 +53,7 @@ Para editar y guardar cambios: abre el `.html`, en Draw.io usa **File → Save a
 | [flujo-workspace.mmd](./flujo-workspace.mmd) | [flujo-workspace.html](./flujo-workspace.html) | Generadores → Workspace → deploy |
 | [flujo-github-pages.mmd](./flujo-github-pages.mmd) | [flujo-github-pages.html](./flujo-github-pages.html) | Flujo deploy:pages → GitHub Pages |
 | [codigo-vs-artefactos.mmd](./codigo-vs-artefactos.mmd) | [codigo-vs-artefactos.html](./codigo-vs-artefactos.html) | Separación código vs artefactos |
-| [equipo-agentes.mmd](./equipo-agentes.mmd) | [equipo-agentes.html](./equipo-agentes.html) | **6 agentes** (Orquestador, Scout, Historian, Guardian, GitHub Repos, Cloud Agent) |
+| [equipo-agentes.mmd](./equipo-agentes.mmd) | [equipo-agentes.html](./equipo-agentes.html) | **7 agentes** (Orquestador, Scout, Historian, Guardian, GitHub Repos, PO-Agile-Master, Cloud Agent) |
 | [4-fases-protocolo.mmd](./4-fases-protocolo.mmd) | [4-fases-protocolo.html](./4-fases-protocolo.html) | 4 fases del protocolo (Análisis → Validación) |
 | [flujo-automation-datadog-alert.mmd](./flujo-automation-datadog-alert.mmd) | [flujo-automation-datadog-alert.html](./flujo-automation-datadog-alert.html) | Cloud Agent Datadog (6 pasos) |
 | [esquema-proyecto-completo.mmd](./esquema-proyecto-completo.mmd) | [esquema-proyecto-completo.html](./esquema-proyecto-completo.html) | Esquema general del proyecto |

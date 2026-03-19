@@ -14,6 +14,7 @@ Incluye:
 - **Scripts de auditoría** de errores de consola en el navegador
 - **Reportes** de ciclo de desarrollo y despliegue a GitHub Pages
 - **Integración** con Jira, Datadog y GitHub vía MCP
+- **Miniverse** — mundo de píxeles compartido para agentes IA (`miniverse/`)
 
 **Configuración por plataforma** (URLs, Jira, Datadog) vive en `Workspace/config/platforms.json`. Ver `docs/onboarding/01-flujo-primera-interaccion.md` para el flujo de primera interacción.
 
@@ -61,12 +62,15 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
    No consideres una tarea terminada sin un reporte de éxito de Playwright cuando aplique.
 
 4. **Uso de MCP**  
-   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para análisis de PRs: `gh pr list`.
+   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para análisis de PRs: `gh pr list`. Para crear Historias de Usuario: agente PO-Agile-Master (`agent-po-agile-master.mdc`). Para actualizar documentación tras cambios de código: agente Doc Updater (`agent-doc-updater.mdc`).
 
-5. **No mezclar contextos**  
+5. **Automatización Datadog → Cursor**  
+   Trigger webhook: validar alertas, consultar repos, generar plan y crear HU en Jira. Ver `docs/runbook/automation-datadog-alert.md`.
+
+6. **No mezclar contextos**  
    Si la tarea es compleja, indica que abrirás un Subagente en lugar de mezclar contextos.
 
-6. **Spec Driven Development (SDD)**  
+7. **Spec Driven Development (SDD)**  
    La especificación es la fuente de verdad. Antes de implementar: (1) Define requisitos y criterios de aceptación, (2) Genera diseño técnico y plan en `Workspace/plans/`, (3) Descompón en tareas atómicas. El código se deriva de la spec; usa PRD/Confluence como input cuando aplique.
 
 ### Framework de trabajo
@@ -136,3 +140,4 @@ prueba-agente-po/
 | `npm run deploy:pages` | Regenera reportes y copia a `docs/` para GitHub Pages |
 | `npm run lint` | ESLint |
 | `npm run format` | Prettier |
+| `npx playwright test --project=miniverse` | Tests E2E Miniverse (requiere `cd miniverse && npm run dev:full`) |

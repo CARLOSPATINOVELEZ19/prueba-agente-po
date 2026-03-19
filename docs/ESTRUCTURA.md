@@ -13,7 +13,10 @@ prueba-agente-po/
 │   │   ├── 00-swarm-orchestrator.mdc   # Orquestador (siempre activa)
 │   │   ├── 01-plans-location.mdc       # Planes en Workspace/plans/
 │   │   ├── 02-onboarding-first-interaction.mdc
-│   │   └── agent-tech-guardian.mdc     # QA/Playwright (globs: tests)
+│   │   ├── agent-tech-guardian.mdc     # QA/Playwright (globs: tests)
+│   │   ├── agent-github-repos.mdc      # Lectura repos GitHub de la plataforma
+│   │   ├── agent-po-agile-master.mdc   # PO: Historias de Usuario para Jira (INVEST)
+│   │   └── agent-doc-updater.mdc       # Experto en documentación (globs: código, docs)
 │   ├── skills/                 # Skills especializados
 │   │   ├── construir/         # Build y deploy
 │   │   └── prueba/            # Tests E2E y validación UI
@@ -30,11 +33,19 @@ prueba-agente-po/
 │   ├── data/                   # Datos de referencia (jira-cycle-*.json)
 │   └── *.html                  # Reportes publicados (GitHub Pages)
 │
+├── miniverse/                  # Mundo de píxeles para agentes IA (ver docs/architecture/1-stack.md)
+│   ├── src/                    # Frontend (Vite) + servidor (Express)
+│   ├── public/                 # world.json, assets
+│   └── .claude/                # Hooks Claude Code
 ├── rules/                      # Reglas técnicas (Playwright, Datadog, PRD)
 ├── scripts/                    # Scripts de auditoría y config
 │   ├── get-platform-config.js  # Lee platforms.json; usado por Playwright y audit
 │   ├── audit-console-errors.js # Auditoría de consola (URL y zonas desde config)
 │   └── audit-data.js           # Helpers para auditoría
+│
+├── .githooks/                  # Git hooks (pre-commit: recordatorio Doc Updater)
+│   ├── pre-commit              # Recordatorio cuando hay código sin docs
+│   └── README.md               # Instalación: git config core.hooksPath .githooks
 │
 ├── tests/
 │   ├── smoke.spec.js           # E2E agnósticos (baseURL y smokePaths desde config)
@@ -98,6 +109,9 @@ docs/data/jira-cycle-*.json → generate-cycle-report-html.js → Workspace/repo
 ```
 Orquestador (00-swarm-orchestrator) → Plan en Workspace/plans/
                                     → Validación Playwright (agent-tech-guardian)
+                                    → Lectura repos plataforma (agent-github-repos)
+                                    → Historias de Usuario para Jira (agent-po-agile-master)
+                                    → Documentación viva (agent-doc-updater, pre-commit)
 ```
 
 ### Diagrama de flujos (vista integrada)
@@ -133,6 +147,7 @@ flowchart TB
     subgraph agents ["Flujo de agentes"]
         E1[Orquestador] --> E2[Plan en Workspace/plans/]
         E2 --> E3[Guardian Playwright]
+        E2 --> E4[PO-Agile-Master: HU para Jira]
     end
 
     A2 -.-> B3

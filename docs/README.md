@@ -20,7 +20,8 @@ docs/
 │   ├── 2-design-system.md
 │   ├── 3-tech-stack-org.md
 │   ├── 4-workspace.md
-│   └── 5-agents-functional-architecture.md   # Agentes (visual, para negocio)
+│   ├── 5-agents-functional-architecture.md   # Agentes (visual, para negocio)
+│   └── 6-inventario-agentes.md               # Inventario unificado de agentes (actualización)
 ├── Asset/                  # Plantillas CSS/HTML para reportes
 ├── onboarding/             # Flujo primera interacción
 ├── runbook/                # Guías operativas
@@ -42,6 +43,7 @@ Los diagramas están embebidos en Mermaid dentro de los documentos para renderiz
 | Ubicación | Diagrama |
 |-----------|----------|
 | [ESTRUCTURA.md](./ESTRUCTURA.md) | Flujos integrados (config, E2E, auditoría, reportes, agentes) |
+| [esquema-proyecto.md](./esquema-proyecto.md) | Esquema visual del proyecto (componentes, automation, config) |
 | [onboarding/01-flujo-primera-interaccion.md](./onboarding/01-flujo-primera-interaccion.md) | Flujo de onboarding (validación MCPs/CLIs → platforms.json) |
 | [architecture/4-workspace.md](./architecture/4-workspace.md) | Flujo de datos Workspace (generadores → carpetas → deploy) |
 | [architecture/0-overview.md](./architecture/0-overview.md) | Separación código vs artefactos |
@@ -60,6 +62,7 @@ Los diagramas están embebidos en Mermaid dentro de los documentos para renderiz
 | [architecture/3-tech-stack-org.md](./architecture/3-tech-stack-org.md) | Ecosistema tecnológico de la organización |
 | [architecture/4-workspace.md](./architecture/4-workspace.md) | Estructura del Workspace (resultados de agentes) |
 | [architecture/5-agents-functional-architecture.md](./architecture/5-agents-functional-architecture.md) | **Arquitectura funcional de agentes** (visual, para negocio) |
+| [architecture/6-inventario-agentes.md](./architecture/6-inventario-agentes.md) | **Inventario de agentes** (nombre, objetivo, MCPs, skills, archivos, prompt) |
 
 ### Onboarding
 
@@ -72,6 +75,7 @@ Los diagramas están embebidos en Mermaid dentro de los documentos para renderiz
 
 | Runbook | Descripción |
 |---------|-------------|
+| [runbook/automation-datadog-alert.md](./runbook/automation-datadog-alert.md) | Automatización Datadog → Cursor: validar alertas, plan y HU en Jira |
 | [runbook/levantar-entorno-local.md](./runbook/levantar-entorno-local.md) | Cómo levantar el entorno local |
 | [runbook/auditoria-proyecto.md](./runbook/auditoria-proyecto.md) | Cómo auditar el proyecto (errores de consola) |
 | [runbook/github-pages.md](./runbook/github-pages.md) | Cómo publicar reportes en GitHub Pages |
@@ -88,6 +92,7 @@ Los diagramas están embebidos en Mermaid dentro de los documentos para renderiz
 | Recurso | Uso |
 |---------|-----|
 | [templates/platforms.example.json](./templates/platforms.example.json) | Plantilla para `Workspace/config/platforms.json` |
+| [templates/automation-datadog-alert-prompt.md](./templates/automation-datadog-alert-prompt.md) | Prompt para Cursor Automation (alertas Datadog → plan + HU) |
 | [Asset/](./Asset/) | Plantillas CSS y HTML para reportes publicados en GitHub Pages |
 | [data/jira-cycle-2025.json](./data/jira-cycle-2025.json) | Datos de referencia para reportes de ciclo |
 

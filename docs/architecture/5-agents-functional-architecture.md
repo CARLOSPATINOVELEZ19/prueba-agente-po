@@ -22,17 +22,26 @@ flowchart LR
         O --> S[🔍 Scout]
         O --> H[📚 Historian]
         O --> G[🛡️ Guardian]
+        O --> R[📂 GitHub Repos]
+        O --> P[📋 PO-Agile-Master]
+        O --> D[📝 Doc Updater]
     end
 
     subgraph fuentes ["Fuentes de información"]
         J[Jira]
         C[Código]
         T[Tests]
+        GH[Repos GitHub]
+        DOC[docs/]
     end
 
     S --> J
     H --> C
     G --> T
+    R --> GH
+    P --> J
+    D --> C
+    D --> DOC
 ```
 
 > **[Abrir en Draw.io](../diagrams/equipo-agentes.html)** — Editar diagrama en la aplicación
@@ -43,6 +52,9 @@ flowchart LR
 | **🔍 Scout** | El explorador | Lee los tickets de Jira y extrae qué se necesita hacer (requerimientos) |
 | **📚 Historian** | El experto en historia | Revisa el código y los cambios recientes para evitar repetir errores del pasado |
 | **🛡️ Guardian** | El validador | Ejecuta pruebas automáticas y solo da por terminada la tarea cuando todo pasa |
+| **📂 GitHub Repos** | El lector de repos | Lee repositorios externos de la plataforma (PRs, archivos, commits) vía MCP GitHub |
+| **📋 PO-Agile-Master** | El Product Owner | Transforma requisitos en Historias de Usuario listas para Jira (formato INVEST, criterios Dado-Cuando-Entonces) |
+| **📝 Doc Updater** | El documentador | Actualiza la documentación cuando el código cambia con una solución definitiva (se activa en pre-commit) |
 
 ---
 
@@ -126,6 +138,31 @@ flowchart TB
 
 ---
 
+### 5️⃣ Agente especializado — GitHub Repos
+
+**Pregunta que responde:** *¿Qué hay en los repos de la plataforma?*
+
+- Lee **repositorios externos** definidos en `platforms.json` (org/repos)
+- Usa MCP GitHub para: archivos, PRs, commits, búsqueda de código
+- Se activa al planificar o al trabajar con config de plataforma
+
+**Valor para negocio:** Contexto completo de la plataforma sin clonar; análisis de múltiples repos en un solo flujo.
+
+---
+
+### 6️⃣ Agente especializado — PO-Agile-Master
+
+**Pregunta que responde:** *¿Cómo expresamos este requisito como Historia de Usuario lista para Sprint?*
+
+- Transforma **requisitos, ideas o descripciones** en Historias de Usuario impecables
+- Aplica formato **INVEST** y criterios de aceptación **Dado-Cuando-Entonces**
+- Se activa al trabajar con planes, specs o docs (`Workspace/plans/`, `**/docs/**`, `**/*.spec.md`)
+- Puede crear la HU directamente en **Jira** vía MCP Atlassian si se solicita
+
+**Valor para negocio:** Historias claras y listas para desarrollo; menos ambigüedad en el backlog; criterios de aceptación testables.
+
+---
+
 ## Resumen ejecutivo (una diapositiva)
 
 | Concepto | Explicación |
@@ -134,6 +171,7 @@ flowchart TB
 | **Cómo trabaja** | 4 fases secuenciales: Análisis (Jira) → Contexto (código) → Planificación → Validación (tests) |
 | **Beneficio principal** | Acelera el ciclo de desarrollo con trazabilidad a Jira y validación automática de calidad |
 | **Herramientas integradas** | Jira, GitHub, Playwright, Datadog |
+| **Agentes especializados** | GitHub Repos (lectura de repos), PO-Agile-Master (Historias de Usuario para Jira) |
 
 ---
 
@@ -141,4 +179,5 @@ flowchart TB
 
 - [0-overview.md](./0-overview.md) — Visión general del proyecto
 - [4-workspace.md](./4-workspace.md) — Dónde se guardan los planes y reportes
+- [6-inventario-agentes.md](./6-inventario-agentes.md) — **Inventario unificado** de agentes (MCPs, skills, archivos, prompt)
 - [../ESTRUCTURA.md](../ESTRUCTURA.md) — Estructura completa del proyecto

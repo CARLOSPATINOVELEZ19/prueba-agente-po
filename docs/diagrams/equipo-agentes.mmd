@@ -1,7 +1,7 @@
 flowchart TB
     subgraph metadata ["📋 Metadatos"]
         M1["Título: Equipo de agentes"]
-        M2["Objetivo: 6 agentes (Orquestador, Scout, Historian, Guardian, GitHub Repos, Cloud Agent)"]
+        M2["Objetivo: 7 agentes (Orquestador, Scout, Historian, Guardian, GitHub Repos, PO-Agile-Master, Cloud Agent)"]
         M3["Ruta archivo: docs/diagrams/equipo-agentes.mmd"]
     end
 
@@ -11,6 +11,7 @@ flowchart TB
         O --> S["🔍 Scout<br/>Fase Análisis: lee Jira<br/>MCPs: atlassian"]
         O --> H["📚 Historian<br/>Fase Contexto: Codebase + gh<br/>Tools: @Codebase, gh pr list"]
         O --> R["📂 GitHub Repos<br/>Regla: agent-github-repos.mdc<br/>MCPs: user-github"]
+        O --> P["📋 PO-Agile-Master<br/>Regla: agent-po-agile-master.mdc<br/>Historias de Usuario para Jira | MCPs: atlassian"]
         O --> G["🛡️ Guardian<br/>Regla: agent-tech-guardian.mdc<br/>Skills: prueba | Tools: npm test"]
     end
 
@@ -29,6 +30,7 @@ flowchart TB
     S --> J
     H --> C
     R --> GH
+    P --> J
     G --> T
     CA --> DD
     CA --> GH
