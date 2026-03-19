@@ -26,7 +26,15 @@
       "datadog": {
         "site": "us1",
         "dashboardIds": [],
-        "monitorTags": []
+        "monitorTags": [],
+        "serviceToRepos": {
+          "_comment": "Mapeo servicio/tag Datadog → repos GitHub para automation de alertas. Ver docs/runbook/automation-datadog-alert.md",
+          "ejemplo-servicio": ["nombre-org/repo-frontend", "nombre-org/repo-api"]
+        }
+      },
+      "github": {
+        "org": "nombre-org",
+        "repos": ["repo-frontend", "repo-backend"]
       }
     }
   ],

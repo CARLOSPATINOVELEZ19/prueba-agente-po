@@ -79,6 +79,7 @@ Si no existe `Workspace/config/platforms.json`, crearlo a partir de `docs/templa
 | **Jira - Tablero de incidentes** | ID o URL del board | `123` |
 | **Jira - Tablero de incidentes de seguridad** | ID o URL del board | `456` |
 | **Datadog** | Site, IDs de dashboards relevantes | `us1`, `[12345, 67890]` |
+| **GitHub - Repos** | Org y repos de la plataforma (para agente GitHub Repos) | `{ "org": "mi-org", "repos": ["frontend", "api"] }` |
 
 ### Formato de salida
 

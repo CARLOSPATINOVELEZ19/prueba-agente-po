@@ -19,5 +19,19 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+      testIgnore: ['**/miniverse.spec.js'],
+    },
+    {
+      name: 'miniverse',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'http://localhost:3001',
+      },
+      testMatch: '**/miniverse.spec.js',
+    },
+  ],
 });

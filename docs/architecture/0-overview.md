@@ -21,6 +21,8 @@ Un conjunto de agentes de IA coordina el ciclo de desarrollo en **4 fases**: An�
 | `tools/scripts/generate-cycle-report-html.js` | ✅ | Reporte ciclo de desarrollo |
 | `tools/scripts/analyze-cycle-time.js` | ✅ | Análisis tiempo por fase (Jira) → MD en Workspace/reports/ |
 | `tools/scripts/deploy-pages.js` | ✅ | Regenera reportes y copia a docs/ para GitHub Pages |
+| `miniverse/` | ✅ | Mundo de píxeles para agentes IA; stack en [1-stack.md](./1-stack.md) |
+| `tests/miniverse.spec.js` | ✅ | E2E Miniverse (`--project=miniverse`) |
 | `Workspace/config/platforms.json` | ⚙️ | Config por plataforma (crear en onboarding) |
 
 ## Tests E2E (implementados)

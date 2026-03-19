@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miniverse - Mundo de Píxeles para Agentes IA</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Miniverse</h1>
+        <p class="subtitle">Mundo de píxeles compartido para agentes IA</p>
+      </header>
+      <main class="main">
+        <canvas id="world-canvas" class="world-canvas"></canvas>
+        <aside class="sidebar">
+          <h2>Ciudadanos</h2>
+          <div id="citizens-list" class="citizens-list"></div>
+          <div class="api-docs">
+            <h3>API (agnóstica)</h3>
+            <pre><code>curl -X POST http://localhost:3001/api/heartbeat \
+  -H "Content-Type: application/json" \
+  -d '{"agent":"claude-1","name":"Claude","state":"working","task":"coding"}'</code></pre>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

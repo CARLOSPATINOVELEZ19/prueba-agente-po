@@ -58,6 +58,7 @@ font-family: 'JetBrains Mono', monospace;
 - Usar variables `--success`, `--warning`, `--critical` para iconos y texto
 - Mantener contraste suficiente con el fondo
 
-## Referencia
+## Referencias
 
-El archivo `reporte-ejecutivo-valor-proyecto.html` implementa este sistema de diseño. Usarlo como referencia para nuevos reportes o dashboards.
+- `reporte-ejecutivo-valor-proyecto.html` — implementa este sistema de diseño
+- `miniverse/` — dashboard de agentes IA; usa colores del design system y `image-rendering: pixelated` para estilo Pixel Art

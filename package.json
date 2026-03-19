@@ -10,6 +10,7 @@
     "audit:lighthouse": "node scripts/audit-lighthouse.js",
     "report:cycle": "node tools/scripts/generate-cycle-report-html.js",
     "deploy:pages": "node tools/scripts/deploy-pages.js",
+    "automation:create-cursor": "node tools/scripts/create-cursor-automation.js",
     "lint": "eslint . --ext .js,.cjs --ignore-pattern Workspace",
     "format": "prettier --write \"**/*.{js,cjs,json,md}\""
   },

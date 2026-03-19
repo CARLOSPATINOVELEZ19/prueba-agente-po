@@ -6,11 +6,20 @@ Scripts reutilizables para el proyecto.
 
 | Script | Descripción |
 |--------|-------------|
+| `create-cursor-automation.js` | Automatiza la creación de la automation Datadog→Cursor en cursor.com/automations (Playwright) |
 | `generate-cycle-report-html.js` | Genera reporte HTML del ciclo de desarrollo |
 | `analyze-cycle-time.js` | Analiza tiempo por fase del ciclo (Jira); genera MD en `Workspace/reports/` |
 | `deploy-pages.js` | Regenera reportes y copia a `docs/` para GitHub Pages |
 
 ## Uso
+
+### Crear automatización en Cursor (Playwright)
+
+```bash
+npm run automation:create-cursor
+```
+
+Abre el navegador, navega a cursor.com/automations e intenta crear la automatización "Datadog Alert → Plan + HU". La primera vez puede pedir login manual; el estado se guarda en `Workspace/playwright/cursor-browser-state/` para reutilizar la sesión. Si la UI de Cursor ha cambiado, el script puede pausar para completar manualmente. Ver `docs/runbook/automation-datadog-alert.md`.
 
 ### Reporte de ciclo
 
