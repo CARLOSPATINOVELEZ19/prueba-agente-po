@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+# Build Miniverse (GitHub Actions genera el artefacto)
+miniverse/dist/
+
 # Playwright
 test-results/
 playwright-report/
