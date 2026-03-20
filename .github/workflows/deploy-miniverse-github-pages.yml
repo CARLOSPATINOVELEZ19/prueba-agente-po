@@ -1,0 +1,53 @@
+# Publica la UI de Miniverse (build estático Vite) en GitHub Pages.
+# Configuración en el repo: Settings → Pages → Source: GitHub Actions.
+name: Deploy Miniverse to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'miniverse/**'
+      - '.github/workflows/deploy-miniverse-github-pages.yml'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages-miniverse
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: miniverse/package-lock.json
+
+      - name: Build Miniverse
+        working-directory: miniverse
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_MINIVERSE_API: https://miniverse-public-production.up.railway.app
+          VITE_MINIVERSE_WS: wss://miniverse-public-production.up.railway.app/ws
+        run: npm ci && npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: miniverse/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
