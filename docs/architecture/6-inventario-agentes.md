@@ -63,7 +63,7 @@
 | **Scripts** | — |
 | **Archivos de código** | Embebido en `.cursor/rules/00-swarm-orchestrator.mdc` (Fase 2). Referencia: `rules/AGENTS.md` (Contexto de Git, Análisis Técnico). |
 | **Archivo de prompt** | No aplica (fase del Orquestador) |
-| **Otra información** | No tiene regla propia. El Orquestador ejecuta esta fase. Usa Codebase para impacto técnico y `gh pr list` para cambios recientes. |
+| **Otra información** | No tiene regla propia. El Orquestador ejecuta esta fase. **Scope: repo actual del proyecto.** Usa Codebase para impacto técnico y `gh pr list`/`git log` para el repo actual. No confundir con GitHub Repos (repos externos). |
 
 ---
 
@@ -95,7 +95,7 @@
 | **Scripts** | — |
 | **Archivos de código** | `.cursor/rules/agent-github-repos.mdc`, `Workspace/config/platforms.json` (github.repos), `docs/templates/platforms.example.json` |
 | **Archivo de prompt** | No aplica (regla Cursor) |
-| **Otra información** | **globs:** `Workspace/config/platforms.json`, `Workspace/plans/**`, `**/platforms.json`, `docs/templates/platforms.example.json`. **alwaysApply: false**. Solo lectura; no push/merge. Repos definidos en `platforms[].github.repos`. |
+| **Otra información** | **globs:** `Workspace/config/platforms.json`, `Workspace/plans/**`, `**/platforms.json`, `docs/templates/platforms.example.json`. **alwaysApply: false**. **Scope: repos externos** definidos en `platforms[].github.repos` (no el repo actual; para el repo actual ver Historian). Solo lectura; no push/merge. |
 
 ---
 

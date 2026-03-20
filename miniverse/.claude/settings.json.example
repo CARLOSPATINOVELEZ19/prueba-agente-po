@@ -1,5 +1,5 @@
 {
-  "description": "Hooks para que Claude Code envíe eventos de sesión a Miniverse. Copia a .claude/settings.json y ajusta MINIVERSE_URL si es necesario.",
+  "description": "Hooks para que Claude Code envíe eventos de sesión a Miniverse. Copia a .claude/settings.json y ajusta MINIVERSE_URL si es necesario (API en http://localhost:4321 por defecto).",
   "hooks": {
     "SessionStart": [
       {

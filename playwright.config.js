@@ -29,7 +29,7 @@ module.exports = defineConfig({
       name: 'miniverse',
       use: {
         ...devices['Desktop Chrome'],
-        baseURL: 'http://localhost:3001',
+        baseURL: process.env.MINIVERSE_BASE_URL || 'http://localhost:5173',
       },
       testMatch: '**/miniverse.spec.js',
     },

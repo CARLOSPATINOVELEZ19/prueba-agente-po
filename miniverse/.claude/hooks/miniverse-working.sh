@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # PreToolUse: Claude va a usar una herramienta -> state: working
-MINIVERSE_URL="${MINIVERSE_URL:-http://localhost:3001}"
+MINIVERSE_URL="${MINIVERSE_URL:-http://localhost:4321}"
 INPUT=$(cat)
 TOOL_NAME=$(echo "$INPUT" | jq -r '.tool_name // "tool"' 2>/dev/null || echo "tool")
 AGENT_ID="claude-$(hostname)"

@@ -36,19 +36,18 @@
 
 ### Miniverse (`miniverse/`)
 
-Mundo de píxeles compartido para agentes IA. Stack extendido (submódulo independiente):
+Mundo de píxeles compartido para agentes IA, basado en el upstream **[ianscott313/miniverse](https://github.com/ianscott313/miniverse)** (npm `@miniverse/core`, `@miniverse/server`).
 
-| Tecnología | Versión | Uso |
-|------------|---------|-----|
-| Node.js | 18+ | Runtime (alineado con raíz) |
-| TypeScript | ~5.9 | Tipado en frontend y servidor |
-| Vite | ^8.0 | Build y dev del frontend |
-| Express | ^5.2 | API REST y servidor estático |
-| ws | ^8.19 | WebSocket tiempo real |
+| Tecnología | Uso |
+|------------|-----|
+| Node.js 18+ | Runtime |
+| TypeScript | Cliente Vite |
+| Vite ^5 | Dev server y HMR de la UI (`http://localhost:5173`) |
+| `@miniverse/server` | CLI `miniverse`, API REST + WebSocket (`http://localhost:4321`) |
+| `@miniverse/core` | Motor canvas, ciudadanos, editor |
 
 **Lineamientos aplicados:**
 
-- Planes en `Workspace/plans/` (ej. `miniverse-plan.md`)
-- Comunicación agnóstica: API HTTP/WS sin hardcodear plataformas
-- Estilo visual: `image-rendering: pixelated` (Pixel Art); colores alineados con [2-design-system.md](./2-design-system.md)
-- Validación: tests E2E en `tests/miniverse.spec.js` (`npx playwright test --project=miniverse`)
+- Planes en `Workspace/plans/` cuando apliquen cambios estructurales
+- API de heartbeats y acciones [documentada en el upstream](https://github.com/ianscott313/miniverse#readme); sin hardcodear plataformas en el código del monorepo
+- Validación: `tests/miniverse.spec.js` — `npx playwright test --project=miniverse` (con `npm run dev` en `miniverse/`)

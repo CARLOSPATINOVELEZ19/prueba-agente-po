@@ -140,4 +140,4 @@ prueba-agente-po/
 | `npm run deploy:pages` | Regenera reportes y copia a `docs/` para GitHub Pages |
 | `npm run lint` | ESLint |
 | `npm run format` | Prettier |
-| `npx playwright test --project=miniverse` | Tests E2E Miniverse (requiere `cd miniverse && npm run dev:full`) |
+| `npx playwright test --project=miniverse` | Tests E2E Miniverse (requiere `cd miniverse && npm run dev`: Vite :5173 + API :4321) |

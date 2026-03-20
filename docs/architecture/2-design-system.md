@@ -61,4 +61,4 @@ font-family: 'JetBrains Mono', monospace;
 ## Referencias
 
 - `reporte-ejecutivo-valor-proyecto.html` — implementa este sistema de diseño
-- `miniverse/` — dashboard de agentes IA; usa colores del design system y `image-rendering: pixelated` para estilo Pixel Art
+- `miniverse/` — dashboard de agentes IA ([Miniverse upstream](https://github.com/ianscott313/miniverse)); estilo pixel art del renderer `@miniverse/core`; alinear tonos con este documento solo si se personaliza la UI

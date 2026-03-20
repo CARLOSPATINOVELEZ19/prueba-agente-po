@@ -12,6 +12,8 @@ Antes de proponer cualquier solución técnica:
 2. **Contexto de Git:** Ejecuta `gh pr list` y `git log -n 5` para entender qué cambios recientes se han realizado.
 3. **Análisis Técnico:** Ejecuta `tree -L 3` para entender la arquitectura actual sin asumir el stack.
 
+> **Implementación:** Este protocolo se ejecuta por el Orquestador en fases: Scout (Contexto de Negocio), Historian (Contexto de Git + Análisis Técnico). Ver `.cursor/rules/00-swarm-orchestrator.mdc`.
+
 ## Metodología Spec Driven Development (SDD) / SPECDD
 
 Framework: la especificación es la fuente de verdad. Ciclo:
