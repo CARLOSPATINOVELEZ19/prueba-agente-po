@@ -7,11 +7,17 @@
 const path = require('path');
 const fs = require('fs');
 
-const CONFIG_PATH = path.join(__dirname, '../Workspace/config/platforms.json');
+function getConfigPath() {
+  return (
+    process.env.PLATFORMS_CONFIG_PATH ||
+    path.join(__dirname, '../Workspace/config/platforms.json')
+  );
+}
 
 function getPlatformsConfig() {
-  if (!fs.existsSync(CONFIG_PATH)) return null;
-  return JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf-8'));
+  const configPath = getConfigPath();
+  if (!fs.existsSync(configPath)) return null;
+  return JSON.parse(fs.readFileSync(configPath, 'utf-8'));
 }
 
 function getPlatformConfig() {

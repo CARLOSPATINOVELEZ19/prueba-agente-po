@@ -38,7 +38,7 @@ Incluye:
 ### Tests
 
 - **Playwright**: `tests/smoke.spec.js` — smoke tests E2E agnósticos (baseURL y rutas desde `Workspace/config/platforms.json`)
-- **Vitest**: `tests/unit/` — tests unitarios (audit-data, helpers)
+- **Vitest**: `tests/unit/` — tests unitarios (audit-data, get-platform-config, analyze-cycle-time)
 
 ### Scripts
 

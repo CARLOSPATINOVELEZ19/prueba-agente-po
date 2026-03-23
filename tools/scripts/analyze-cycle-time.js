@@ -26,10 +26,7 @@ const FIELDS = {
   customfield_24762: 'Producción',
 };
 
-function analyze(dataPath) {
-  const raw = fs.readFileSync(dataPath, 'utf8');
-  const data = JSON.parse(raw);
-
+function analyzeFromData(data) {
   if (!data.issues || !Array.isArray(data.issues)) {
     throw new Error('Formato inválido: se esperaba { issues: [...] }');
   }
@@ -68,6 +65,12 @@ function analyze(dataPath) {
   }
 
   return { stats, byProject, totalIssues: issues.length };
+}
+
+function analyze(dataPath) {
+  const raw = fs.readFileSync(dataPath, 'utf8');
+  const data = JSON.parse(raw);
+  return analyzeFromData(data);
 }
 
 function formatHours(h) {
@@ -199,4 +202,8 @@ function main() {
   console.log('\n---\nReporte guardado en:', outPath);
 }
 
-main();
+// Exportadas para tests unitarios
+module.exports = { analyze, analyzeFromData, formatHours, report };
+
+// Solo ejecutar main cuando se invoca directamente (node analyze-cycle-time.js)
+if (require.main === module) main();
