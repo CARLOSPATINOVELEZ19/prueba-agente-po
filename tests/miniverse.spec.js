@@ -69,4 +69,46 @@ test.describe('Miniverse', () => {
       )
       .toBe(8);
   });
+
+  test('nueva verificación: inventario completo (8 agentes, API exacta + mundo)', async ({
+    page,
+    request,
+  }) => {
+    const cleanupIds = [...INVENTORY_AGENTS.map((x) => x.agent), 'e2e-test'];
+    for (const agent of cleanupIds) {
+      await request.post(`${MINIVERSE_API}/api/agents/remove`, { data: { agent } }).catch(() => {});
+    }
+
+    for (const a of INVENTORY_AGENTS) {
+      const res = await request.post(`${MINIVERSE_API}/api/heartbeat`, {
+        data: { agent: a.agent, name: a.name, state: a.state, task: `Equipo completo · ${a.name}` },
+      });
+      expect(res.ok()).toBeTruthy();
+    }
+
+    const listRes = await request.get(`${MINIVERSE_API}/api/agents`);
+    expect(listRes.ok()).toBeTruthy();
+    const { agents } = await listRes.json();
+    const list = agents ?? [];
+    expect(list.length, '/api/agents debe listar exactamente 8 agentes').toBe(8);
+
+    const byId = Object.fromEntries(list.map((x) => [x.agent, x]));
+    for (const a of INVENTORY_AGENTS) {
+      const row = byId[a.agent];
+      expect(row, `fila ${a.agent}`).toBeTruthy();
+      expect(row.name).toBe(a.name);
+      expect(row.state).toBe(a.state);
+      expect(String(row.task ?? '')).toContain('Equipo completo');
+    }
+
+    await page.goto('/');
+    await expect(page.locator('#miniverse-container canvas')).toBeVisible({ timeout: 20000 });
+    await expect
+      .poll(
+        async () =>
+          page.evaluate(() => globalThis.__E2E_MINIVERSE_CITIZENS__ ?? -1),
+        { timeout: 15000 },
+      )
+      .toBe(8);
+  });
 });

@@ -23,7 +23,8 @@ module.exports = defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-      testIgnore: ['**/miniverse.spec.js'],
+      // Debe incluir **/unit/**: si solo se ignora miniverse, se pierde el ignore raíz y Vitest (*.test.js) choca con expect de Playwright.
+      testIgnore: ['**/miniverse.spec.js', '**/unit/**'],
     },
     {
       name: 'miniverse',
