@@ -4,6 +4,9 @@ node_modules/
 # Build Miniverse (GitHub Actions genera el artefacto)
 miniverse/dist/
 
+# Vitest
+coverage/
+
 # Playwright
 test-results/
 playwright-report/

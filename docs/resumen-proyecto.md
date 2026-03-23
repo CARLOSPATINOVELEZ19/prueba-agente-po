@@ -38,7 +38,7 @@ Incluye:
 ### Tests
 
 - **Playwright**: `tests/smoke.spec.js` — smoke tests E2E agnósticos (baseURL y rutas desde `Workspace/config/platforms.json`)
-- **Vitest**: `tests/unit/` — tests unitarios (audit-data, get-platform-config, analyze-cycle-time)
+- **Vitest**: `tests/unit/` — tests unitarios (audit-data, get-platform-config, analyze-cycle-time). Ver `docs/testing/vitest-cli.md` para comandos CLI.
 
 ### Scripts
 
@@ -133,7 +133,11 @@ prueba-agente-po/
 | Comando | Descripción |
 |---------|-------------|
 | `npm test` | Tests E2E Playwright (URL desde config) |
-| `npm run test:unit` | Tests unitarios (Vitest) |
+| `npm run test:unit` | Tests unitarios Vitest (single run) |
+| `npm run test:unit:watch` | Vitest watch (desarrollo) |
+| `npm run test:unit:ui` | Vitest UI interactiva |
+| `npm run test:unit:coverage` | Vitest con cobertura → `./coverage/` |
+| `npm run test:unit:list` | Lista tests Vitest |
 | `npm run test:ui` | Playwright con UI interactiva |
 | `npm run audit` | Auditoría de errores de consola (URL desde config) |
 | `npm run report:cycle` | Genera reporte ciclo de desarrollo → `Workspace/reports/` |

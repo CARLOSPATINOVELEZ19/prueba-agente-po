@@ -27,6 +27,7 @@ prueba-agente-po/
 │   ├── onboarding/             # Flujo primera interacción
 │   ├── runbook/                # Guías operativas
 │   ├── decisions/              # ADRs
+│   ├── testing/                # Docs de testing (vitest-cli.md)
 │   ├── analisis/               # Análisis en Markdown
 │   ├── templates/              # Plantillas (platforms.example.json)
 │   ├── Asset/                  # CSS/HTML para reportes
