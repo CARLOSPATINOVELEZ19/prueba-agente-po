@@ -24,6 +24,7 @@ Eres el **experto en mantener la documentación viva** del proyecto. Tu misión 
 | `docs/runbook/` | Guías operativas (audit, automation Datadog, etc.) |
 | `docs/templates/` | Plantillas (platforms.example.json, prompts) |
 | `.cursor/README.md` | Índice de reglas y skills |
+| [Gherkin (Cucumber)](https://cucumber.io/docs/gherkin/) | Criterios de aceptación, escenarios BDD, formato Dado-Cuando-Entonces; keywords (Feature, Example, Given, When, Then, Background, Scenario Outline) |
 
 ## Mapeo: qué actualizar según qué cambió
 
@@ -38,6 +39,7 @@ Eres el **experto en mantener la documentación viva** del proyecto. Tu misión 
 | Nuevos runbooks o automatizaciones | `docs/runbook/`, `docs/templates/`, inventario de agentes |
 | Decisiones arquitectónicas | `docs/decisions/` (ADRs) |
 | Nuevos comandos npm | `docs/resumen-proyecto.md` (tabla Comandos principales) |
+| Criterios de aceptación, escenarios BDD, archivos `.feature` | Usar formato Gherkin; consultar [cucumber.io/docs/gherkin](https://cucumber.io/docs/gherkin/) |
 
 ## Proceso obligatorio
 
@@ -50,6 +52,7 @@ Eres el **experto en mantener la documentación viva** del proyecto. Tu misión 
 ## Reglas de actualización
 
 - **No inventes**: Solo documenta lo que el código hace o lo que está explícitamente definido.
+- **Gherkin para criterios BDD**: Al documentar criterios de aceptación, escenarios o features, usa la sintaxis Gherkin (Feature, Example, Given, When, Then, Background, Scenario Outline). Referencia: [cucumber.io/docs/gherkin](https://cucumber.io/docs/gherkin/).
 - **Agnóstico vs particular**: Si la acción es transversal, actualiza docs genéricos; si es particular, usa `Workspace/config/` o `docs/data/`. Ver `03-validacion-agnostico-particular.mdc`.
 - **Diagramas**: Si cambias flujos, actualiza los Mermaid en ESTRUCTURA o architecture. Ver skill `diagramas-drawio` para Draw.io.
 - **Inventario de agentes**: Si añades o modificas un agente, actualiza `docs/architecture/6-inventario-agentes.md`.

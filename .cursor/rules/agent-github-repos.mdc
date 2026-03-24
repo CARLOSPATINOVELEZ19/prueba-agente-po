@@ -1,5 +1,4 @@
 ---
-description: "Especialista en lectura de repositorios GitHub de la plataforma. Se activa al analizar repos externos o config de plataforma."
 globs: ["Workspace/config/platforms.json", "Workspace/plans/**", "**/platforms.json", "docs/templates/platforms.example.json"]
 alwaysApply: false
 ---

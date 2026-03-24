@@ -47,6 +47,14 @@ flowchart TB
 | **datadog** | Logs, métricas, dashboards, incidentes | Ver skill `datadog-mcp-setup`: revisar que `mcp.json` no tenga `${DD_MCP_DOMAIN}` |
 | **github** | PRs, issues, `gh pr list` | Probar `list_pull_requests` o verificar que `gh` CLI esté instalado |
 
+### MCP opcional: Playwright
+
+| MCP | Uso | Validación |
+|-----|-----|------------|
+| **playwright** | Exploración interactiva de la UI, verificación ad hoc | Ver `docs/onboarding/02-playwright-mcp-config.md`. Comprobar que el servidor aparece en Cursor o probar `browser_navigate` |
+
+Complementa al CLI `npx playwright`; no lo sustituye. Para smoke tests y CI se usa `npm test`.
+
 ### CLIs requeridos
 
 | CLI | Uso | Comando de validación |
@@ -97,6 +105,7 @@ El archivo `Workspace/config/platforms.json` debe seguir la estructura de la pla
 - [ ] CLI `npx playwright`: instalado
 - [ ] `Workspace/config/platforms.json` creado con al menos una plataforma
 - [ ] URLs, Jira y Datadog definidos para la plataforma por defecto
+- [ ] (Opcional) MCP Playwright: configurado para exploración interactiva — ver `docs/onboarding/02-playwright-mcp-config.md`
 
 ---
 
@@ -105,3 +114,4 @@ El archivo `Workspace/config/platforms.json` debe seguir la estructura de la pla
 - Plantilla: `docs/templates/platforms.example.json`
 - Skill Datadog: `.cursor/plugins/.../datadog-mcp-setup/SKILL.md`
 - Estructura Workspace: `docs/architecture/4-workspace.md`
+- Playwright MCP (opcional): `docs/onboarding/02-playwright-mcp-config.md`

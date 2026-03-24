@@ -62,7 +62,7 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
    No consideres una tarea terminada sin un reporte de éxito de Playwright cuando aplique.
 
 4. **Uso de MCP**  
-   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para análisis de PRs: `gh pr list`. Para crear Historias de Usuario: agente PO-Agile-Master (`agent-po-agile-master.mdc`). Para actualizar documentación tras cambios de código: agente Doc Updater (`agent-doc-updater.mdc`).
+   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para exploración interactiva de la UI: MCP `playwright` (opcional; ver `docs/onboarding/02-playwright-mcp-config.md`). Para análisis de PRs: `gh pr list`. Para crear Historias de Usuario: agente PO-Agile-Master (`agent-po-agile-master.mdc`). Para actualizar documentación tras cambios de código: agente Doc Updater (`agent-doc-updater.mdc`).
 
 5. **Automatización Datadog → Cursor**  
    Trigger webhook: validar alertas, consultar repos, generar plan y crear HU en Jira. Ver `docs/runbook/automation-datadog-alert.md`.

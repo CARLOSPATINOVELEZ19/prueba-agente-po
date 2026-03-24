@@ -1,6 +1,6 @@
 ---
 name: prueba-ui
-description: Abre el navegador, comprueba el funcionamiento de la interfaz de usuario recién creada o modificada, y si falla, corrige los errores y vuelve a intentar automáticamente. Usa Playwright para E2E o MCP de Chrome si está disponible.
+description: Abre el navegador, comprueba el funcionamiento de la interfaz de usuario recién creada o modificada, y si falla, corrige los errores y vuelve a intentar automáticamente. Usa Playwright Test (CLI) para tests E2E; Playwright MCP para exploración interactiva cuando esté disponible.
 ---
 
 # Skill de Prueba de UI
@@ -35,12 +35,12 @@ npm run test:ui
 4. **Volver al paso 2** y ejecutar los tests de nuevo
 5. Repetir hasta que todos pasen
 
-### 4. MCP de Chrome (opcional)
+### 4. Playwright MCP (opcional, si está configurado)
 
-Si el proyecto tiene MCP de Chrome/Puppeteer configurado, úsalo para:
-- Navegar a la URL de la interfaz
-- Verificar que elementos clave cargan
-- Capturar errores de consola
+Si Playwright MCP está disponible en Cursor (ver `docs/onboarding/02-playwright-mcp-config.md`):
+- Usa `browser_navigate`, `browser_snapshot` para explorar una página concreta
+- Útil para verificación ad hoc sin escribir un test
+- **Prioriza** `npm test` para smoke tests conocidos; MCP para exploración interactiva
 
 ### 5. Criterio de éxito
 

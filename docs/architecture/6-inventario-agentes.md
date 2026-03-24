@@ -127,7 +127,7 @@
 | **Scripts** | — |
 | **Archivos de código** | `.cursor/rules/agent-doc-updater.mdc`, `.githooks/pre-commit` |
 | **Archivo de prompt** | No aplica (regla Cursor) |
-| **Otra información** | **globs:** `**/*.{js,ts,tsx,cjs,mjs}`, `scripts/`, `tests/`, `tools/`, `miniverse/`, `docs/**`, `rules/**`. **alwaysApply: false**. **Trigger adicional:** pre-commit hook (`.githooks/pre-commit`) muestra recordatorio cuando hay cambios en código sin cambios en docs. Instalación: `git config core.hooksPath .githooks`. |
+| **Otra información** | **globs:** `**/*.{js,ts,tsx,cjs,mjs}`, `scripts/`, `tests/`, `tools/`, `miniverse/`, `docs/**`, `rules/**`. **alwaysApply: false**. **Trigger adicional:** pre-commit hook (`.githooks/pre-commit`) muestra recordatorio cuando hay cambios en código sin cambios en docs. Instalación: `git config core.hooksPath .githooks`. **Referencia BDD:** usa [Gherkin (Cucumber)](https://cucumber.io/docs/gherkin/) para criterios de aceptación y formato Dado-Cuando-Entonces. |
 
 ---
 
