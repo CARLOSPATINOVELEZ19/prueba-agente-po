@@ -28,6 +28,7 @@ Los reportes HTML en `docs/` se publican en GitHub Pages para acceso desde la we
 | Análisis ciclo de desarrollo | `analisis-ciclo-desarrollo.html` | ✅ Generado por `deploy:pages` |
 | Auditoría errores consola | `auditoria-errores-consola.html` | ⏳ Pendiente (no hay generador HTML) |
 | Reporte Ciencuadras | `reporte-ciencuadras-marzo-2026.html` | ⏳ Pendiente (no existe) |
+| Agentes, MCPs, CLIs, Skills y actividades | `diagrams/agentes-mcps-cli-skills-actividades.html` | ✅ Versionado en `docs/diagrams/` |
 
 **Importante:** No añadir enlaces en `reportes.html` ni `index.html` a páginas que no existan en `docs/`, para evitar 404 en GitHub Pages.
 
