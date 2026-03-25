@@ -24,7 +24,7 @@ Hay dos modos posibles (no uses los dos a la vez para el mismo sitio):
 
 ### B) GitHub Actions (Miniverse)
 
-Si **Source** es **GitHub Actions**, el sitio publicado es solo el artefacto del workflow (build de `miniverse/dist`). Los archivos que están solo en `docs/` **no** se publican solos: el workflow `.github/workflows/deploy-miniverse-github-pages.yml` copia explícitamente páginas estáticas necesarias (por ejemplo `docs/diagrams/agentes-mcps-cli-skills-actividades.html` → `diagrams/…` en el sitio). Tras cambiar ese HTML o el workflow, hace falta un push que dispare el deploy (o **Actions** → ejecutar el workflow manualmente).
+Si **Source** es **GitHub Actions**, el sitio publicado es el artefacto del workflow (build de `miniverse/dist`). El workflow `.github/workflows/deploy-miniverse-github-pages.yml` **copia** además casi todo `docs/`: HTML de reportes (excepto `docs/index.html`, para no sustituir el `index.html` del SPA de Vite), `Asset/`, `data/`, `diagrams/*.html` y `screenshots-auditoria/` si existen. Cualquier cambio bajo `docs/**` dispara el deploy en push a `main`. Tras cambiar el workflow, hace falta push o **Actions** → ejecutar el workflow manualmente.
 
 ## Reportes disponibles
 
