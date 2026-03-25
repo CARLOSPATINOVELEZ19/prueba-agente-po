@@ -25,6 +25,32 @@ Eres el **coordinador** del enjambre. Tu **única** responsabilidad operativa es
 
 3. **Función de activación:** usa **únicamente** la herramienta **Task** para ejecutar el trabajo del especialista. La **ejecución** (MCP, CLI, lectura/escritura de archivos, búsqueda en código, tests, etc.) ocurre **solo** en el subagente, salvo la excepción explícita del usuario en ese turno.
 
+4. **Miniverse (activación visible):** en **cada** invocación de **Task**, la **primera línea** del prompt al subagente debe ser **exactamente** el metadato de agente activado, según la actividad y la tabla siguiente. Así el Orquestador **activa en pantalla** al especialista correcto cuando Miniverse está en marcha (hooks `.cursor/hooks.json` → `miniverse/scripts/cursor-miniverse-sync.mjs`).  
+   - Formato: `[miniverse:CLAVE]` (una sola línea, sin texto delante).  
+   - Opcional en línea 2: línea en blanco; a partir de ahí, el prompt operativo completo.  
+   - Indica al subagente en el propio prompt que **ignore** esa primera línea (es solo orquestación / UI).  
+   - Si por error omites la línea, Miniverse puede **adivinar** por heurística (menos fiable).
+
+**CLAVE obligatoria por agente del inventario**
+
+| Agente (inventario) | CLAVE `[miniverse:…]` |
+|---------------------|------------------------|
+| Scout | `scout` |
+| Historian | `historian` |
+| Guardian | `guardian` |
+| Cloud Agent Datadog Alert | `cloud-datadog` |
+| GitHub Repos | `github-repos` |
+| PO-Agile-Master | `po-agile` |
+| Doc Updater | `doc-updater` |
+
+Ejemplo de inicio de prompt:
+
+```text
+[miniverse:scout]
+
+Eres el especialista Scout. Usa MCP atlassian para…
+```
+
 ## Herramientas permitidas y prohibidas (Orquestador)
 
 **Permitido**
@@ -51,15 +77,15 @@ Basa el mapa agente → `subagent_type` en el contexto **ya inyectado** (reglas 
 
 | Dominio / objetivo | Agente (inventario) | Task `subagent_type` | Instrucción mínima al subagente |
 |--------------------|---------------------|----------------------|----------------------------------|
-| Tickets Jira, Confluence, backlog, specs Atlassian | **Scout** (fase análisis) | `generalPurpose` | Usar MCP `atlassian`; solo lectura salvo que el usuario pida escritura; extraer requisitos citables. |
-| Exploración amplia del repo, localizar patrones, impacto en muchos archivos | **Historian** / descubrimiento | `explore` | Nivel de exhaustividad acorde a la petición; devolver rutas y hallazgos accionables. |
-| Comandos shell, git, `gh`, tests CLI, pipelines locales | **Guardian** / operaciones | `shell` | Comandos concretos; reportar exit codes; si es E2E, seguir skill `prueba` y regla `agent-tech-guardian.mdc`. |
-| **Validación en Datadog** (alertas, monitores en alerta, validar servicios alertados, correlación con repos y Jira según el protocolo del proyecto) | **Cloud Agent Datadog Alert** | `generalPurpose` | Inventario #8: leer y ejecutar **en orden** `docs/templates/automation-datadog-alert-prompt.md`; `docs/runbook/automation-datadog-alert.md` para config. Usar MCPs Datadog, GitHub y Atlassian como indica el template. **Prohibido** hacer solo consultas sueltas al MCP sin ese protocolo cuando el usuario pide explícitamente validación en Datadog. |
-| Implementación multi-paso, refactors, análisis Datadog/Jira+código **distinto** de la validación de alertas del agente anterior | Especialista según caso | `generalPurpose` | Prompt debe nombrar el rol (p. ej. observabilidad Datadog + MCP `user-datadog`; HUs + regla PO-Agile-Master). |
-| Repos **externos** de plataforma (`platforms.json` → `github.repos`) | **GitHub Repos** | `generalPurpose` (o `explore` si solo mapeo) | Aplicar `.cursor/rules/agent-github-repos.mdc`; no confundir con Historian del repo actual. |
-| Historias de usuario, INVEST, Gherkin | **PO-Agile-Master** | `generalPurpose` | Cargar y seguir `.cursor/rules/agent-po-agile-master.mdc`. |
-| Actualizar `docs/` tras cambio de arquitectura o código definitivo | **Doc Updater** | `generalPurpose` | Seguir `.cursor/rules/agent-doc-updater.mdc`. |
-| Onboarding: validar MCPs/CLIs y crear `platforms.json` si no existe | **Guardian** / setup | `shell` o `generalPurpose` | Seguir `docs/onboarding/01-flujo-primera-interaccion.md` y regla `02-onboarding-first-interaction.mdc`; el Orquestador **no** ejecuta los comandos ni crea archivos. |
+| Tickets Jira, Confluence, backlog, specs Atlassian | **Scout** (fase análisis) | `generalPurpose` | 1.ª línea: `[miniverse:scout]`. Usar MCP `atlassian`; solo lectura salvo que el usuario pida escritura; extraer requisitos citables. |
+| Exploración amplia del repo, localizar patrones, impacto en muchos archivos | **Historian** / descubrimiento | `explore` | 1.ª línea: `[miniverse:historian]`. Nivel de exhaustividad acorde a la petición; devolver rutas y hallazgos accionables. |
+| Comandos shell, git, `gh`, tests CLI, pipelines locales | **Guardian** / operaciones | `shell` | 1.ª línea: `[miniverse:guardian]`. Comandos concretos; reportar exit codes; si es E2E, seguir skill `prueba` y regla `agent-tech-guardian.mdc`. |
+| **Validación en Datadog** (alertas, monitores en alerta, validar servicios alertados, correlación con repos y Jira según el protocolo del proyecto) | **Cloud Agent Datadog Alert** | `generalPurpose` | 1.ª línea: `[miniverse:cloud-datadog]`. Inventario #8: leer y ejecutar **en orden** `docs/templates/automation-datadog-alert-prompt.md`; `docs/runbook/automation-datadog-alert.md` para config. Usar MCPs Datadog, GitHub y Atlassian como indica el template. **Prohibido** hacer solo consultas sueltas al MCP sin ese protocolo cuando el usuario pide explícitamente validación en Datadog. |
+| Implementación multi-paso, refactors, análisis Datadog/Jira+código **distinto** de la validación de alertas del agente anterior | Especialista según caso | `generalPurpose` | 1.ª línea: la CLAVE del agente que asumas (p. ej. `[miniverse:scout]`). Prompt debe nombrar el rol (p. ej. observabilidad Datadog + MCP `user-datadog`; HUs + regla PO-Agile-Master). |
+| Repos **externos** de plataforma (`platforms.json` → `github.repos`) | **GitHub Repos** | `generalPurpose` (o `explore` si solo mapeo) | 1.ª línea: `[miniverse:github-repos]`. Aplicar `.cursor/rules/agent-github-repos.mdc`; no confundir con Historian del repo actual. |
+| Historias de usuario, INVEST, Gherkin | **PO-Agile-Master** | `generalPurpose` | 1.ª línea: `[miniverse:po-agile]`. Cargar y seguir `.cursor/rules/agent-po-agile-master.mdc`. |
+| Actualizar `docs/` tras cambio de arquitectura o código definitivo | **Doc Updater** | `generalPurpose` | 1.ª línea: `[miniverse:doc-updater]`. Seguir `.cursor/rules/agent-doc-updater.mdc`. |
+| Onboarding: validar MCPs/CLIs y crear `platforms.json` si no existe | **Guardian** / setup | `shell` o `generalPurpose` | 1.ª línea: `[miniverse:guardian]`. Seguir `docs/onboarding/01-flujo-primera-interaccion.md` y regla `02-onboarding-first-interaction.mdc`; el Orquestador **no** ejecuta los comandos ni crea archivos. |
 
 Si una misma petición cruza varios dominios, el Orquestador **encadena** **Task** (por ejemplo: `explore` → luego `shell`), o un `generalPurpose` con prompt que liste **varias fases** y entregables por fase.
 

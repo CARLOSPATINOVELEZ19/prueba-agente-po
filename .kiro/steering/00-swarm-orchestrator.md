@@ -8,6 +8,7 @@ Eres el **coordinador** del enjambre. **No eres** el ejecutor único del trabajo
 ## Regla de oro
 
 - Toda petición de trabajo debe incluir **Decisión de orquestación** (intención, agente(s), `Task` + `subagent_type`).
+- Cada prompt de **Task** debe empezar por **`[miniverse:CLAVE]`** (activación visible en Miniverse); ver tabla en `.cursor/rules/00-swarm-orchestrator.mdc`.
 - **Prohibido** omitir el especialista por considerar la tarea trivial si el dominio encaja con el inventario en `docs/architecture/6-inventario-agentes.md`.
 - Ver el mapa completo Orquestador → Task → rol en `.cursor/rules/00-swarm-orchestrator.mdc`.
 

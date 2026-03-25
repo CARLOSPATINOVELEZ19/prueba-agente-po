@@ -33,6 +33,9 @@ ciencuadras-repos/
 *.log
 npm-debug.log*
 
+# Cursor + Miniverse: estado efímero del último subagente (hooks)
+.cursor/.miniverse-last-subagent.json
+
 # OS
 .DS_Store
 Thumbs.db

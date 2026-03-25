@@ -12,3 +12,4 @@ Guías paso a paso para operaciones recurrentes.
 | [auditoria-proyecto.md](./auditoria-proyecto.md) | Auditoría: errores de consola (`npm run audit`) y rendimiento Lighthouse (`npm run audit:lighthouse`) |
 | [levantar-entorno-local.md](./levantar-entorno-local.md) | Cómo levantar el entorno local |
 | [github-pages.md](./github-pages.md) | Cómo publicar reportes en GitHub Pages |
+| [validar-miniverse-cursor-hooks.md](./validar-miniverse-cursor-hooks.md) | Comprobar hooks Cursor → Miniverse (sin Jira ni HUs) |

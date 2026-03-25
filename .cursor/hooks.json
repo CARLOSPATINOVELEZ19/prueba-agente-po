@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hooks": {
+    "subagentStart": [
+      {
+        "command": ".cursor/hooks/miniverse-sync.sh subagentStart",
+        "timeout": 25
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": ".cursor/hooks/miniverse-sync.sh subagentStop",
+        "timeout": 25
+      }
+    ]
+  }
+}
