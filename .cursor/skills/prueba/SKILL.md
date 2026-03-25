@@ -1,6 +1,6 @@
 ---
 name: prueba-ui
-description: Abre el navegador, comprueba el funcionamiento de la interfaz de usuario recién creada o modificada, y si falla, corrige los errores y vuelve a intentar automáticamente. Usa Playwright Test (CLI) para tests E2E; Playwright MCP para exploración interactiva cuando esté disponible.
+description: Abre el navegador, comprueba el funcionamiento de la interfaz de usuario recién creada o modificada, y si falla, corrige los errores y vuelve a intentar automáticamente. Usa Playwright Test (CLI) para tests E2E; Playwright MCP para exploración interactiva; Chrome DevTools MCP solo en este flujo E2E (`.cursor/mcp.json`) para rendimiento y depuración profunda.
 ---
 
 # Skill de Prueba de UI
@@ -42,7 +42,14 @@ Si Playwright MCP está disponible en Cursor (ver `docs/onboarding/02-playwright
 - Útil para verificación ad hoc sin escribir un test
 - **Prioriza** `npm test` para smoke tests conocidos; MCP para exploración interactiva
 
-### 5. Criterio de éxito
+### 5. Chrome DevTools MCP (este workspace, solo E2E)
+
+Si está activo (`.cursor/mcp.json` del proyecto + [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)):
+- Úsalo **solo** dentro de esta skill / agente Guardian: trazas de rendimiento, Lighthouse, red, consola, capturas cuando Playwright no basta para diagnosticar.
+- **No** sustituye el criterio de éxito: sigue cerrando con `npm test` pasando.
+- Otros agentes del enjambre no deben invocar estas herramientas (política en `agent-tech-guardian.mdc` y `00-swarm-orchestrator.mdc`).
+
+### 6. Criterio de éxito
 
 - Todos los tests de Playwright pasan
 - No hay errores críticos en consola (si se audita con `npm run audit`)

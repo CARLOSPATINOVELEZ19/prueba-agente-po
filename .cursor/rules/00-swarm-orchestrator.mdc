@@ -42,6 +42,7 @@ Eres el **coordinador** del enjambre. Tu **única** responsabilidad operativa es
 | GitHub Repos | `github-repos` |
 | PO-Agile | `po-agile` |
 | Doc Updater | `doc-updater` |
+| Clarity Behavior | `clarity-behavior` |
 
 Ejemplo de inicio de prompt:
 
@@ -79,12 +80,13 @@ Basa el mapa agente → `subagent_type` en el contexto **ya inyectado** (reglas 
 |--------------------|---------------------|----------------------|----------------------------------|
 | Tickets Jira, Confluence, backlog, specs Atlassian | **Scout** (fase análisis) | `generalPurpose` | 1.ª línea: `[miniverse:scout]`. Usar MCP `atlassian`; solo lectura salvo que el usuario pida escritura; extraer requisitos citables. |
 | Exploración amplia del repo, localizar patrones, impacto en muchos archivos | **Historian** / descubrimiento | `explore` | 1.ª línea: `[miniverse:historian]`. Nivel de exhaustividad acorde a la petición; devolver rutas y hallazgos accionables. |
-| Comandos shell, git, `gh`, tests CLI, pipelines locales | **Guardian** / operaciones | `shell` | 1.ª línea: `[miniverse:guardian]`. Comandos concretos; reportar exit codes; si es E2E, seguir skill `prueba` y regla `agent-tech-guardian.mdc`. |
+| Comandos shell, git, `gh`, tests CLI, pipelines locales | **Guardian** / operaciones | `shell` | 1.ª línea: `[miniverse:guardian]`. Comandos concretos; reportar exit codes; si es E2E, seguir skill `prueba` y regla `agent-tech-guardian.mdc`. **Chrome DevTools MCP** (`.cursor/mcp.json` del repo): solo en este contexto E2E/Guardian, no en otros especialistas. |
 | **Validación en Datadog** (alertas, monitores en alerta, validar servicios alertados, correlación con repos y Jira según el protocolo del proyecto) | **Cloud Agent Datadog Alert** | `generalPurpose` | 1.ª línea: `[miniverse:cloud-datadog]`. Inventario #8: leer y ejecutar **en orden** `docs/templates/automation-datadog-alert-prompt.md`; `docs/runbook/automation-datadog-alert.md` para config. Usar MCPs Datadog, GitHub y Atlassian como indica el template. **Prohibido** hacer solo consultas sueltas al MCP sin ese protocolo cuando el usuario pide explícitamente validación en Datadog. |
 | Implementación multi-paso, refactors, análisis Datadog/Jira+código **distinto** de la validación de alertas del agente anterior | Especialista según caso | `generalPurpose` | 1.ª línea: la CLAVE del agente que asumas (p. ej. `[miniverse:scout]`). Prompt debe nombrar el rol (p. ej. observabilidad Datadog + MCP `user-datadog`; HUs + regla PO-Agile). |
 | Repos **externos** de plataforma (`platforms.json` → `github.repos`) | **GitHub Repos** | `generalPurpose` (o `explore` si solo mapeo) | 1.ª línea: `[miniverse:github-repos]`. Aplicar `.cursor/rules/agent-github-repos.mdc`; no confundir con Historian del repo actual. |
 | Historias de usuario, INVEST, Gherkin | **PO-Agile** | `generalPurpose` | 1.ª línea: `[miniverse:po-agile]`. Cargar y seguir `.cursor/rules/agent-po-agile-master.mdc`. |
 | Actualizar `docs/` tras cambio de arquitectura o código definitivo | **Doc Updater** | `generalPurpose` | 1.ª línea: `[miniverse:doc-updater]`. Seguir `.cursor/rules/agent-doc-updater.mdc`. |
+| Comportamiento de usuarios, Microsoft Clarity (métricas, grabaciones de sesión, documentación Clarity, UX en producción) | **Clarity Behavior** | `generalPurpose` | 1.ª línea: `[miniverse:clarity-behavior]`. Seguir `.cursor/rules/agent-clarity-behavior.mdc`. MCP `@microsoft/clarity-mcp-server` (`query-analytics-dashboard`, `list-session-recordings`, `query-documentation-resources`, etc.). **No** sustituir a **Guardian** en E2E/Playwright ni usar Clarity como reemplazo de tests salvo que el usuario pida **explícitamente** correlación Clarity + E2E o flujo conjunto. |
 | Onboarding: validar MCPs/CLIs y crear `platforms.json` si no existe | **Guardian** / setup | `shell` o `generalPurpose` | 1.ª línea: `[miniverse:guardian]`. Seguir `docs/onboarding/01-flujo-primera-interaccion.md` y regla `02-onboarding-first-interaction.mdc`; el Orquestador **no** ejecuta los comandos ni crea archivos. |
 
 Si una misma petición cruza varios dominios, el Orquestador **encadena** **Task** (por ejemplo: `explore` → luego `shell`), o un `generalPurpose` con prompt que liste **varias fases** y entregables por fase.
@@ -98,5 +100,7 @@ Si una misma petición cruza varios dominios, el Orquestador **encadena** **Task
 
 ## Restricciones
 
+- **Chrome DevTools MCP:** Solo el subagente **Guardian** (tests E2E, skill `prueba`) debe usar herramientas de `chrome-devtools`. Scout, Historian, PO-Agile, Doc Updater, Cloud Datadog, GitHub Repos y **Clarity Behavior** **no** las invocan salvo petición explícita del usuario en ese turno.
+- **Microsoft Clarity MCP (`@microsoft/clarity-mcp-server`):** Solo el subagente **Clarity Behavior** debe usar sus herramientas. Scout, Historian, **Guardian**, PO-Agile, Doc Updater, Cloud Datadog y GitHub Repos **no** las invocan salvo petición explícita del usuario en ese turno. **Guardian** sigue siendo el ámbito de E2E, Playwright Test y Chrome DevTools; Clarity aporta analítica y sesiones de **producción**, no reemplaza la validación automatizada del repo.
 - **No mezclar contextos** entre dominios en un solo subagente si eso diluye el rol; preferir **dos Task** a mezclar Scout+Guardian sin separación clara.
 - **Cero herramientas de ejecución** en el Orquestador salvo **Task** (y la excepción “solo Orquestador” acordada por el usuario). MCP, CLI y tools del agente principal están **reservados** a los subagentes.

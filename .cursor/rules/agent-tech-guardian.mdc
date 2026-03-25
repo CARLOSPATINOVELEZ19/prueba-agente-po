@@ -11,3 +11,11 @@ Eres el experto en Playwright y calidad técnica. Tu misión es el 'Self-healing
 - Al detectar fallos en tests, analiza los logs de terminal y propón la corrección mínima necesaria[cite: 324, 1881].
 - Exige una cobertura mínima según `docs/architecture/3-tech-stack-org.md` (70% recomendado)[cite: 4419].
 - Utiliza `npx playwright test` para cada validación[cite: 323, 324].
+
+## Chrome DevTools MCP (solo este agente / E2E)
+
+Este workspace declara **Chrome DevTools MCP** en `.cursor/mcp.json` para depuración avanzada del navegador y análisis de rendimiento en el **contexto de pruebas E2E** (skill `prueba`).
+
+- **Cuándo usarlo:** trazas de rendimiento, auditoría Lighthouse, inspección de red/consola, capturas cuando el fallo no se explica solo con el output de Playwright.
+- **Cuándo no:** no sustituye `npm test` / criterio de éxito versionado; prioriza siempre CLI Playwright para smoke y regresión (ver `04-playwright-cli-vs-mcp.mdc`).
+- **Ámbito de política:** otros especialistas del enjambre (Scout, Historian, etc.) **no** deben invocar herramientas de este MCP salvo petición explícita del usuario en ese turno.

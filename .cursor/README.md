@@ -9,6 +9,7 @@
 ```
 .cursor/
 ├── README.md           # Este índice
+├── mcp.json            # MCP solo de workspace: Chrome DevTools (flujo E2E/Guardian); se fusiona con la config global de Cursor
 ├── rules/              # Reglas aplicadas por la IA
 │   ├── 00-swarm-orchestrator.mdc   # Orquestador: siempre decide y activa Task/subagentes
 │   ├── 01-plans-location.mdc       # Planes en Workspace/plans/
@@ -18,6 +19,7 @@
 │   ├── agent-github-repos.mdc      # Lectura de repos GitHub de la plataforma
 │   ├── agent-po-agile-master.mdc   # PO: Historias de Usuario para Jira (INVEST)
 │   ├── agent-doc-updater.mdc       # Experto en documentación (globs: código, docs)
+│   ├── agent-clarity-behavior.mdc  # Microsoft Clarity: métricas, sesiones, docs (MCP)
 │   ├── vitest-cli.mdc              # Convenciones Vitest / scripts npm
 │   └── 04-playwright-cli-vs-mcp.mdc # Playwright Test vs Playwright MCP
 ├── skills/             # Skills especializados
@@ -43,6 +45,7 @@
 | agent-github-repos | No | platforms.json, plans | Lectura de repos GitHub de la plataforma (MCP + gh) |
 | agent-po-agile-master | No | plans, docs, specs | PO: transformar requisitos en HU para Jira (INVEST, AC) |
 | agent-doc-updater | No | código, docs, rules | Actualizar docs cuando código cambia (pre-commit reminder) |
+| agent-clarity-behavior | No | docs, ux, analytics | Comportamiento de usuarios vía MCP Microsoft Clarity (Miniverse: `clarity-behavior`) |
 
 ---
 

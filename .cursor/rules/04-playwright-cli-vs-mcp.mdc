@@ -12,9 +12,11 @@ alwaysApply: false
 | Smoke tests, regresión, validación CI | `npm test` o `npx playwright test` | Tests deterministas, eficientes en tokens |
 | Explorar una página sin test escrito | Playwright MCP (si está configurado) | Interacción iterativa, snapshot de accesibilidad |
 | Verificar ad hoc en conversación | Playwright MCP | El agente navega y verifica en tiempo real |
+| Rendimiento lab, red/consola profunda, Lighthouse | **Chrome DevTools MCP** (si está en `.cursor/mcp.json`) | Solo en flujo **Guardian / E2E**; ver `agent-tech-guardian.mdc` |
 
 ## Instrucciones
 
 1. **Tests conocidos** (smoke.spec.js, miniverse.spec.js, etc.): Ejecutar siempre vía CLI (`npm test`).
 2. **Exploración nueva** (ej. "verifica que /login carga correctamente"): Usar Playwright MCP si está disponible; si no, sugerir escribir un test y ejecutarlo con CLI.
 3. **Guardian / criterio de éxito**: El reporte final debe basarse en `npm test`; MCP no sustituye la validación con tests versionados.
+4. **Chrome DevTools MCP**: Reservado al agente **Guardian** y a la skill **`prueba`**. Otros roles del enjambre no invocan esas herramientas salvo que el usuario lo pida explícitamente.

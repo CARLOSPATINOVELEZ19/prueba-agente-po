@@ -16,6 +16,7 @@
 | 6 | PO-Agile | Cursor Rule | `.cursor/rules/agent-po-agile-master.mdc` |
 | 7 | Doc Updater | Cursor Rule | `.cursor/rules/agent-doc-updater.mdc` |
 | 8 | Cloud Agent Datadog Alert | Cursor Automation | `docs/templates/automation-datadog-alert-prompt.md` |
+| 9 | Clarity Behavior | Cursor Rule | `.cursor/rules/agent-clarity-behavior.mdc` |
 
 ---
 
@@ -73,9 +74,9 @@
 |-------|-------|
 | **Nombre** | Guardian / QA Specialist |
 | **Objetivo** | Validar que los tests E2E pasan. Self-healing de tests. Exigir cobertura mínima. Solo dar por terminada la tarea cuando Playwright pasa. |
-| **MCPs** | — |
+| **MCPs** | **Chrome DevTools MCP** (`chrome-devtools-mcp`): declarado en `.cursor/mcp.json` del repo; **uso reservado** a este agente y a la skill `prueba` (E2E). No usar desde otros agentes salvo petición explícita del usuario. |
 | **Skills** | `prueba` (`.cursor/skills/prueba/SKILL.md`) — Playwright, corrección de fallos |
-| **Tools** | `npx playwright test` |
+| **Tools** | `npx playwright test`; herramientas MCP de Chrome DevTools solo para depuración/rendimiento en contexto E2E |
 | **Scripts** | `npm test`, `npm run test:ui`, `npx playwright test --project=miniverse` (cuando aplique Miniverse) |
 | **Archivos de código** | `.cursor/rules/agent-tech-guardian.mdc`, `tests/smoke.spec.js`, `tests/reportes.spec.js`, `tests/miniverse.spec.js`, `playwright.config.js`, `scripts/get-platform-config.js` |
 | **Archivo de prompt** | No aplica (regla Cursor) |
@@ -147,6 +148,22 @@
 
 ---
 
+## 9. Clarity Behavior (Analista Clarity / UX comportamiento)
+
+| Campo | Valor |
+|-------|-------|
+| **Nombre** | Clarity Behavior / Analista Clarity |
+| **Objetivo** | Analizar comportamiento de usuarios reales con **Microsoft Clarity** vía MCP: métricas y consultas al dashboard analítico, listado y filtrado de grabaciones de sesión, respuestas desde documentación oficial de Clarity. Responde: *¿Qué hacen los usuarios en producción?, ¿dónde friccionan?, ¿qué errores JS aparecen en sesiones?* |
+| **MCPs** | `@microsoft/clarity-mcp-server` ([microsoft/clarity-mcp-server](https://github.com/microsoft/clarity-mcp-server)): herramientas típicas `query-analytics-dashboard`, `list-session-recordings`, `query-documentation-resources`; el servidor puede exponer también `get-clarity-data` u otras según versión (consultar descriptor MCP del cliente). |
+| **Skills** | — |
+| **Tools** | Herramientas del MCP Clarity; token vía `--clarity_api_token=…` en el arranque del servidor o parámetros que indique el README del paquete (sin commitear secretos). |
+| **Scripts** | — |
+| **Archivos de código** | `.cursor/rules/agent-clarity-behavior.mdc`, `.cursor/rules/00-swarm-orchestrator.mdc` (mapeo Orquestador), `docs/onboarding/02-playwright-mcp-config.md` (nota opcional de configuración MCP) |
+| **Archivo de prompt** | No aplica (regla Cursor) |
+| **Otra información** | **globs:** `docs/**`, `**/ux/**`, `**/analytics/**` (orientativo; el Orquestador activa por dominio de la petición). **alwaysApply: false**. **Activación:** Task `generalPurpose`, primera línea `[miniverse:clarity-behavior]`. **Restricciones:** no sustituye al **Guardian** en E2E, Playwright ni Chrome DevTools MCP salvo que el usuario pida **explícitamente** correlación Clarity + tests o flujo conjunto. Los datos de Clarity son de **usuarios reales**; respetar [privacidad de Microsoft Clarity](https://clarity.microsoft.com/privacy) y políticas internas; no exponer PII innecesaria en informes. |
+
+---
+
 ## Reglas de soporte (no son agentes)
 
 | Regla | Propósito |
@@ -176,15 +193,16 @@
 | [equipo-agentes.html](../diagrams/equipo-agentes.html) | Equipo Orquestador → Scout, Historian, Guardian |
 | [4-fases-protocolo.html](../diagrams/4-fases-protocolo.html) | 4 fases del protocolo |
 | [flujo-automation-datadog-alert.html](../diagrams/flujo-automation-datadog-alert.html) | Cloud Agent Datadog (6 pasos) |
+| [agentes-mcps-cli-skills-actividades.html](../diagrams/agentes-mcps-cli-skills-actividades.html) | Agentes ↔ MCPs, CLIs, skills |
 
 ---
 
 ## Cómo actualizar un agente
 
-1. **Reglas Cursor (1–7):** Editar el `.mdc` en `.cursor/rules/`.
+1. **Reglas Cursor (1–7, 9):** Editar el `.mdc` en `.cursor/rules/` (el agente 9 es Clarity Behavior).
 2. **Cloud Agent (8):** Editar `docs/templates/automation-datadog-alert-prompt.md` y volver a copiar en cursor.com/automations.
 3. **MCPs/Skills:** Actualizar este documento y la regla correspondiente.
-4. **Nuevo agente:** Añadir entrada en este inventario y crear regla en `.cursor/rules/` o prompt en `docs/templates/`.
+4. **Nuevo agente:** Añadir entrada en este inventario, fila en `00-swarm-orchestrator.mdc` (CLAVE Miniverse + mapa) y crear regla en `.cursor/rules/` o prompt en `docs/templates/`.
 
 ---
 
