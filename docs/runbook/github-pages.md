@@ -12,11 +12,19 @@ Los reportes HTML en `docs/` se publican en GitHub Pages para acceso desde la we
 
 ## Configuración en GitHub
 
+Hay dos modos posibles (no uses los dos a la vez para el mismo sitio):
+
+### A) Rama + carpeta `/docs` (reportes y `docs/*.html`)
+
 1. **Settings** → **Pages**
 2. **Source:** Deploy from a branch
 3. **Branch:** `main` (o la rama principal)
 4. **Folder:** `/docs`
 5. Guardar
+
+### B) GitHub Actions (Miniverse)
+
+Si **Source** es **GitHub Actions**, el sitio publicado es solo el artefacto del workflow (build de `miniverse/dist`). Los archivos que están solo en `docs/` **no** se publican solos: el workflow `.github/workflows/deploy-miniverse-github-pages.yml` copia explícitamente páginas estáticas necesarias (por ejemplo `docs/diagrams/agentes-mcps-cli-skills-actividades.html` → `diagrams/…` en el sitio). Tras cambiar ese HTML o el workflow, hace falta un push que dispare el deploy (o **Actions** → ejecutar el workflow manualmente).
 
 ## Reportes disponibles
 

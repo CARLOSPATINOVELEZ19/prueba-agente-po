@@ -8,6 +8,8 @@ on:
     paths:
       - 'miniverse/**'
       - '.github/workflows/deploy-miniverse-github-pages.yml'
+      # Páginas estáticas en docs/ que deben coexistir con Miniverse en el mismo sitio Pages
+      - 'docs/diagrams/agentes-mcps-cli-skills-actividades.html'
   workflow_dispatch:
 
 permissions:
@@ -38,6 +40,17 @@ jobs:
           VITE_MINIVERSE_API: https://miniverse-public-production.up.railway.app
           VITE_MINIVERSE_WS: wss://miniverse-public-production.up.railway.app/ws
         run: npm ci && npm run build
+
+      # GitHub Pages usa solo este artefacto: Miniverse no incluye docs/ por defecto.
+      - name: Incluir páginas estáticas (docs) en el sitio
+        run: |
+          mkdir -p miniverse/dist/diagrams
+          if [ -f docs/diagrams/agentes-mcps-cli-skills-actividades.html ]; then
+            cp docs/diagrams/agentes-mcps-cli-skills-actividades.html miniverse/dist/diagrams/
+            echo "Copiado: diagrams/agentes-mcps-cli-skills-actividades.html"
+          else
+            echo "::warning::Falta docs/diagrams/agentes-mcps-cli-skills-actividades.html"
+          fi
 
       - uses: actions/upload-pages-artifact@v3
         with:
