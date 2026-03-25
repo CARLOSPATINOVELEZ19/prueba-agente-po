@@ -13,7 +13,7 @@
 | 3 | Historian | Fase del Orquestador | Embebido en 00-swarm-orchestrator |
 | 4 | Guardian (QA Specialist) | Cursor Rule | `.cursor/rules/agent-tech-guardian.mdc` |
 | 5 | GitHub Repos | Cursor Rule | `.cursor/rules/agent-github-repos.mdc` |
-| 6 | PO-Agile-Master | Cursor Rule | `.cursor/rules/agent-po-agile-master.mdc` |
+| 6 | PO-Agile | Cursor Rule | `.cursor/rules/agent-po-agile-master.mdc` |
 | 7 | Doc Updater | Cursor Rule | `.cursor/rules/agent-doc-updater.mdc` |
 | 8 | Cloud Agent Datadog Alert | Cursor Automation | `docs/templates/automation-datadog-alert-prompt.md` |
 
@@ -99,11 +99,11 @@
 
 ---
 
-## 6. PO-Agile-Master (Product Owner / Agile Master)
+## 6. PO-Agile (Product Owner / Agile Master)
 
 | Campo | Valor |
 |-------|-------|
-| **Nombre** | PO-Agile-Master |
+| **Nombre** | PO-Agile |
 | **Objetivo** | Transformar requisitos, ideas o descripciones en Historias de Usuario impecables, claras y listas para Sprint. Formato INVEST, criterios de aceptación Dado-Cuando-Entonces. |
 | **MCPs** | `atlassian` (opcional, para crear HU en Jira) |
 | **Skills** | — |

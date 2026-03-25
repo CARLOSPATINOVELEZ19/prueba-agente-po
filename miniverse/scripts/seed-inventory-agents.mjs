@@ -17,7 +17,7 @@ const INVENTORY_AGENTS = [
   { agent: 'inv-historian', name: 'Historian', state: 'thinking' },
   { agent: 'inv-guardian', name: 'Guardian', state: 'working' },
   { agent: 'inv-github-repos', name: 'GitHub Repos', state: 'idle' },
-  { agent: 'inv-po-agile', name: 'PO-Agile-Master', state: 'idle' },
+  { agent: 'inv-po-agile', name: 'PO-Agile', state: 'idle' },
   { agent: 'inv-doc-updater', name: 'Doc Updater', state: 'idle' },
   { agent: 'inv-cloud-datadog', name: 'Cloud Agent Datadog', state: 'sleeping' },
 ];

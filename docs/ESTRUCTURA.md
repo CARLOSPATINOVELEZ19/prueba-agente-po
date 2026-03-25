@@ -158,7 +158,7 @@ flowchart TB
     subgraph agents ["Flujo de agentes"]
         E1[Orquestador] --> E2[Plan en Workspace/plans/]
         E2 --> E3[Guardian Playwright]
-        E2 --> E4[PO-Agile-Master: HU para Jira]
+        E2 --> E4[PO-Agile: HU para Jira]
         E2 --> E5[Doc Updater: docs vivos]
     end
 

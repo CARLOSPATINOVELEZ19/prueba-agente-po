@@ -76,7 +76,7 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
    Toda petición de trabajo debe pasar por **decisión del Orquestador** y **activación vía Task** (subagentes) según el mapa en `.cursor/rules/00-swarm-orchestrator.mdc`. No omitir el especialista por considerar la tarea “pequeña”.
 
 5. **Uso de MCP**  
-   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para exploración interactiva de la UI: MCP `playwright` (opcional; ver `docs/onboarding/02-playwright-mcp-config.md`). Para análisis de PRs: `gh pr list`. Para crear Historias de Usuario: agente PO-Agile-Master (`agent-po-agile-master.mdc`). Para actualizar documentación tras cambios de código: agente Doc Updater (`agent-doc-updater.mdc`).
+   Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para exploración interactiva de la UI: MCP `playwright` (opcional; ver `docs/onboarding/02-playwright-mcp-config.md`). Para análisis de PRs: `gh pr list`. Para crear Historias de Usuario: agente PO-Agile (`agent-po-agile-master.mdc`). Para actualizar documentación tras cambios de código: agente Doc Updater (`agent-doc-updater.mdc`).
 
 6. **Automatización Datadog → Cursor**  
    **Scheduled** en Cursor Automations (sin webhook): alertas vía MCP Datadog, validación, repos, plan en `{WORKSPACE_ROOT}/plans/` y HU en Jira. Ver `docs/runbook/automation-datadog-alert.md`.

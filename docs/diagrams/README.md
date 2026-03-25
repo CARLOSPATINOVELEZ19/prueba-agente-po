@@ -53,7 +53,7 @@ Para editar y guardar cambios: abre el `.html`, en Draw.io usa **File → Save a
 | [flujo-workspace.mmd](./flujo-workspace.mmd) | [flujo-workspace.html](./flujo-workspace.html) | Generadores → Workspace → deploy |
 | [flujo-github-pages.mmd](./flujo-github-pages.mmd) | [flujo-github-pages.html](./flujo-github-pages.html) | Flujo deploy:pages → GitHub Pages |
 | [codigo-vs-artefactos.mmd](./codigo-vs-artefactos.mmd) | [codigo-vs-artefactos.html](./codigo-vs-artefactos.html) | Separación código vs artefactos |
-| [equipo-agentes.mmd](./equipo-agentes.mmd) | [equipo-agentes.html](./equipo-agentes.html) | **8 agentes** (Orquestador, Scout, Historian, Guardian, GitHub Repos, PO-Agile-Master, Doc Updater, Cloud Agent) |
+| [equipo-agentes.mmd](./equipo-agentes.mmd) | [equipo-agentes.html](./equipo-agentes.html) | **8 agentes** (Orquestador, Scout, Historian, Guardian, GitHub Repos, PO-Agile, Doc Updater, Cloud Agent) |
 | [4-fases-protocolo.mmd](./4-fases-protocolo.mmd) | [4-fases-protocolo.html](./4-fases-protocolo.html) | 4 fases del protocolo (Análisis → Validación) |
 | [flujo-automation-datadog-alert.mmd](./flujo-automation-datadog-alert.mmd) | [flujo-automation-datadog-alert.html](./flujo-automation-datadog-alert.html) | Cloud Agent Datadog (6 pasos) |
 | [esquema-proyecto-completo.mmd](./esquema-proyecto-completo.mmd) | [esquema-proyecto-completo.html](./esquema-proyecto-completo.html) | Esquema general del proyecto |

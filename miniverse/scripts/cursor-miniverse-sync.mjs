@@ -27,7 +27,7 @@ const INVENTORY = {
   historian: { agent: 'inv-historian', name: 'Historian' },
   guardian: { agent: 'inv-guardian', name: 'Guardian' },
   githubRepos: { agent: 'inv-github-repos', name: 'GitHub Repos' },
-  poAgile: { agent: 'inv-po-agile', name: 'PO-Agile-Master' },
+  poAgile: { agent: 'inv-po-agile', name: 'PO-Agile' },
   docUpdater: { agent: 'inv-doc-updater', name: 'Doc Updater' },
   datadog: { agent: 'inv-cloud-datadog', name: 'Cloud Agent Datadog' },
 };

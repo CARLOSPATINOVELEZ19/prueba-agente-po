@@ -23,7 +23,7 @@ flowchart LR
         O --> H[📚 Historian]
         O --> G[🛡️ Guardian]
         O --> R[📂 GitHub Repos]
-        O --> P[📋 PO-Agile-Master]
+        O --> P[📋 PO-Agile]
         O --> D[📝 Doc Updater]
         O --> CA[☁️ Cloud Agent]
     end
@@ -60,7 +60,7 @@ flowchart LR
 | **📚 Historian** | El experto en historia | Revisa el código y los cambios recientes para evitar repetir errores del pasado |
 | **🛡️ Guardian** | El validador | Ejecuta pruebas automáticas y solo da por terminada la tarea cuando todo pasa |
 | **📂 GitHub Repos** | El lector de repos | Lee repositorios externos de la plataforma (PRs, archivos, commits) vía MCP GitHub |
-| **📋 PO-Agile-Master** | El Product Owner | Transforma requisitos en Historias de Usuario listas para Jira (formato INVEST, criterios Dado-Cuando-Entonces) |
+| **📋 PO-Agile** | El Product Owner | Transforma requisitos en Historias de Usuario listas para Jira (formato INVEST, criterios Dado-Cuando-Entonces) |
 | **📝 Doc Updater** | El documentador | Actualiza la documentación cuando el código cambia con una solución definitiva (se activa en pre-commit) |
 | **☁️ Cloud Agent Datadog** | El vigilante programado | En horario fijo, revisa alertas en Datadog, cruza con repos y puede generar planes y HUs en Jira (ver runbook) |
 
@@ -162,7 +162,7 @@ flowchart TB
 
 ---
 
-### 6️⃣ Agente especializado — PO-Agile-Master
+### 6️⃣ Agente especializado — PO-Agile
 
 **Pregunta que responde:** *¿Cómo expresamos este requisito como Historia de Usuario lista para Sprint?*
 
@@ -207,7 +207,7 @@ flowchart TB
 | **Cómo trabaja** | 4 fases secuenciales: Análisis (Jira) → Contexto (código) → Planificación → Validación (tests) |
 | **Beneficio principal** | Acelera el ciclo de desarrollo con trazabilidad a Jira y validación automática de calidad |
 | **Herramientas integradas** | Jira, GitHub, Playwright, Datadog |
-| **Agentes especializados** | GitHub Repos, PO-Agile-Master, Doc Updater; **Cloud Agent** (Datadog→Jira, programado) |
+| **Agentes especializados** | GitHub Repos, PO-Agile, Doc Updater; **Cloud Agent** (Datadog→Jira, programado) |
 
 ---
 

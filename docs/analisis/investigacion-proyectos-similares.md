@@ -7,7 +7,7 @@
 
 ## Resumen ejecutivo
 
-Esta investigación analiza proyectos y frameworks alineados con **prueba-agente-po**: workspace agnóstico, pruebas E2E, auditoría, integración Jira/Datadog/GitHub vía MCP, y equipo de agentes (Scout, Historian, Guardian, PO-Agile-Master). Se identifican **6 áreas de evolución** priorizables.
+Esta investigación analiza proyectos y frameworks alineados con **prueba-agente-po**: workspace agnóstico, pruebas E2E, auditoría, integración Jira/Datadog/GitHub vía MCP, y equipo de agentes (Scout, Historian, Guardian, PO-Agile). Se identifican **6 áreas de evolución** priorizables.
 
 ---
 
@@ -21,7 +21,7 @@ Esta investigación analiza proyectos y frameworks alineados con **prueba-agente
 |---------|----------|------------------|
 | Integración Jira/Confluence | ✅ One-click export | ✅ MCP Atlassian |
 | Documentación automática | BRD, PRD, FRD, SRS | docs/ + runbooks |
-| Backlog / Historias de Usuario | Decomposición automática | PO-Agile-Master (INVEST, Dado-Cuando-Entonces) |
+| Backlog / Historias de Usuario | Decomposición automática | PO-Agile (INVEST, Dado-Cuando-Entonces) |
 | Diagramas | Flowcharts, mind maps, MoSCoW | Draw.io MCP |
 | Fases | 9 fases (Research → Approval) | 4 fases (Análisis → Validación) |
 | Human-in-the-Loop | Gates de aprobación | Plan en Workspace/plans/ antes de código |
@@ -36,7 +36,7 @@ Esta investigación analiza proyectos y frameworks alineados con **prueba-agente
 
 | Aspecto | APOX | prueba-agente-po |
 |---------|------|------------------|
-| Agentes especializados | 8+ (PRD, PO, UX, Architect…) | Scout, Historian, Guardian, PO-Agile-Master, Doc Updater |
+| Agentes especializados | 8+ (PRD, PO, UX, Architect…) | Scout, Historian, Guardian, PO-Agile, Doc Updater |
 | Gates humanos | Obligatorios en cada etapa | Implícito en planificación |
 | Auditoría | Trazabilidad de prompts y outputs | Workspace/plans/, reportes ciclo |
 
@@ -107,7 +107,7 @@ Esta investigación analiza proyectos y frameworks alineados con **prueba-agente
 
 | Proyecto | Característica | Aplicabilidad |
 |----------|----------------|----------------|
-| **ChatPRD** | PRD en IDE vía MCP; criterios de aceptación, edge cases | PO-Agile-Master podría enriquecer HUs con edge cases explícitos |
+| **ChatPRD** | PRD en IDE vía MCP; criterios de aceptación, edge cases | PO-Agile podría enriquecer HUs con edge cases explícitos |
 | **SpecWeave** | /sw:increment, /sw:auto, /sw:done para shipping autónomo | Inspiración para flujo de "done" con validación y deploy |
 
 ---
@@ -196,7 +196,7 @@ Esta investigación analiza proyectos y frameworks alineados con **prueba-agente
    Para tareas donde Scout, Historian y Guardian trabajen en paralelo con file locking y gestión de dependencias.
 
 9. **Enriquecimiento de HUs con edge cases**  
-   PO-Agile-Master podría incorporar edge cases explícitos en criterios de aceptación (inspiración ChatPRD).
+   PO-Agile podría incorporar edge cases explícitos en criterios de aceptación (inspiración ChatPRD).
 
 ---
 
