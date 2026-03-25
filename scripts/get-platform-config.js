@@ -1,17 +1,19 @@
 /**
- * Lee la configuración de plataforma desde Workspace/config/platforms.json.
+ * Lee la configuración desde WORKSPACE_ROOT/config/platforms.json (o PLATFORMS_CONFIG_PATH).
  * Usado por Playwright, audit y otros scripts para mantener el proyecto agnóstico.
  *
  * @returns {object|null} Config de defecto, o null si no existe
  */
 const path = require('path');
 const fs = require('fs');
+const { getWorkspaceRoot, REPO_ROOT } = require('./workspace-root.js');
 
 function getConfigPath() {
-  return (
-    process.env.PLATFORMS_CONFIG_PATH ||
-    path.join(__dirname, '../Workspace/config/platforms.json')
-  );
+  if (process.env.PLATFORMS_CONFIG_PATH) {
+    const p = process.env.PLATFORMS_CONFIG_PATH.trim();
+    return path.isAbsolute(p) ? p : path.join(REPO_ROOT, p);
+  }
+  return path.join(getWorkspaceRoot(), 'config', 'platforms.json');
 }
 
 function getPlatformsConfig() {
@@ -20,12 +22,27 @@ function getPlatformsConfig() {
   return JSON.parse(fs.readFileSync(configPath, 'utf-8'));
 }
 
+/**
+ * ID de plataforma activa: PLATFORM_ID (env) si existe y coincide con una entrada;
+ * si no, defaultPlatformId del JSON.
+ */
+function resolveActivePlatformId(config) {
+  const envId = process.env.PLATFORM_ID?.trim();
+  if (envId && config.platforms?.some((p) => p.id === envId)) {
+    return envId;
+  }
+  return config.defaultPlatformId;
+}
+
 function getPlatformConfig() {
   const config = getPlatformsConfig();
   if (!config) return null;
 
+  const activeId = resolveActivePlatformId(config);
   const platform =
-    config.platforms?.find((p) => p.id === config.defaultPlatformId) || config.platforms?.[0];
+    config.platforms?.find((p) => p.id === activeId) ||
+    config.platforms?.find((p) => p.id === config.defaultPlatformId) ||
+    config.platforms?.[0];
   return platform || null;
 }
 

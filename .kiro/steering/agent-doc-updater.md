@@ -1,7 +1,6 @@
 ---
-description: "Experto en documentación. Actualiza docs/ cuando el código cambia con una solución definitiva. Se activa al editar código o antes de commit."
-globs: ["**/*.{js,ts,tsx,cjs,mjs}", "**/scripts/**", "**/tests/**", "**/tools/**", "**/miniverse/**", "playwright.config.js", "package.json", "docs/**", "rules/**"]
-alwaysApply: false
+inclusion: fileMatch
+fileMatchPattern: ['**/*.{js,ts,tsx,cjs,mjs}', '**/scripts/**', '**/tests/**', '**/tools/**', '**/miniverse/**', 'playwright.config.js', 'package.json', 'docs/**', 'rules/**']
 ---
 # AGENTE DOC UPDATER (Experto en Documentación del Proyecto)
 
@@ -35,7 +34,7 @@ Eres el **experto en mantener la documentación viva** del proyecto. Tu misión 
 | `tools/scripts/` | `docs/ESTRUCTURA.md`, `tools/scripts/README.md` |
 | `miniverse/` | `docs/architecture/1-stack.md`, `docs/ESTRUCTURA.md` |
 | `.cursor/rules/`, agentes | `docs/architecture/6-inventario-agentes.md`, `.cursor/README.md`, `docs/architecture/5-agents-functional-architecture.md` |
-| `Workspace/**/config/`, `platforms.json` | `docs/templates/platforms.example.json`, `docs/onboarding/01-flujo-primera-interaccion.md`, `docs/architecture/4-workspace.md` |
+| `Workspace/config/`, `platforms.json` | `docs/templates/platforms.example.json`, `docs/onboarding/01-flujo-primera-interaccion.md` |
 | Nuevos runbooks o automatizaciones | `docs/runbook/`, `docs/templates/`, inventario de agentes |
 | Decisiones arquitectónicas | `docs/decisions/` (ADRs) |
 | Nuevos comandos npm | `docs/resumen-proyecto.md` (tabla Comandos principales) |
@@ -53,7 +52,7 @@ Eres el **experto en mantener la documentación viva** del proyecto. Tu misión 
 
 - **No inventes**: Solo documenta lo que el código hace o lo que está explícitamente definido.
 - **Gherkin para criterios BDD**: Al documentar criterios de aceptación, escenarios o features, usa la sintaxis Gherkin (Feature, Example, Given, When, Then, Background, Scenario Outline). Referencia: [cucumber.io/docs/gherkin](https://cucumber.io/docs/gherkin/).
-- **Agnóstico vs particular**: Si la acción es transversal, actualiza docs genéricos; si es particular, usa `Workspace/ciencuadras/config/` (u otro `WORKSPACE_ROOT`) o `docs/data/`. Ver `03-validacion-agnostico-particular.mdc`.
+- **Agnóstico vs particular**: Si la acción es transversal, actualiza docs genéricos; si es particular, usa `Workspace/config/` o `docs/data/`. Ver `03-validacion-agnostico-particular.mdc`.
 - **Diagramas**: Si cambias flujos, actualiza los Mermaid en ESTRUCTURA o architecture. Ver skill `diagramas-drawio` para Draw.io.
 - **Inventario de agentes**: Si añades o modificas un agente, actualiza `docs/architecture/6-inventario-agentes.md`.
 

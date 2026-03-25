@@ -26,11 +26,11 @@ flowchart TB
         end
     end
 
-    subgraph platformsConfig ["platforms.json - Ciencuadras"]
-        jiraConfig[Jira GD768]
-        datadogConfig[Datadog us1]
-        serviceToRepos[serviceToRepos: 12 servicios]
-        githubRepos[github.repos: 5 repos]
+    subgraph platformsConfig ["platforms.json (ejemplo: una plataforma configurada)"]
+        jiraConfig[Jira projectKey + tableros]
+        datadogConfig[Datadog site + dashboards]
+        serviceToRepos[serviceToRepos]
+        githubRepos[github.repos]
     end
 
     subgraph automation ["Automation Datadog Alert"]
@@ -94,9 +94,9 @@ flowchart TB
 
 | Capa | Componentes |
 |------|-------------|
-| **Código** | tests/, scripts/, tools/scripts/, docs/, .cursor/rules/ |
-| **Workspace** | config/platforms.json, plans/, reports/, audit/, observabilidad/ |
-| **Config** | Jira GD768, Datadog us1, serviceToRepos (12), github.repos (5) |
+| **Código** | tests/, scripts/, tools/scripts/, miniverse/, docs/, .cursor/rules/ |
+| **Workspace** | config/platforms.json, plans/, reports/, audit/, observabilidad/, playwright/ |
+| **Config** | Por plataforma en platforms.json (Jira, Datadog, serviceToRepos, github.repos) |
 | **Automation** | Schedule → 6 pasos (MCP Datadog → validar → repos → plan → Jira) |
 | **MCPs** | Datadog, Atlassian, GitHub |
 | **Externos** | Datadog, Jira, GitHub |
@@ -114,14 +114,16 @@ flowchart TB
 
 ---
 
-## Configuración actual (Ciencuadras)
+## Ejemplo de configuración local (no versionada)
 
-| Sección | Valores |
-|---------|---------|
-| **Jira** | projectKey: GD768, incidentBoardId: 35754 |
-| **Datadog** | site: us1, dashboardIds: wei-k9v-vkx |
-| **serviceToRepos** | 12 servicios (admin-eventos-masivos-ms, carrito-compras-ms, portal-frontend, etc.) |
-| **github.repos** | 5 repos (admin-eventos-masivos-ms, admin-ms, lambdas-infra, portal-frontend, carrito-compras-ms) |
+Los valores concretos viven en `Workspace/ciencuadras/config/platforms.json` por defecto (`.gitignore`; ver `docs/architecture/4-workspace.md`). En un entorno típico con plataforma **Ciencuadras**, la plantilla puede rellenarse así (los números pueden cambiar según el JSON):
+
+| Sección | Ejemplo de contenido |
+|---------|----------------------|
+| **Jira** | projectKey, URLs de proyecto, tableros de incidentes y seguridad |
+| **Datadog** | site (`us1`, etc.), IDs de dashboards, `serviceToRepos` |
+| **serviceToRepos** | Mapa servicio Datadog → repos GitHub (varias entradas) |
+| **github.repos** | Lista de repos de la plataforma bajo la org configurada |
 
 ---
 

@@ -25,6 +25,7 @@ flowchart LR
         O --> R[📂 GitHub Repos]
         O --> P[📋 PO-Agile-Master]
         O --> D[📝 Doc Updater]
+        O --> CA[☁️ Cloud Agent]
     end
 
     subgraph fuentes ["Fuentes de información"]
@@ -33,6 +34,7 @@ flowchart LR
         T[Tests]
         GH[Repos GitHub]
         DOC[docs/]
+        DD[Datadog]
     end
 
     S --> J
@@ -42,19 +44,29 @@ flowchart LR
     P --> J
     D --> C
     D --> DOC
+    CA --> J
+    CA --> DD
+    CA --> GH
 ```
+
+> **Cloud Agent:** corre en **Cursor Automations** (programado), no dentro del chat. Orquesta alertas Datadog, repos y Jira según el runbook.
 
 > **[Abrir en Draw.io](../diagrams/equipo-agentes.html)** — Editar diagrama en la aplicación
 
 | Agente | Rol en lenguaje simple | ¿Qué hace? |
 |--------|------------------------|-------------|
-| **🎯 Orquestador** | El coordinador | Decide el orden de trabajo y asegura que cada fase se complete antes de pasar a la siguiente |
+| **🎯 Orquestador** | El coordinador | **Siempre** elige qué especialista actúa y lo **activa** con la herramienta **Task** (subagentes); no absorbe el trabajo de dominio salvo petición explícita del usuario en ese mensaje |
 | **🔍 Scout** | El explorador | Lee los tickets de Jira y extrae qué se necesita hacer (requerimientos) |
 | **📚 Historian** | El experto en historia | Revisa el código y los cambios recientes para evitar repetir errores del pasado |
 | **🛡️ Guardian** | El validador | Ejecuta pruebas automáticas y solo da por terminada la tarea cuando todo pasa |
 | **📂 GitHub Repos** | El lector de repos | Lee repositorios externos de la plataforma (PRs, archivos, commits) vía MCP GitHub |
 | **📋 PO-Agile-Master** | El Product Owner | Transforma requisitos en Historias de Usuario listas para Jira (formato INVEST, criterios Dado-Cuando-Entonces) |
 | **📝 Doc Updater** | El documentador | Actualiza la documentación cuando el código cambia con una solución definitiva (se activa en pre-commit) |
+| **☁️ Cloud Agent Datadog** | El vigilante programado | En horario fijo, revisa alertas en Datadog, cruza con repos y puede generar planes y HUs en Jira (ver runbook) |
+
+### Activación en Cursor (chat / Composer)
+
+En el IDE, la **función concreta** que enciende a cada especialista es la herramienta **Task** (subagentes): el Orquestador debe anunciar la decisión y lanzar el `subagent_type` adecuado (`explore`, `shell`, `generalPurpose`, etc.) según el mapa en `.cursor/rules/00-swarm-orchestrator.mdc`. El script `npm run demo:agentes` solo **ilustra** el flujo en consola; no sustituye a Task.
 
 ---
 
@@ -69,7 +81,7 @@ flowchart TB
     subgraph fases [4 Fases del Protocolo]
         F1[1️⃣ ANÁLISIS<br/>Scout lee Jira]
         F2[2️⃣ CONTEXTO<br/>Historian revisa código]
-        F3[3️⃣ PLANIFICACIÓN<br/>Plan en Workspace/plans/]
+        F3[3️⃣ PLANIFICACIÓN<br/>Plan en WORKSPACE_ROOT/plans/]
         F4[4️⃣ VALIDACIÓN<br/>Guardian ejecuta Playwright]
     end
 
@@ -119,7 +131,7 @@ flowchart TB
 **Pregunta que responde:** *¿Cómo lo haremos paso a paso?*
 
 - Genera un **plan escrito** antes de tocar código
-- Se guarda en `Workspace/plans/`
+- Se guarda en `{WORKSPACE_ROOT}/plans/` (por defecto `Workspace/ciencuadras/plans/`)
 - Permite revisar la estrategia antes de ejecutar
 
 **Valor para negocio:** Transparencia y posibilidad de ajustar el enfoque antes de invertir tiempo en desarrollo.
@@ -156,10 +168,34 @@ flowchart TB
 
 - Transforma **requisitos, ideas o descripciones** en Historias de Usuario impecables
 - Aplica formato **INVEST** y criterios de aceptación **Dado-Cuando-Entonces**
-- Se activa al trabajar con planes, specs o docs (`Workspace/plans/`, `**/docs/**`, `**/*.spec.md`)
+- Se activa al trabajar con planes, specs o docs (`{WORKSPACE_ROOT}/plans/`, `**/docs/**`, `**/*.spec.md`)
 - Puede crear la HU directamente en **Jira** vía MCP Atlassian si se solicita
 
 **Valor para negocio:** Historias claras y listas para desarrollo; menos ambigüedad en el backlog; criterios de aceptación testables.
+
+---
+
+### 7️⃣ Agente especializado — Doc Updater
+
+**Pregunta que responde:** *¿La documentación refleja el código que acabamos de cambiar?*
+
+- Actualiza `docs/` y referencias cuando hay una solución estable
+- Puede usar el skill de diagramas Draw.io si cambian flujos visuales
+- El hook **pre-commit** (`.githooks/pre-commit`) recuerda revisar docs si solo cambió código
+
+**Valor para negocio:** Menos deuda de documentación; onboarding y operación alineados con el estado real del repo.
+
+---
+
+### 8️⃣ Cloud Agent — alertas Datadog
+
+**Pregunta que responde:** *¿Hay incidentes recurrentes que deban convertirse en trabajo priorizado en Jira?*
+
+- Se ejecuta como **automation en la nube** (Cursor), en horario (**scheduled**; sin webhook), no como conversación interactiva
+- Usa MCPs Datadog, GitHub y Atlassian según `docs/templates/automation-datadog-alert-prompt.md`
+- Deja planes en `{WORKSPACE_ROOT}/plans/` y puede crear o enriquecer historias en Jira
+
+**Valor para negocio:** Puente automático entre observabilidad y backlog; menos pérdida de contexto entre alertas y desarrollo.
 
 ---
 
@@ -171,7 +207,7 @@ flowchart TB
 | **Cómo trabaja** | 4 fases secuenciales: Análisis (Jira) → Contexto (código) → Planificación → Validación (tests) |
 | **Beneficio principal** | Acelera el ciclo de desarrollo con trazabilidad a Jira y validación automática de calidad |
 | **Herramientas integradas** | Jira, GitHub, Playwright, Datadog |
-| **Agentes especializados** | GitHub Repos (lectura de repos), PO-Agile-Master (Historias de Usuario para Jira) |
+| **Agentes especializados** | GitHub Repos, PO-Agile-Master, Doc Updater; **Cloud Agent** (Datadog→Jira, programado) |
 
 ---
 

@@ -12,7 +12,9 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const API_BASE = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
-const OUTPUT_DIR = path.join(__dirname, '../Workspace/audit/lighthouse');
+const { getWorkspaceRoot } = require('./workspace-root.js');
+
+const OUTPUT_DIR = path.join(getWorkspaceRoot(), 'audit', 'lighthouse');
 const STRATEGIES = ['mobile', 'desktop'];
 
 const METRIC_IDS = [

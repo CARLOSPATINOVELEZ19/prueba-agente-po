@@ -1,6 +1,6 @@
 # Flujo de Primera Interacción
 
-> Este flujo debe ejecutarse cuando el agente interactúa por primera vez con el proyecto o cuando no existe `Workspace/config/platforms.json`.
+> Este flujo debe ejecutarse cuando el agente interactúa por primera vez con el proyecto o cuando no existe `Workspace/ciencuadras/config/platforms.json` (o el `config/platforms.json` del `WORKSPACE_ROOT` activo).
 
 ## Objetivo
 
@@ -26,7 +26,7 @@ flowchart TB
     Capture --> Jira[Jira: projectKey, tableros]
     Capture --> DD[Datadog: site, dashboards]
 
-    Jira --> Create[Crear Workspace/config/platforms.json]
+    Jira --> Create[Crear Workspace/ciencuadras/config/platforms.json]
     DD --> Create
 
     Create --> Checklist[Checklist: MCPs validados, CLIs OK, platforms.json]
@@ -74,7 +74,7 @@ Complementa al CLI `npx playwright`; no lo sustituye. Para smoke tests y CI se u
 
 ## Paso 2: Identificar plataformas a trabajar
 
-Si no existe `Workspace/config/platforms.json`, crearlo a partir de `docs/templates/platforms.example.json` y solicitar al usuario:
+Si no existe `Workspace/ciencuadras/config/platforms.json` (raíz por defecto del workspace de artefactos), crearlo a partir de `docs/templates/platforms.example.json` y solicitar al usuario:
 
 ### Datos a capturar por plataforma
 
@@ -91,7 +91,7 @@ Si no existe `Workspace/config/platforms.json`, crearlo a partir de `docs/templa
 
 ### Formato de salida
 
-El archivo `Workspace/config/platforms.json` debe seguir la estructura de la plantilla. Puede haber varias plataformas; `defaultPlatformId` indica cuál usar por defecto.
+El archivo debe guardarse en `Workspace/ciencuadras/config/platforms.json` (salvo que uses otro `WORKSPACE_ROOT`) y seguir la estructura de la plantilla. Puede haber varias plataformas; `defaultPlatformId` indica cuál usar por defecto.
 
 ---
 
@@ -103,7 +103,7 @@ El archivo `Workspace/config/platforms.json` debe seguir la estructura de la pla
 - [ ] CLI `gh`: instalado y autenticado
 - [ ] CLI `node` 18+: instalado
 - [ ] CLI `npx playwright`: instalado
-- [ ] `Workspace/config/platforms.json` creado con al menos una plataforma
+- [ ] `Workspace/ciencuadras/config/platforms.json` creado con al menos una plataforma
 - [ ] URLs, Jira y Datadog definidos para la plataforma por defecto
 - [ ] (Opcional) MCP Playwright: configurado para exploración interactiva — ver `docs/onboarding/02-playwright-mcp-config.md`
 

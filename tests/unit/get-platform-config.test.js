@@ -21,6 +21,7 @@ const {
 let tempDir;
 let originalConfigPath;
 let originalBaseUrl;
+let originalPlatformId;
 
 const mockPlatform = {
   id: "ejemplo",
@@ -43,6 +44,7 @@ describe("get-platform-config", () => {
     tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "platform-config-test-"));
     originalConfigPath = process.env.PLATFORMS_CONFIG_PATH;
     originalBaseUrl = process.env.BASE_URL;
+    originalPlatformId = process.env.PLATFORM_ID;
   });
 
   afterEach(() => {
@@ -51,6 +53,11 @@ describe("get-platform-config", () => {
     }
     process.env.PLATFORMS_CONFIG_PATH = originalConfigPath;
     process.env.BASE_URL = originalBaseUrl;
+    if (originalPlatformId === undefined) {
+      delete process.env.PLATFORM_ID;
+    } else {
+      process.env.PLATFORM_ID = originalPlatformId;
+    }
   });
 
   describe("getPlatformsConfig", () => {
@@ -88,6 +95,30 @@ describe("get-platform-config", () => {
       const configPath = path.join(tempDir, "platforms.json");
       fs.writeFileSync(configPath, JSON.stringify(configNoMatch), "utf-8");
       process.env.PLATFORMS_CONFIG_PATH = configPath;
+      expect(getPlatformConfig()).toEqual(mockPlatform);
+    });
+
+    it("usa PLATFORM_ID cuando coincide con una plataforma", () => {
+      const platformB = { ...mockPlatform, id: "b", name: "B" };
+      const configPath = path.join(tempDir, "platforms.json");
+      fs.writeFileSync(
+        configPath,
+        JSON.stringify({
+          platforms: [mockPlatform, platformB],
+          defaultPlatformId: "ejemplo",
+        }),
+        "utf-8",
+      );
+      process.env.PLATFORMS_CONFIG_PATH = configPath;
+      process.env.PLATFORM_ID = "b";
+      expect(getPlatformConfig()).toEqual(platformB);
+    });
+
+    it("ignora PLATFORM_ID si no existe en la lista y usa defaultPlatformId", () => {
+      const configPath = path.join(tempDir, "platforms.json");
+      fs.writeFileSync(configPath, JSON.stringify(mockConfig), "utf-8");
+      process.env.PLATFORMS_CONFIG_PATH = configPath;
+      process.env.PLATFORM_ID = "inexistente";
       expect(getPlatformConfig()).toEqual(mockPlatform);
     });
   });

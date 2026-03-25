@@ -19,6 +19,8 @@
     "diagrams:regenerate-html": "node tools/scripts/regenerate-diagram-html.js",
     "demo:agentes": "node scripts/demo-agentes-run.js",
     "demo:agentes:open": "open docs/demo-agentes.html",
+    "seed:agents": "npm --prefix miniverse run seed:agents",
+    "seed:agents:live": "npm --prefix miniverse run seed:agents:live",
     "lint": "eslint . --ext .js,.cjs --ignore-pattern Workspace",
     "format": "prettier --write \"**/*.{js,cjs,json,md}\""
   },

@@ -10,6 +10,7 @@
 docs/
 ├── index.html              # Landing (GitHub Pages)
 ├── reportes.html           # Índice de reportes HTML
+├── demo-agentes.html       # Demo visual del flujo de agentes (ver `npm run demo:agentes`)
 ├── README.md               # Este índice
 ├── resumen-proyecto.md     # Contexto principal para IA
 ├── ESTRUCTURA.md           # Estructura y lógica del proyecto (con diagrama de flujos)
@@ -45,6 +46,7 @@ Los diagramas están embebidos en Mermaid dentro de los documentos para renderiz
 | [ESTRUCTURA.md](./ESTRUCTURA.md) | Flujos integrados (config, E2E, auditoría, reportes, agentes) |
 | [esquema-proyecto.md](./esquema-proyecto.md) | Esquema visual del proyecto (componentes, automation, config) |
 | [onboarding/01-flujo-primera-interaccion.md](./onboarding/01-flujo-primera-interaccion.md) | Flujo de onboarding (validación MCPs/CLIs → platforms.json) |
+| [onboarding/02-playwright-mcp-config.md](./onboarding/02-playwright-mcp-config.md) | Playwright MCP opcional en Cursor (complemento al CLI) |
 | [architecture/4-workspace.md](./architecture/4-workspace.md) | Flujo de datos Workspace (generadores → carpetas → deploy) |
 | [architecture/0-overview.md](./architecture/0-overview.md) | Separación código vs artefactos |
 | [architecture/5-agents-functional-architecture.md](./architecture/5-agents-functional-architecture.md) | Equipo de agentes y fases del protocolo |
@@ -69,6 +71,7 @@ Los diagramas están embebidos en Mermaid dentro de los documentos para renderiz
 | Documento | Descripción |
 |----------|-------------|
 | [onboarding/01-flujo-primera-interaccion.md](./onboarding/01-flujo-primera-interaccion.md) | Flujo de primera interacción: validar MCPs/CLIs y crear platforms.json |
+| [onboarding/02-playwright-mcp-config.md](./onboarding/02-playwright-mcp-config.md) | Configuración opcional de Playwright MCP (exploración interactiva) |
 | [onboarding/02-compartir-proyecto-sin-github.md](./onboarding/02-compartir-proyecto-sin-github.md) | Cómo compartir el proyecto sin GitHub (para abrir en Cursor) |
 
 ### Runbooks
@@ -91,7 +94,7 @@ Los diagramas están embebidos en Mermaid dentro de los documentos para renderiz
 
 | Recurso | Uso |
 |---------|-----|
-| [templates/platforms.example.json](./templates/platforms.example.json) | Plantilla para `Workspace/config/platforms.json` |
+| [templates/platforms.example.json](./templates/platforms.example.json) | Plantilla para `Workspace/ciencuadras/config/platforms.json` (u otro `WORKSPACE_ROOT`) |
 | [templates/automation-datadog-alert-prompt.md](./templates/automation-datadog-alert-prompt.md) | Prompt para Cursor Automation (alertas Datadog → plan + HU) |
 | [Asset/](./Asset/) | Plantillas CSS y HTML para reportes publicados en GitHub Pages |
 | [data/jira-cycle-2025.json](./data/jira-cycle-2025.json) | Datos de referencia para reportes de ciclo |

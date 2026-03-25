@@ -40,7 +40,7 @@ Eres un agente de respuesta a alertas. Obtienes la información de las alertas *
 
 ### Paso 2: Consultar los repositorios necesarios para entender la causa
 
-1. Lee la configuración de plataformas desde `Workspace/config/platforms.json` o desde la variable de entorno `PLATFORMS_JSON` si existe.
+1. Lee la configuración de plataformas desde el `config/platforms.json` del workspace activo (`Workspace/ciencuadras/` por defecto) o desde la variable de entorno `PLATFORMS_JSON` si existe.
 2. Identifica los repositorios a consultar:
    - Si existe `datadog.serviceToRepos` y el servicio/tag de la alerta coincide, usa esos repos.
    - Si no, usa `github.repos` de la plataforma por defecto.

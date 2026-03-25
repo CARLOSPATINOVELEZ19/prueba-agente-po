@@ -64,7 +64,7 @@ Los reportes se generan en `Workspace/reports/` (área de staging, no versionada
 
 ## Filtro por plataforma
 
-La página `reportes.html` incluye un selector de plataforma que carga desde `docs/data/platforms.json`. Este archivo se copia automáticamente desde `Workspace/config/platforms.json` al ejecutar `deploy:pages`. Si no existe `platforms.json`, el filtro no se muestra.
+La página `reportes.html` incluye un selector de plataforma que carga desde `docs/data/platforms.json`. Este archivo se copia automáticamente desde `{WORKSPACE_ROOT}/config/platforms.json` (por defecto `Workspace/ciencuadras/config/platforms.json`) al ejecutar `deploy:pages`. Si no existe `platforms.json`, el filtro no se muestra.
 
 ## Flujo de publicación (deploy:pages)
 

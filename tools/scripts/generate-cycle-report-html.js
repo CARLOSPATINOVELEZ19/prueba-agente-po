@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
  * Genera reporte HTML gerencial de análisis de ciclo de desarrollo
- * Lee JSON de Jira y produce Workspace/reports/analisis-ciclo-desarrollo.html
+ * Lee JSON de Jira y produce reports/analisis-ciclo-desarrollo.html bajo WORKSPACE_ROOT (ver scripts/workspace-root.js)
  */
 
 const fs = require('fs');
 const path = require('path');
+const { getWorkspaceRoot } = require('../../scripts/workspace-root.js');
 
 const JIRA_BASE = 'https://jirasegurosbolivar.atlassian.net/browse';
 
@@ -240,7 +241,7 @@ function generateHtml(dataPath, outPath) {
 
 const dataPath =
   process.argv[2] || path.join(__dirname, '../../docs/data/jira-cycle-2025.json');
-const outPath = path.join(__dirname, '../../Workspace/reports/analisis-ciclo-desarrollo.html');
+const outPath = path.join(getWorkspaceRoot(), 'reports', 'analisis-ciclo-desarrollo.html');
 
 if (!fs.existsSync(dataPath)) {
   console.error('No se encontró el archivo de datos. Uso: node generate-cycle-report-html.js <ruta-json>');

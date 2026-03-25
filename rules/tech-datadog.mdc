@@ -6,6 +6,10 @@ alwaysApply: false
 
 # Observabilidad con Datadog
 
+## Validación en Datadog (obligatorio: agente dedicado)
+
+Cuando el usuario pida **validación en Datadog** (alertas, monitores en alerta, comprobar servicios alertados, flujo alerta → código → plan/Jira), el **Orquestador** debe activar el agente **Cloud Agent Datadog Alert** (inventario `docs/architecture/6-inventario-agentes.md` #8) vía **Task** `generalPurpose`, siguiendo el prompt completo en `docs/templates/automation-datadog-alert-prompt.md` y el runbook `docs/runbook/automation-datadog-alert.md`. No sustituir ese flujo con consultas aisladas al MCP.
+
 ## Instrucciones
 Usa el MCP `datadog` cuando necesites:
 1. **Investigar Incidentes:** Si un ticket de Jira describe un error, consulta logs o monitores en Datadog para correlacionar con el código[cite: 1887, 4348].

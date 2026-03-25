@@ -14,10 +14,11 @@
 const path = require('path');
 const fs = require('fs');
 const { chromium } = require('playwright');
+const { getWorkspaceRoot } = require('../../scripts/workspace-root.js');
 
 const CURSOR_AUTOMATIONS_URL = 'https://cursor.com/automations';
 const PROMPT_FILE = path.join(__dirname, '../../docs/templates/automation-datadog-alert-prompt.md');
-const USER_DATA_DIR = path.join(__dirname, '../../Workspace/playwright/cursor-browser-state');
+const USER_DATA_DIR = path.join(getWorkspaceRoot(), 'playwright', 'cursor-browser-state');
 
 // Contenido del prompt sin el encabezado (líneas 1-5)
 function getPromptContent() {

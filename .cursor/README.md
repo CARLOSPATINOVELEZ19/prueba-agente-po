@@ -10,16 +10,20 @@
 .cursor/
 ├── README.md           # Este índice
 ├── rules/              # Reglas aplicadas por la IA
-│   ├── 00-swarm-orchestrator.mdc   # Orquestador (siempre activa)
+│   ├── 00-swarm-orchestrator.mdc   # Orquestador: siempre decide y activa Task/subagentes
 │   ├── 01-plans-location.mdc       # Planes en Workspace/plans/
 │   ├── 02-onboarding-first-interaction.mdc
+│   ├── 03-validacion-agnostico-particular.mdc
 │   ├── agent-tech-guardian.mdc     # QA/Playwright (globs: tests)
 │   ├── agent-github-repos.mdc      # Lectura de repos GitHub de la plataforma
 │   ├── agent-po-agile-master.mdc   # PO: Historias de Usuario para Jira (INVEST)
-│   └── agent-doc-updater.mdc       # Experto en documentación (globs: código, docs)
-├── skills/             # Skills especializados (construir, prueba)
+│   ├── agent-doc-updater.mdc       # Experto en documentación (globs: código, docs)
+│   ├── vitest-cli.mdc              # Convenciones Vitest / scripts npm
+│   └── 04-playwright-cli-vs-mcp.mdc # Playwright Test vs Playwright MCP
+├── skills/             # Skills especializados
 │   ├── construir/      # Build y deploy
-│   └── prueba/         # Tests E2E y validación UI
+│   ├── prueba/         # Tests E2E y validación UI
+│   └── diagramas-drawio/ # Diagramas Mermaid / Draw.io
 └── plans/              # Redirige a Workspace/plans/ (no usar aquí)
 ```
 
@@ -29,9 +33,12 @@
 
 | Regla | alwaysApply | Globs | Propósito |
 |-------|-------------|-------|-----------|
-| 00-swarm-orchestrator | Sí | * | Orquestador: análisis Jira, planificación, validación Playwright |
+| 00-swarm-orchestrator | Sí | * | Orquestador: **Task** para especialistas (mapa en la regla); fases Scout → Historian → plan → Guardian |
 | 01-plans-location | Sí | * | Planes en `Workspace/plans/`, no en `.cursor/plans/` |
 | 02-onboarding-first-interaction | Sí | * | Validar MCPs/CLIs y crear platforms.json si no existe |
+| 03-validacion-agnostico-particular | Sí | * | Preguntar si una acción es transversal o particular al producto |
+| vitest-cli | No | vitest.config, tests/unit | Patrones CLI y scripts npm de Vitest |
+| 04-playwright-cli-vs-mcp | No | playwright, tests | Cuándo usar CLI vs MCP de Playwright |
 | agent-tech-guardian | No | tests, playwright.config | QA: self-healing de tests, cobertura mínima |
 | agent-github-repos | No | platforms.json, plans | Lectura de repos GitHub de la plataforma (MCP + gh) |
 | agent-po-agile-master | No | plans, docs, specs | PO: transformar requisitos en HU para Jira (INVEST, AC) |
@@ -45,6 +52,7 @@
 |-------|-----|
 | **construir** | Build, commit, push a producción |
 | **prueba** | Ejecutar Playwright, corregir fallos y reintentar |
+| **diagramas-drawio** | Crear/editar diagramas con Draw.io MCP |
 
 ---
 

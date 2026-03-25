@@ -54,7 +54,7 @@ flowchart TB
 - [ ] MCP **Atlassian** configurado (Jira)
 - [ ] MCP **Datadog** configurado (dominio sin placeholder)
 - [ ] MCP **GitHub** configurado
-- [ ] `Workspace/config/platforms.json` con Jira, Datadog y GitHub por plataforma
+- [ ] `config/platforms.json` del workspace activo con Jira, Datadog y GitHub por plataforma
 - [ ] Cuenta Cursor con acceso a [cursor.com/automations](https://cursor.com/automations)
 - [ ] **No se requiere** configurar webhook en Datadog (se usa MCP)
 
@@ -93,7 +93,7 @@ Copiar el contenido de `docs/templates/automation-datadog-alert-prompt.md` en el
 
 ### Acceso a platforms.json en Cloud Agent
 
-El Cloud Agent clona el repo; `Workspace/` está en `.gitignore`, por lo que **no tendrá** `Workspace/config/platforms.json` por defecto.
+El Cloud Agent clona el repo; `Workspace/` está en `.gitignore`, por lo que **no tendrá** `Workspace/ciencuadras/config/platforms.json` por defecto.
 
 **Solución:** Configurar `PLATFORMS_JSON` en [Cursor Cloud Agents](https://cursor.com/dashboard?tab=cloud-agents) → Environment con el contenido completo de `platforms.json` (como string JSON). El prompt indica al agente que lea esta variable si no encuentra el archivo.
 

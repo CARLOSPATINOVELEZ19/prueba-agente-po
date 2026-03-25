@@ -1,18 +1,25 @@
 /**
  * Script de auditoría: navega por la URL configurada y captura errores de consola.
  * Genera reporte con capturas de pantalla y lista de errores priorizados.
- * URL y zonas desde Workspace/config/platforms.json.
+ * URL y zonas desde config/platforms.json del workspace activo (workspace-root.js).
  */
 
 const { firefox } = require('playwright');
 const path = require('path');
 const fs = require('fs');
 const { getBaseUrl, getAuditZones } = require('./get-platform-config.js');
+const { getWorkspaceRoot } = require('./workspace-root.js');
 
 const BASE_URL = getBaseUrl() || process.env.BASE_URL || 'https://example.com';
 const ZONES = getAuditZones();
-const OUTPUT_DIR = path.join(__dirname, '../Workspace/audit');
+const OUTPUT_DIR = path.join(getWorkspaceRoot(), 'audit');
 const SCREENSHOTS_DIR = path.join(OUTPUT_DIR, 'screenshots');
+
+/** URL final de zona: absoluta si zone.url ya es http(s), si no se concatena con BASE_URL */
+function resolveZoneUrl(baseUrl, zoneUrl) {
+  if (/^https?:\/\//i.test(zoneUrl)) return zoneUrl;
+  return `${baseUrl}${zoneUrl}`;
+}
 
 async function runAudit() {
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -53,7 +60,7 @@ async function runAudit() {
     });
 
     try {
-      const fullUrl = `${BASE_URL}${zone.url}`;
+      const fullUrl = resolveZoneUrl(BASE_URL, zone.url);
       console.log(`Navegando a ${zone.name}: ${fullUrl}`);
       await page.goto(fullUrl, { waitUntil: 'networkidle', timeout: 30000 });
       await page.waitForTimeout(3000);
@@ -80,7 +87,7 @@ async function runAudit() {
     } catch (err) {
       report.zones.push({
         name: zone.name,
-        url: `${BASE_URL}${zone.url}`,
+        url: resolveZoneUrl(BASE_URL, zone.url),
         status: 'error',
         error: err.message,
         messages: zoneMessages,

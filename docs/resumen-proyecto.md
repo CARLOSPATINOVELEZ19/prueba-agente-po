@@ -16,7 +16,7 @@ Incluye:
 - **Integración** con Jira, Datadog y GitHub vía MCP
 - **Miniverse** — mundo de píxeles compartido para agentes IA (`miniverse/`)
 
-**Configuración por plataforma** (URLs, Jira, Datadog) vive en `Workspace/config/platforms.json`. Ver `docs/onboarding/01-flujo-primera-interaccion.md` para el flujo de primera interacción.
+**Configuración por plataforma** (URLs, Jira, Datadog) vive en `Workspace/ciencuadras/config/platforms.json` por defecto (`WORKSPACE_ROOT`; ver `docs/architecture/4-workspace.md`). Ver `docs/onboarding/01-flujo-primera-interaccion.md` para el flujo de primera interacción.
 
 ---
 
@@ -37,14 +37,25 @@ Incluye:
 
 ### Tests
 
-- **Playwright**: `tests/smoke.spec.js` — smoke tests E2E agnósticos (baseURL y rutas desde `Workspace/config/platforms.json`)
-- **Vitest**: `tests/unit/` — tests unitarios (audit-data, get-platform-config, analyze-cycle-time). Ver `docs/testing/vitest-cli.md` para comandos CLI.
+- **Playwright** (`playwright.config.js`): proyecto **chromium** — `tests/smoke.spec.js` (smoke agnóstico) y `tests/reportes.spec.js` (página `reportes.html` en GitHub Pages; URL por defecto configurable con `REPORTES_BASE_URL`). Proyecto **miniverse** — `tests/miniverse.spec.js` (base URL `MINIVERSE_BASE_URL` o `http://localhost:5173`). Los archivos en `tests/unit/**` no los ejecuta Playwright (`testIgnore`).
+- **Vitest**: `tests/unit/` — audit-data, get-platform-config, analyze-cycle-time, etc. Ver `docs/testing/vitest-cli.md`.
 
-### Scripts
+### Scripts (`scripts/`)
 
+- **workspace-root.js** — resuelve la raíz de artefactos (`WORKSPACE_ROOT` o `Workspace/ciencuadras` por defecto); lo usan scripts y tests que escriben bajo `Workspace/`
+- **get-platform-config.js** — lee `config/platforms.json` del workspace activo; usado por Playwright, auditorías y herramientas
 - **audit-console-errors.js** — auditoría de errores de consola (URL y zonas desde config)
-- **get-platform-config.js** — lee `Workspace/config/platforms.json`; usado por Playwright, audit y otros scripts
 - **audit-data.js** — datos y helpers para auditoría (ZONES por defecto, createEmptyReport, categorizeMessage)
+- **audit-lighthouse.js** — auditoría de rendimiento (PageSpeed Insights API o Lighthouse CLI); salida en `Workspace/audit/lighthouse/`
+- **demo-agentes-run.js** — demo del flujo de agentes; enlazado desde `docs/demo-agentes.html` vía `npm run demo:agentes`
+
+### Herramientas (`tools/scripts/`)
+
+- **generate-cycle-report-html.js** — reporte HTML de ciclo de desarrollo
+- **analyze-cycle-time.js** — análisis por fases (Jira) → MD en `Workspace/reports/`
+- **deploy-pages.js** — regenera reportes y copia a `docs/` para GitHub Pages
+- **create-cursor-automation.js** — creación asistida de automation en cursor.com (Datadog → plan + HU); `npm run automation:create-cursor`
+- **regenerate-diagram-html.js** — regenera `docs/diagrams/*.html` desde `*.mmd`; `npm run diagrams:regenerate-html`
 
 ---
 
@@ -56,22 +67,25 @@ Comportamientos que la IA **debe seguir** al trabajar en este proyecto:
    No ejecutes `npm run build` o equivalentes tras cada modificación. Solo haz build cuando sea explícitamente necesario (ej. antes de deploy).
 
 2. **Planificación antes de código**  
-   Para tareas complejas, genera un plan en `Workspace/plans/` antes de tocar código.
+   Para tareas complejas, genera un plan en `{WORKSPACE_ROOT}/plans/` (por defecto `Workspace/ciencuadras/plans/`; ver `scripts/workspace-root.js`) antes de tocar código.
 
 3. **Validación con Playwright**  
    No consideres una tarea terminada sin un reporte de éxito de Playwright cuando aplique.
 
-4. **Uso de MCP**  
+4. **Orquestador siempre activa especialistas**  
+   Toda petición de trabajo debe pasar por **decisión del Orquestador** y **activación vía Task** (subagentes) según el mapa en `.cursor/rules/00-swarm-orchestrator.mdc`. No omitir el especialista por considerar la tarea “pequeña”.
+
+5. **Uso de MCP**  
    Para Jira: MCP `atlassian`. Para Datadog: MCP `datadog`. Para diagramas: MCP `drawio-mcp`. Para exploración interactiva de la UI: MCP `playwright` (opcional; ver `docs/onboarding/02-playwright-mcp-config.md`). Para análisis de PRs: `gh pr list`. Para crear Historias de Usuario: agente PO-Agile-Master (`agent-po-agile-master.mdc`). Para actualizar documentación tras cambios de código: agente Doc Updater (`agent-doc-updater.mdc`).
 
-5. **Automatización Datadog → Cursor**  
-   Trigger webhook: validar alertas, consultar repos, generar plan y crear HU en Jira. Ver `docs/runbook/automation-datadog-alert.md`.
+6. **Automatización Datadog → Cursor**  
+   **Scheduled** en Cursor Automations (sin webhook): alertas vía MCP Datadog, validación, repos, plan en `{WORKSPACE_ROOT}/plans/` y HU en Jira. Ver `docs/runbook/automation-datadog-alert.md`.
 
-6. **No mezclar contextos**  
-   Si la tarea es compleja, indica que abrirás un Subagente en lugar de mezclar contextos.
+7. **No mezclar contextos**  
+   Preferir **varios Task** con roles claros a mezclar Scout, Historian y Guardian en un solo contexto difuso. Excepción: el usuario pide explícitamente un solo hilo en ese mensaje.
 
-7. **Spec Driven Development (SDD)**  
-   La especificación es la fuente de verdad. Antes de implementar: (1) Define requisitos y criterios de aceptación, (2) Genera diseño técnico y plan en `Workspace/plans/`, (3) Descompón en tareas atómicas. El código se deriva de la spec; usa PRD/Confluence como input cuando aplique.
+8. **Spec Driven Development (SDD)**  
+   La especificación es la fuente de verdad. Antes de implementar: (1) Define requisitos y criterios de aceptación, (2) Genera diseño técnico y plan en `{WORKSPACE_ROOT}/plans/`, (3) Descompón en tareas atómicas. El código se deriva de la spec; usa PRD/Confluence como input cuando aplique.
 
 ### Framework de trabajo
 
@@ -91,13 +105,18 @@ prueba-agente-po/
 │   ├── smoke.spec.js       # E2E agnósticos (baseURL y smokePaths desde config)
 │   └── unit/               # Tests unitarios (Vitest)
 ├── scripts/
-│   ├── audit-console-errors.js
+│   ├── workspace-root.js
 │   ├── get-platform-config.js
-│   └── audit-data.js
+│   ├── audit-console-errors.js
+│   ├── audit-data.js
+│   ├── audit-lighthouse.js
+│   └── demo-agentes-run.js
 ├── tools/scripts/
 │   ├── generate-cycle-report-html.js
 │   ├── analyze-cycle-time.js
 │   ├── deploy-pages.js
+│   ├── create-cursor-automation.js
+│   ├── regenerate-diagram-html.js
 │   └── README.md
 ├── docs/                   # Documentación y reportes publicados
 │   ├── README.md           # Índice de documentación
@@ -111,18 +130,14 @@ prueba-agente-po/
 │   ├── templates/          # Plantillas de config (platforms.example.json)
 │   ├── data/               # Datos de referencia (jira-cycle-*.json)
 │   └── decisions/          # ADRs
-├── Workspace/              # Resultados del trabajo de agentes (no versionados)
-│   ├── config/             # platforms.json (URLs, Jira, Datadog por plataforma)
-│   ├── reports/            # HTML, MD de reportes
-│   ├── audit/              # Auditoría consola (JSON, screenshots)
-│   ├── playwright/         # test-results, playwright-report
-│   ├── plans/              # Planes generados por agentes
-│   ├── observabilidad/     # Runbooks Datadog, mapeos
-│   ├── repos/              # Repos externos clonados
-│   └── data/               # Datos exportados (opcional)
+├── Workspace/              # Artefactos por producto (no versionados); ver docs/architecture/4-workspace.md
+│   ├── ciencuadras/        # WORKSPACE_ROOT por defecto
+│   │   ├── config/platforms.json
+│   │   └── reports/ plans/ audit/ playwright/ observabilidad/ repos/ data/
+│   └── jelpit-conjuntos-pagos/  # Misma forma de carpetas (otro producto)
 ├── playwright.config.js    # baseURL desde get-platform-config
 ├── vitest.config.js        # Config Vitest (tests/unit/**/*.test.js)
-├── .cursor/                # Reglas y skills de agentes (planes en Workspace/plans)
+├── .cursor/                # Reglas y skills de agentes (planes en {WORKSPACE_ROOT}/plans/)
 └── rules/                  # Reglas técnicas (Playwright, Datadog, PRD, etc.)
 ```
 
@@ -138,10 +153,16 @@ prueba-agente-po/
 | `npm run test:unit:ui` | Vitest UI interactiva |
 | `npm run test:unit:coverage` | Vitest con cobertura → `./coverage/` |
 | `npm run test:unit:list` | Lista tests Vitest |
+| `npm run test:unit:related` | Vitest solo tests relacionados con archivos cambiados (`vitest related --run`) |
 | `npm run test:ui` | Playwright con UI interactiva |
 | `npm run audit` | Auditoría de errores de consola (URL desde config) |
+| `npm run audit:lighthouse` | Auditoría Lighthouse / PageSpeed → `Workspace/audit/lighthouse/` |
 | `npm run report:cycle` | Genera reporte ciclo de desarrollo → `Workspace/reports/` |
 | `npm run deploy:pages` | Regenera reportes y copia a `docs/` para GitHub Pages |
+| `npm run automation:create-cursor` | Asiste creación de automation Datadog en Cursor (ver `docs/runbook/automation-datadog-alert.md`) |
+| `npm run diagrams:regenerate-html` | Regenera HTML de diagramas en `docs/diagrams/` desde `.mmd` |
+| `npm run demo:agentes` | Ejecuta demo de agentes |
+| `npm run demo:agentes:open` | Abre `docs/demo-agentes.html` en el navegador (macOS `open`) |
 | `npm run lint` | ESLint |
 | `npm run format` | Prettier |
 | `npx playwright test --project=miniverse` | Tests E2E Miniverse (requiere `cd miniverse && npm run dev`: Vite :5173 + API :4321) |

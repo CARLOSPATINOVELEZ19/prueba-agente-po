@@ -7,7 +7,9 @@
     "dev:full": "npm run dev",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "miniverse"
+    "server": "miniverse",
+    "seed:agents": "node scripts/seed-inventory-agents.mjs",
+    "seed:agents:live": "node scripts/seed-inventory-agents.mjs --keep-alive"
   },
   "dependencies": {
     "@miniverse/core": "^0.2.6",

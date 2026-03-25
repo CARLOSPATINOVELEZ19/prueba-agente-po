@@ -303,7 +303,7 @@
       <h1>Agentes y su interacción con MCPs, CLIs y Skills</h1>
       <p class="subtitle">
         Vista basada en <code>docs/architecture/6-inventario-agentes.md</code>.
-        El Orquestador coordina fases; cada agente consume integraciones (MCP), herramientas de línea de comandos (CLI) o skills reutilizables.
+        El Orquestador coordina y <strong>solo delega con Task</strong> (subagentes); MCP, CLI, skills y tools de repo las ejecutan los especialistas. Excepción: el usuario pide explícitamente actuar sin subagentes en ese turno.
       </p>
     </header>
 
@@ -317,7 +317,7 @@
     <div class="orchestrator-row">
       <div class="orchestrator">
         <strong>Orquestador (The Architect)</strong>
-        <span>MCP <code class="chip chip--mcp" style="border:none;padding:0;background:none;display:inline">atlassian</code> · Tools <span class="chip chip--tool" style="font-size:0.75rem">@Codebase</span> <span class="chip chip--cli" style="font-size:0.75rem">gh pr list</span></span>
+        <span><span class="chip chip--tool" style="font-size:0.8rem">Task</span> única herramienta de ejecución · texto al usuario (decisión de orquestación y síntesis) · sin MCP / CLI / lectura de repo en sesión normal</span>
       </div>
     </div>
 
@@ -416,12 +416,24 @@
     <header>
       <h1>Actividades realizadas con los agentes</h1>
       <p class="activities-intro">
-        Resumen de entregables y planes generados en <code>Workspace/reports/</code>, <code>Workspace/plans/</code> y <code>Workspace/observabilidad/</code>.
-        Puedes ampliar o editar esta lista cuando se añadan nuevos artefactos.
+        Resumen de entregables y planes bajo el <code>WORKSPACE_ROOT</code> activo (por defecto <code>Workspace/ciencuadras/</code>): <code>reports/</code>, <code>plans/</code>, <code>observabilidad/</code>, etc. La raíz la resuelven los scripts con <code>scripts/workspace-root.js</code> y la variable de entorno <code>WORKSPACE_ROOT</code>. Puedes ampliar o editar esta lista cuando se añadan nuevos artefactos.
       </p>
     </header>
 
     <div class="activity-list">
+      <article class="activity-item">
+        <time class="activity-item__date" datetime="2026-03-24">24 mar 2026</time>
+        <div>
+          <h3>Documentación y diagrama: Orquestador, WORKSPACE_ROOT y Datadog</h3>
+          <p>Inventario y vista HTML alineados con la regla del Orquestador (solo <strong>Task</strong> para ejecutar; MCP/CLI en subagentes). Rutas de planes y artefactos descritas con <code>WORKSPACE_ROOT</code> y <code>scripts/workspace-root.js</code>. En resumen de proyecto: automatización Datadog en Cursor como <strong>scheduled</strong> (sin webhook), coherente con runbook y template.</p>
+          <div class="activity-item__meta">
+            <span class="chip chip--tool">Doc Updater</span>
+            <span class="chip chip--skill">diagramas HTML</span>
+            <span class="chip chip--tool">scripts/workspace-root.js</span>
+          </div>
+        </div>
+      </article>
+
       <article class="activity-item">
         <time class="activity-item__date" datetime="2026-03-17">17 mar 2026</time>
         <div>
@@ -449,7 +461,7 @@
       <article class="activity-item">
         <time class="activity-item__date" datetime="2026-03">Mar 2026</time>
         <div>
-          <h3>Planes en Workspace/plans/</h3>
+          <h3>Planes en {WORKSPACE_ROOT}/plans/</h3>
           <p>Validación de solapamiento de reglas de agentes; HU de latencia (admin eventos masivos); mejoras sobre alerta Datadog; plan Miniverse; validación separación código/agentes; optimización de proyecto; plan de errores de consola; unit tests.</p>
           <div class="activity-item__meta">
             <span class="chip chip--tool">Orquestador</span>

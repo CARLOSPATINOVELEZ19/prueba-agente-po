@@ -13,13 +13,17 @@ prueba-agente-po/
 │   │   ├── 00-swarm-orchestrator.mdc   # Orquestador (siempre activa)
 │   │   ├── 01-plans-location.mdc       # Planes en Workspace/plans/
 │   │   ├── 02-onboarding-first-interaction.mdc
+│   │   ├── 03-validacion-agnostico-particular.mdc
 │   │   ├── agent-tech-guardian.mdc     # QA/Playwright (globs: tests)
 │   │   ├── agent-github-repos.mdc      # Lectura repos GitHub de la plataforma
 │   │   ├── agent-po-agile-master.mdc   # PO: Historias de Usuario para Jira (INVEST)
-│   │   └── agent-doc-updater.mdc       # Experto en documentación (globs: código, docs)
+│   │   ├── agent-doc-updater.mdc       # Experto en documentación (globs: código, docs)
+│   │   ├── vitest-cli.mdc              # Convenciones Vitest / scripts npm
+│   │   └── 04-playwright-cli-vs-mcp.mdc # Playwright Test vs Playwright MCP
 │   ├── skills/                 # Skills especializados
 │   │   ├── construir/         # Build y deploy
-│   │   └── prueba/            # Tests E2E y validación UI
+│   │   ├── prueba/            # Tests E2E y validación UI
+│   │   └── diagramas-drawio/  # Diagramas Mermaid / Draw.io
 │   └── plans/                  # Redirige a Workspace/plans/
 │
 ├── docs/                       # Documentación y reportes publicados
@@ -42,20 +46,26 @@ prueba-agente-po/
 ├── scripts/                    # Scripts de auditoría y config
 │   ├── get-platform-config.js  # Lee platforms.json; usado por Playwright y audit
 │   ├── audit-console-errors.js # Auditoría de consola (URL y zonas desde config)
-│   └── audit-data.js           # Helpers para auditoría
+│   ├── audit-data.js           # Helpers para auditoría
+│   ├── audit-lighthouse.js     # Rendimiento (PageSpeed / Lighthouse)
+│   └── demo-agentes-run.js     # Demo flujo agentes → demo-agentes.html
 │
 ├── .githooks/                  # Git hooks (pre-commit: recordatorio Doc Updater)
 │   ├── pre-commit              # Recordatorio cuando hay código sin docs
 │   └── README.md               # Instalación: git config core.hooksPath .githooks
 │
 ├── tests/
-│   ├── smoke.spec.js           # E2E agnósticos (baseURL y smokePaths desde config)
+│   ├── smoke.spec.js           # E2E smoke (baseURL y smokePaths desde config)
+│   ├── reportes.spec.js        # E2E índice reportes (GitHub Pages; REPORTES_BASE_URL)
+│   ├── miniverse.spec.js       # E2E Miniverse (--project=miniverse)
 │   └── unit/                   # Tests unitarios Vitest
 │
-├── tools/scripts/              # Scripts de reportes y deploy
+├── tools/scripts/              # Scripts de reportes, deploy y automatización
 │   ├── generate-cycle-report-html.js
 │   ├── analyze-cycle-time.js
 │   ├── deploy-pages.js
+│   ├── create-cursor-automation.js
+│   ├── regenerate-diagram-html.js
 │   └── README.md
 │
 ├── Workspace/                  # Artefactos generados (.gitignore)
@@ -80,7 +90,7 @@ prueba-agente-po/
 
 ### Flujo de configuración
 
-1. **Onboarding**: Si no existe `Workspace/config/platforms.json`, seguir `docs/onboarding/01-flujo-primera-interaccion.md`.
+1. **Onboarding**: Si no existe `Workspace/ciencuadras/config/platforms.json`, seguir `docs/onboarding/01-flujo-primera-interaccion.md` (y `docs/architecture/4-workspace.md`).
 2. **Config central**: `platforms.json` define URLs, smokePaths, auditZones, Jira y Datadog por plataforma.
 3. **Scripts y tests** leen la config vía `scripts/get-platform-config.js`.
 

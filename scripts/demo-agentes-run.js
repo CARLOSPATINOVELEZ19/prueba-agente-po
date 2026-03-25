@@ -50,7 +50,7 @@ async function main() {
   }
 
   console.log('');
-  console.log('Agentes especializados (ejemplo): Guardian=activo si hay tests; GitHub Repos/Cloud Datadog=idle en este demo.');
+  console.log('En Cursor, los especialistas se activan con la herramienta Task (subagentes); este script solo simula tiempos en consola.');
   console.log('');
 }
 

@@ -1,6 +1,6 @@
 /**
  * Datos y helpers para auditoría de consola.
- * Zonas por defecto cuando no hay Workspace/config/platforms.json.
+ * Zonas por defecto cuando no hay config/platforms.json en el workspace activo.
  * Para plataformas específicas, definir auditZones en platforms.json.
  */
 

@@ -1,7 +1,6 @@
 ---
-description: "Product Owner experto. Transforma requisitos en Historias de Usuario listas para Jira con formato INVEST y criterios de aceptación."
-globs: ["Workspace/**/plans/**", "**/docs/**", "**/*.spec.md", "**/platforms.json", "**/prd*.md", "**/spec*.md"]
-alwaysApply: false
+inclusion: fileMatch
+fileMatchPattern: ['Workspace/plans/**', '**/docs/**', '**/*.spec.md', '**/platforms.json', '**/prd*.md', '**/spec*.md']
 ---
 # AGENTE PO-AGILE-MASTER (Product Owner / Agile Master)
 
@@ -104,7 +103,7 @@ Si el requisito inicial es ambiguo o incompleto, formula aquí preguntas especí
 Cuando el usuario solicite **crear la HU en Jira**:
 
 1. Usar el MCP de Atlassian (`atlassian`) para crear el issue.
-2. Obtener `projectKey` y `projectUrl` desde el `config/platforms.json` del workspace activo (p. ej. `Workspace/ciencuadras/config/platforms.json`) si existe.
+2. Obtener `projectKey` y `projectUrl` desde `Workspace/config/platforms.json` si existe.
 3. Mapear el formato de salida a los campos de Jira: título → Summary, Historia de Usuario + AC → Description (en Markdown o formato Jira).
 
 ---

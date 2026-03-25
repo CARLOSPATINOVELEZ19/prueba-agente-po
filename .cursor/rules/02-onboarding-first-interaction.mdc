@@ -9,10 +9,10 @@ Al iniciar una sesión de trabajo, **antes de cualquier tarea**:
 
 ## 1. Comprobar si existe configuración de plataformas
 
-Si **no existe** `Workspace/config/platforms.json`:
+Si **no existe** `Workspace/ciencuadras/config/platforms.json` (o el `config/platforms.json` del `WORKSPACE_ROOT` activo):
 
-1. Ejecutar el **Paso 1** del flujo: validar MCPs (Atlassian, Datadog, GitHub) y CLIs (`gh`, `node`, `npm`, `npx playwright`).
-2. Ejecutar el **Paso 2**: crear `Workspace/config/platforms.json` desde `docs/templates/platforms.example.json` y solicitar al usuario:
+1. El **Orquestador no ejecuta** validaciones ni comandos: **delega con Task** (`shell` o `generalPurpose` según `.cursor/rules/00-swarm-orchestrator.mdc`) el **Paso 1**: validar MCPs (Atlassian, Datadog, GitHub) y CLIs (`gh`, `node`, `npm`, `npx playwright`).
+2. **Delegar con Task** el **Paso 2**: crear `Workspace/ciencuadras/config/platforms.json` desde `docs/templates/platforms.example.json` y solicitar al usuario (el subagente gestiona archivos y plantilla):
    - URLs de la aplicación
    - Rutas del proyecto en Jira (projectKey, projectUrl)
    - Tablero de incidentes
@@ -22,7 +22,7 @@ Si **no existe** `Workspace/config/platforms.json`:
 
 ## 2. Si ya existe configuración
 
-Usar `Workspace/config/platforms.json` como fuente de verdad para URLs, Jira y Datadog. No hardcodear plataformas en código ni docs.
+Usar el `config/platforms.json` del workspace activo (`Workspace/ciencuadras/` por defecto; ver `docs/architecture/4-workspace.md`) como fuente de verdad. No hardcodear plataformas en código ni docs.
 
 ## Referencia
 

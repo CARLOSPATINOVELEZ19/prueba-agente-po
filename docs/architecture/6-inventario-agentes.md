@@ -24,14 +24,14 @@
 | Campo | Valor |
 |-------|-------|
 | **Nombre** | Orquestador / The Architect |
-| **Objetivo** | Liderar el enjambre de agentes y orquestar las fases: Análisis (Scout) → Contexto (Historian) → Planificación → Validación (Guardian). Asegura que cada fase se complete antes de pasar a la siguiente. |
-| **MCPs** | `atlassian` (Jira, Confluence) |
+| **Objetivo** | Coordinar el enjambre: **decidir** qué agente especialista actúa en cada momento y **activarlo siempre** vía herramienta **Task** (subagentes). No sustituir al especialista ejecutando MCP, CLI ni lectura/escritura del repo en la sesión del Orquestador, salvo excepción explícita del usuario en ese turno (“solo Orquestador, sin subagentes”). |
+| **MCPs** | Ninguno en la sesión del Orquestador; el uso de MCP ocurre **solo** en subagentes (`atlassian`, `user-datadog`, `user-github`, etc.). |
 | **Skills** | — |
-| **Tools** | `@Codebase`, `gh pr list` |
-| **Scripts** | — |
+| **Tools** | **Únicamente Task** (delegación a subagentes). Texto al usuario (decisión de orquestación, aclaraciones, síntesis). **Prohibido:** MCP, terminal, lectura/escritura de archivos del repo, búsquedas en código (salvo excepción acordada arriba). |
+| **Scripts** | `scripts/demo-agentes-run.js` (demo educativa; la activación real en Cursor es **Task**) |
 | **Archivos de código** | `.cursor/rules/00-swarm-orchestrator.mdc`, `.cursor/rules/01-plans-location.mdc` |
 | **Archivo de prompt** | No aplica (regla Cursor) |
-| **Otra información** | **alwaysApply: true**. Regla maestra. Delega en Scout (MCP Jira), Historian (Codebase + gh), Guardian (Playwright). Genera planes en `Workspace/plans/`. Restricción: no mezclar contextos; si la tarea es compleja, indicar Subagente. |
+| **Otra información** | **alwaysApply: true**. Mapa Orquestador → `subagent_type` en `00-swarm-orchestrator.mdc`. Planes en `{WORKSPACE_ROOT}/plans/` (por defecto `Workspace/ciencuadras/plans/`; ver `scripts/workspace-root.js`). **Prohibido** omitir especialista por “tarea simple”. |
 
 ---
 
@@ -47,7 +47,7 @@
 | **Scripts** | — |
 | **Archivos de código** | Embebido en `.cursor/rules/00-swarm-orchestrator.mdc` (Fase 1). Referencia: `rules/AGENTS.md` (Protocolo de Descubrimiento). |
 | **Archivo de prompt** | No aplica (fase del Orquestador) |
-| **Otra información** | No tiene regla propia. El Orquestador ejecuta esta fase usando MCP Jira. Fuente de tickets: Jira (projectKey desde `platforms.json`). |
+| **Otra información** | No tiene regla propia. El Orquestador **delega** Scout vía Task (`generalPurpose`) para usar MCP Jira. Fuente de tickets: Jira (projectKey desde `platforms.json` del `WORKSPACE_ROOT` activo). |
 
 ---
 
@@ -63,7 +63,7 @@
 | **Scripts** | — |
 | **Archivos de código** | Embebido en `.cursor/rules/00-swarm-orchestrator.mdc` (Fase 2). Referencia: `rules/AGENTS.md` (Contexto de Git, Análisis Técnico). |
 | **Archivo de prompt** | No aplica (fase del Orquestador) |
-| **Otra información** | No tiene regla propia. El Orquestador ejecuta esta fase. **Scope: repo actual del proyecto.** Usa Codebase para impacto técnico y `gh pr list`/`git log` para el repo actual. No confundir con GitHub Repos (repos externos). |
+| **Otra información** | No tiene regla propia. El Orquestador **delega** Historian vía Task (`explore` o fase en `generalPurpose`). **Scope: repo actual del proyecto.** El subagente usa Codebase, `gh pr list`, `git log`, etc. No confundir con GitHub Repos (repos externos). |
 
 ---
 
@@ -76,8 +76,8 @@
 | **MCPs** | — |
 | **Skills** | `prueba` (`.cursor/skills/prueba/SKILL.md`) — Playwright, corrección de fallos |
 | **Tools** | `npx playwright test` |
-| **Scripts** | `npm test`, `npm run test:ui` |
-| **Archivos de código** | `.cursor/rules/agent-tech-guardian.mdc`, `tests/smoke.spec.js`, `playwright.config.js`, `scripts/get-platform-config.js` |
+| **Scripts** | `npm test`, `npm run test:ui`, `npx playwright test --project=miniverse` (cuando aplique Miniverse) |
+| **Archivos de código** | `.cursor/rules/agent-tech-guardian.mdc`, `tests/smoke.spec.js`, `tests/reportes.spec.js`, `tests/miniverse.spec.js`, `playwright.config.js`, `scripts/get-platform-config.js` |
 | **Archivo de prompt** | No aplica (regla Cursor) |
 | **Otra información** | **globs:** `**/tests/**`, `playwright.config.js`, `**/*.spec.js`. **alwaysApply: false**. Se activa al trabajar con tests. Referencia cobertura: `docs/architecture/3-tech-stack-org.md` (70% recomendado). |
 
@@ -93,9 +93,9 @@
 | **Skills** | — |
 | **Tools** | MCP GitHub, CLI `gh` (gh repo view, gh pr list, gh api) |
 | **Scripts** | — |
-| **Archivos de código** | `.cursor/rules/agent-github-repos.mdc`, `Workspace/config/platforms.json` (github.repos), `docs/templates/platforms.example.json` |
+| **Archivos de código** | `.cursor/rules/agent-github-repos.mdc`, `Workspace/**/config/platforms.json` (github.repos), `docs/templates/platforms.example.json` |
 | **Archivo de prompt** | No aplica (regla Cursor) |
-| **Otra información** | **globs:** `Workspace/config/platforms.json`, `Workspace/plans/**`, `**/platforms.json`, `docs/templates/platforms.example.json`. **alwaysApply: false**. **Scope: repos externos** definidos en `platforms[].github.repos` (no el repo actual; para el repo actual ver Historian). Solo lectura; no push/merge. |
+| **Otra información** | **globs:** `Workspace/**/config/platforms.json`, `Workspace/**/plans/**`, `**/platforms.json`, `docs/templates/platforms.example.json`. **alwaysApply: false**. **Scope: repos externos** definidos en `platforms[].github.repos` (no el repo actual; para el repo actual ver Historian). Solo lectura; no push/merge. |
 
 ---
 
@@ -111,7 +111,7 @@
 | **Scripts** | — |
 | **Archivos de código** | `.cursor/rules/agent-po-agile-master.mdc` |
 | **Archivo de prompt** | No aplica (regla Cursor) |
-| **Otra información** | **globs:** `Workspace/plans/**`, `**/docs/**`, `**/*.spec.md`, `**/platforms.json`, `**/prd*.md`, `**/spec*.md`. **alwaysApply: false**. Se activa al trabajar con planes, specs o docs. Proceso Chain-of-Thought obligatorio. Integración con Jira vía platforms.json. |
+| **Otra información** | **globs:** `{WORKSPACE_ROOT}/plans/**`, `**/docs/**`, `**/*.spec.md`, `**/platforms.json`, `**/prd*.md`, `**/spec*.md`. **alwaysApply: false**. Se activa al trabajar con planes, specs o docs. Proceso Chain-of-Thought obligatorio. Integración con Jira vía `platforms.json` del workspace activo. |
 
 ---
 
@@ -141,9 +141,9 @@
 | **Skills** | — |
 | **Tools** | MCP Datadog, MCP Atlassian, MCP GitHub |
 | **Scripts** | `tools/scripts/create-cursor-automation.js` — crea la automation en cursor.com/automations (Playwright). Comando: `npm run automation:create-cursor` |
-| **Archivos de código** | `docs/templates/automation-datadog-alert-prompt.md`, `docs/runbook/automation-datadog-alert.md`, `Workspace/config/platforms.json` (o `PLATFORMS_JSON` env) |
+| **Archivos de código** | `docs/templates/automation-datadog-alert-prompt.md`, `docs/runbook/automation-datadog-alert.md`, `Workspace/**/config/platforms.json` (o `PLATFORMS_JSON` env) |
 | **Archivo de prompt** | `docs/templates/automation-datadog-alert-prompt.md` |
-| **Otra información** | **Trigger:** Scheduled (cursor.com/automations). **No webhook.** Variables de entorno en Cloud Agents: `PLATFORMS_JSON`, `JIRA_CLOUD_ID`, `JIRA_PROJECT_KEY`. Config: `datadog.serviceToRepos`, `github.repos` en platforms.json. Salidas: `Workspace/plans/plan-alerta-{id}.md`, HU en Jira. Runbook: `docs/runbook/automation-datadog-alert.md`. |
+| **Otra información** | **Trigger:** Scheduled (cursor.com/automations). **No webhook.** Variables de entorno en Cloud Agents: `PLATFORMS_JSON`, `JIRA_CLOUD_ID`, `JIRA_PROJECT_KEY`. Config: `datadog.serviceToRepos`, `github.repos` en platforms.json. Salidas: `{WORKSPACE_ROOT}/plans/plan-alerta-{id}.md`, HU en Jira. Runbook: `docs/runbook/automation-datadog-alert.md`. **Sesión interactiva:** si el usuario solicita *validación en Datadog*, el Orquestador activa este mismo protocolo con **Task** `generalPurpose` y el prompt de `docs/templates/automation-datadog-alert-prompt.md` (ver `.cursor/rules/00-swarm-orchestrator.mdc`). |
 
 ---
 
@@ -151,9 +151,11 @@
 
 | Regla | Propósito |
 |-------|-----------|
-| `.cursor/rules/01-plans-location.mdc` | Planes en `Workspace/plans/`, no en `.cursor/plans/` |
+| `.cursor/rules/01-plans-location.mdc` | Planes en `{WORKSPACE_ROOT}/plans/` (p. ej. `Workspace/ciencuadras/plans/`), no en `.cursor/plans/`; raíz vía `WORKSPACE_ROOT` y `scripts/workspace-root.js` |
 | `.cursor/rules/02-onboarding-first-interaction.mdc` | Validar MCPs/CLIs y crear platforms.json si no existe |
-| `.cursor/rules/03-validacion-agnostico-particular.mdc` | Validar con usuario si acción es transversal o particular |
+| `.cursor/rules/03-validacion-agnostico-particular.mdc` | Pregunta obligatoria: transversal (agnóstico) vs particular al producto |
+| `.cursor/rules/vitest-cli.mdc` | Scripts npm y patrones CLI para Vitest / cobertura |
+| `.cursor/rules/04-playwright-cli-vs-mcp.mdc` | Cuándo usar Playwright Test (CLI) vs Playwright MCP |
 
 ---
 

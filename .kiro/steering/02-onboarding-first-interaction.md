@@ -1,0 +1,27 @@
+---
+inclusion: always
+---
+# Onboarding - Primera Interacción
+
+Al iniciar una sesión de trabajo, **antes de cualquier tarea**:
+
+## 1. Comprobar si existe configuración de plataformas
+
+Si **no existe** `Workspace/config/platforms.json`:
+
+1. Ejecutar el **Paso 1** del flujo: validar MCPs (Atlassian, Datadog, GitHub) y CLIs (`gh`, `node`, `npm`, `npx playwright`).
+2. Ejecutar el **Paso 2**: crear `Workspace/config/platforms.json` desde `docs/templates/platforms.example.json` y solicitar al usuario:
+   - URLs de la aplicación
+   - Rutas del proyecto en Jira (projectKey, projectUrl)
+   - Tablero de incidentes
+   - Tablero de incidentes de seguridad
+   - Tablero/Dashboards de Datadog
+3. No continuar con otras tareas hasta completar el onboarding o hasta que el usuario indique que lo hará después.
+
+## 2. Si ya existe configuración
+
+Usar `Workspace/config/platforms.json` como fuente de verdad para URLs, Jira y Datadog. No hardcodear plataformas en código ni docs.
+
+## Referencia
+
+Flujo detallado: `docs/onboarding/01-flujo-primera-interaccion.md`

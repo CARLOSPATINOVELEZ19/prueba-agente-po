@@ -1,5 +1,5 @@
 {
-  "_comment": "Copiar a Workspace/config/platforms.json. Ver docs/onboarding/01-flujo-primera-interaccion.md",
+  "_comment": "Copiar a Workspace/ciencuadras/config/platforms.json (u otro WORKSPACE_ROOT). Ver docs/onboarding/01-flujo-primera-interaccion.md",
   "platforms": [
     {
       "id": "ejemplo",

@@ -1,6 +1,5 @@
 ---
-description: Validar con el usuario si una acción es particular del proyecto o transversal (agnóstica)
-alwaysApply: true
+inclusion: always
 ---
 
 # Validación: Agnóstico vs Particular
@@ -16,12 +15,12 @@ Antes de implementar o documentar una **acción nueva**, el agente **debe valida
 | Tipo | Ubicación | Ejemplos |
 |------|-----------|----------|
 | **Transversal (agnóstico)** | Código fuente, docs genéricos, templates | `get-platform-config.js`, `platforms.example.json`, flujos de onboarding, tests E2E genéricos |
-| **Particular** | `Workspace/**/config/`, runbooks específicos, automation con datos concretos | `platforms.json` con Jira GD768, Automation Datadog con serviceToRepos, `jira-cycle-*.json` |
+| **Particular** | `Workspace/config/`, runbooks específicos, automation con datos concretos | `platforms.json` con Jira GD768, Automation Datadog con serviceToRepos, `jira-cycle-*.json` |
 
 ## Regla de decisión
 
 - **Transversal**: Se añade al código versionado, usa config desde `platforms.json`, no hardcodea URLs/proyectos.
-- **Particular**: Se documenta en runbooks o config; los datos viven en `Workspace/ciencuadras/config/platforms.json` (u otro `WORKSPACE_ROOT`) o `docs/data/`.
+- **Particular**: Se documenta en runbooks o config; los datos viven en `Workspace/config/platforms.json` o `docs/data/`.
 
 ## No continuar sin confirmación
 
@@ -33,4 +32,4 @@ Si el usuario no responde, **preguntar explícitamente** antes de:
 ## Referencias
 
 - Diagramas: `docs/diagrams/esquema-funcionamiento-agnostico.html`, `docs/diagrams/esquema-acciones-particulares.html`
-- Config: `docs/templates/platforms.example.json`, `Workspace/ciencuadras/config/platforms.json` (por defecto)
+- Config: `docs/templates/platforms.example.json`, `Workspace/config/platforms.json`

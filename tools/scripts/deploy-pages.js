@@ -11,9 +11,11 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '../..');
-const WORKSPACE_REPORTS = path.join(ROOT, 'Workspace/reports');
-const WORKSPACE_AUDIT = path.join(ROOT, 'Workspace/audit');
-const WORKSPACE_CONFIG = path.join(ROOT, 'Workspace/config/platforms.json');
+const { getWorkspaceRoot } = require('../../scripts/workspace-root.js');
+const WS = getWorkspaceRoot();
+const WORKSPACE_REPORTS = path.join(WS, 'reports');
+const WORKSPACE_AUDIT = path.join(WS, 'audit');
+const WORKSPACE_CONFIG = path.join(WS, 'config', 'platforms.json');
 const DOCS = path.join(ROOT, 'docs');
 const DOCS_DATA = path.join(DOCS, 'data');
 
@@ -25,13 +27,13 @@ function main() {
   });
 
   if (!fs.existsSync(WORKSPACE_REPORTS)) {
-    console.error('No se encontró Workspace/reports/. Ejecuta npm run report:cycle primero.');
+    console.error(`No se encontró reports/ en el workspace (${WORKSPACE_REPORTS}). Ejecuta npm run report:cycle primero.`);
     process.exit(1);
   }
 
   const files = fs.readdirSync(WORKSPACE_REPORTS).filter((f) => f.endsWith('.html'));
   if (files.length === 0) {
-    console.log('No hay archivos HTML en Workspace/reports/.');
+    console.log(`No hay archivos HTML en reports/ del workspace (${WORKSPACE_REPORTS}).`);
   } else {
     console.log(`Copiando ${files.length} reporte(s) a docs/...`);
     for (const file of files) {
@@ -49,7 +51,7 @@ function main() {
     fs.copyFileSync(WORKSPACE_CONFIG, dest);
     console.log('  platforms.json -> docs/data/platforms.json');
   } else {
-    console.log('  (Workspace/config/platforms.json no existe; filtros por plataforma deshabilitados)');
+    console.log(`  (${WORKSPACE_CONFIG} no existe; filtros por plataforma deshabilitados)`);
   }
 
   // Copiar screenshots de auditoría si existen (para auditoria-errores-consola.html)

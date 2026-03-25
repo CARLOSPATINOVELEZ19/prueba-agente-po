@@ -13,7 +13,7 @@ Verificar que la interfaz de usuario funciona correctamente tras cambios recient
 
 ### 1. Identificar qué probar
 
-- **Smoke tests**: Tests E2E agnósticos en `tests/smoke.spec.js` (baseURL y rutas desde `Workspace/config/platforms.json`)
+- **Smoke tests**: Tests E2E agnósticos en `tests/smoke.spec.js` (baseURL y rutas desde `WORKSPACE_ROOT/config/platforms.json`; por defecto `Workspace/ciencuadras/config/platforms.json`)
 - **UI específica**: Si se creó o modificó una página, ejecutar tests que la cubran
 
 ### 2. Ejecutar tests con Playwright
@@ -29,7 +29,7 @@ npm run test:ui
 
 ### 3. Si falla
 
-1. Revisar el output de Playwright (trace, screenshot en `Workspace/playwright/test-results/`)
+1. Revisar el output de Playwright (trace, screenshot en `{WORKSPACE_ROOT}/playwright/test-results/`; sin `WORKSPACE_ROOT`, `Workspace/playwright/`)
 2. Identificar la causa del fallo
 3. Corregir el código
 4. **Volver al paso 2** y ejecutar los tests de nuevo

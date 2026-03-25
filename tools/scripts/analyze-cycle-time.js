@@ -15,6 +15,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { getWorkspaceRoot } = require('../../scripts/workspace-root.js');
 
 const FIELDS = {
   customfield_24748: 'Ciclo total (Por hacer → Producción)',
@@ -196,7 +197,7 @@ function main() {
   const reportMd = report(result);
   console.log(reportMd);
 
-  const outPath = path.join(__dirname, '../../Workspace/reports/analisis-ciclo-desarrollo.md');
+  const outPath = path.join(getWorkspaceRoot(), 'reports', 'analisis-ciclo-desarrollo.md');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, reportMd, 'utf8');
   console.log('\n---\nReporte guardado en:', outPath);

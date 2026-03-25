@@ -6,15 +6,16 @@ Workspace almacena los resultados del trabajo de cada agente (scripts, tests, ag
 
 ```mermaid
 flowchart TB
-    subgraph workspace ["Workspace (resultados de agentes - .gitignore)"]
-        config[config/ platforms.json]
-        reports[reports/]
-        audit[audit/]
-        playwright[playwright/]
-        plans[plans/]
-        observabilidad[observabilidad/]
-        repos[repos/]
-        data[data/]
+    subgraph workspace ["Workspace/ (.gitignore)"]
+        direction TB
+        subgraph w1 ["ciencuadras/ (por defecto)"]
+            c1[config/platforms.json]
+            c2[reports audit playwright plans ...]
+        end
+        subgraph w2 ["jelpit-conjuntos-pagos/"]
+            j1[config/platforms.json]
+            j2[reports audit playwright plans ...]
+        end
     end
 
     subgraph generators ["Generadores"]
@@ -27,7 +28,7 @@ flowchart TB
 
     subgraph input ["Entrada"]
         I1[docs/data/jira-cycle-*.json]
-        I2[platforms.json]
+        I2[platforms.json vía WORKSPACE_ROOT]
     end
 
     I1 --> G1
@@ -35,14 +36,13 @@ flowchart TB
     I2 --> G3
     I2 --> G4
 
-    G1 --> reports
-    G2 --> reports
-    G3 --> audit
-    G4 --> playwright
-    G5 --> plans
-    G5 --> observabilidad
+    G1 --> c2
+    G2 --> c2
+    G3 --> c2
+    G4 --> c2
+    G5 --> c2
 
-    reports --> deploy[deploy-pages.js]
+    c2 --> deploy[deploy-pages.js]
     deploy --> docs[docs/*.html GitHub Pages]
 ```
 
@@ -50,22 +50,50 @@ flowchart TB
 
 ## Estructura
 
+En la raíz de `Workspace/` solo viven **dos árboles por producto**. Cada uno incluye la misma forma de carpetas:
+
 ```
 Workspace/
-├── config/         # Configuración por plataforma (URLs, Jira, Datadog)
-│   └── platforms.json   # Creado en onboarding; plantilla en docs/templates/
-├── reports/        # Reportes HTML y MD (análisis ciclo, auditoría, etc.)
-├── audit/          # Auditoría de consola (JSON, screenshots)
-├── observabilidad/ # Documentación de observabilidad (runbooks, mapeos)
-├── repos/          # Repos externos clonados de la plataforma
-├── playwright/     # test-results, playwright-report
-├── plans/          # Planes generados por agentes
-└── data/           # Datos exportados (opcional)
+├── ciencuadras/                 # Producto por defecto (WORKSPACE_ROOT sin definir)
+│   ├── config/platforms.json    # Varias plataformas en un solo JSON (Ciencuadras + Jelpit, etc.)
+│   ├── reports/
+│   ├── audit/
+│   ├── observabilidad/
+│   ├── repos/
+│   ├── playwright/
+│   ├── plans/
+│   └── data/
+└── jelpit-conjuntos-pagos/
+    ├── config/platforms.json    # Solo Jelpit (o copia afinada)
+    ├── reports/
+    ├── audit/
+    ├── observabilidad/
+    ├── repos/
+    ├── playwright/
+    ├── plans/
+    └── data/
 ```
+
+## Workspaces por producto (Ciencuadras / Jelpit)
+
+| Carpeta | Producto |
+|---------|----------|
+| `Workspace/ciencuadras/` | Ciencuadras (artefactos históricos y **raíz por defecto**) |
+| `Workspace/jelpit-conjuntos-pagos/` | Jelpit Conjuntos & Jelpit Pagos |
+
+Variable de entorno (desde la raíz del repo):
+
+```bash
+export WORKSPACE_ROOT=Workspace/ciencuadras
+# o
+export WORKSPACE_ROOT=Workspace/jelpit-conjuntos-pagos
+```
+
+Los scripts resuelven rutas con `scripts/workspace-root.js`. **Si no defines `WORKSPACE_ROOT`, la raíz es `Workspace/ciencuadras/`** (config en `Workspace/ciencuadras/config/platforms.json`).
 
 ## Configuración de plataformas
 
-`Workspace/config/platforms.json` contiene la configuración específica por producto:
+`Workspace/ciencuadras/config/platforms.json` (o el `config/platforms.json` del `WORKSPACE_ROOT` activo) contiene la configuración por plataforma:
 
 - **URLs**: app, staging, docs
 - **smokePaths**: rutas para tests E2E (`tests/smoke.spec.js`)
@@ -80,8 +108,8 @@ Se crea en la **primera interacción** siguiendo `docs/onboarding/01-flujo-prime
 | Carpeta | Generador | Contenido |
 |---------|-----------|-----------|
 | `reports/` | `tools/scripts/generate-cycle-report-html.js`, `tools/scripts/analyze-cycle-time.js` | `analisis-ciclo-desarrollo.html`, `analisis-ciclo-desarrollo.md` |
-| `audit/` | `scripts/audit-console-errors.js` | `console-audit-report.json`, `screenshots/` |
-| `playwright/` | Playwright | `test-results/`, `playwright-report/` |
+| `audit/` | `scripts/audit-console-errors.js`, `scripts/audit-lighthouse.js` | `console-audit-report.json`, `screenshots/`, `lighthouse/` |
+| `playwright/` | Playwright, `tools/scripts/create-cursor-automation.js` | `test-results/`, `playwright-report/`, `cursor-browser-state/` |
 | `plans/` | Agentes IA (Cursor) | Planes generados por el orquestador |
 | `observabilidad/` | Análisis Datadog | Runbooks, mapeo servicio↔repo |
 | `repos/` | Clonación manual | Repos externos de la plataforma |
@@ -89,7 +117,7 @@ Se crea en la **primera interacción** siguiendo `docs/onboarding/01-flujo-prime
 
 ## Publicación en GitHub Pages
 
-Los reportes HTML en `Workspace/reports/` no se publican automáticamente porque `Workspace/` está en `.gitignore`. Para publicar:
+Los reportes HTML en `{WORKSPACE_ROOT}/reports/` no se publican automáticamente porque `Workspace/` está en `.gitignore`. Para publicar:
 
 ```bash
 npm run deploy:pages
@@ -103,4 +131,4 @@ Los scripts de reportes leen datos de `docs/data/` (ej. `jira-cycle-2025.json`).
 
 ## Screenshots de auditoría
 
-Las capturas de auditoría están en `Workspace/audit/screenshots/`. Al ejecutar `npm run deploy:pages`, se copian a `docs/screenshots-auditoria/` para publicación en GitHub Pages.
+Las capturas de auditoría están en `{WORKSPACE_ROOT}/audit/screenshots/`. Al ejecutar `npm run deploy:pages`, se copian a `docs/screenshots-auditoria/` para publicación en GitHub Pages.

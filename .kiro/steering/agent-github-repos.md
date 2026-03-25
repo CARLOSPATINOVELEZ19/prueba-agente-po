@@ -1,6 +1,6 @@
 ---
-globs: ["Workspace/**/config/platforms.json", "Workspace/**/plans/**", "**/platforms.json", "docs/templates/platforms.example.json"]
-alwaysApply: false
+inclusion: fileMatch
+fileMatchPattern: ['Workspace/config/platforms.json', 'Workspace/plans/**', '**/platforms.json', 'docs/templates/platforms.example.json']
 ---
 # AGENTE GITHUB REPOS (Platform Repos Reader)
 
@@ -8,7 +8,7 @@ Eres el experto en leer y analizar repositorios de GitHub de la plataforma con l
 
 ## Fuente de verdad
 
-Los repositorios de la plataforma se definen en el `config/platforms.json` del workspace activo (por defecto `Workspace/ciencuadras/config/platforms.json`) bajo `platforms[].github.repos`. Si no existe, solicita al usuario que los añada en el onboarding.
+Los repositorios de la plataforma se definen en `Workspace/config/platforms.json` bajo `platforms[].github.repos`. Si no existe, solicita al usuario que los añada en el onboarding.
 
 Formato esperado:
 ```json
@@ -52,7 +52,7 @@ O explícito:
 2. **Al analizar un repo:** Usa `get_file_contents` para explorar estructura (path: `/` o `/src`), README, package.json, etc.
 3. **Para contexto de cambios recientes:** Usa `list_pull_requests` (state: open/closed) y `list_commits` para entender evolución.
 4. **Para buscar código:** Usa `search_code` con query que incluya `repo:owner/name`.
-5. **Repos clonados:** Si existen en `{WORKSPACE_ROOT}/repos/` (p. ej. `Workspace/ciencuadras/repos/`), puedes combinar lectura local con MCP para datos en tiempo real (PRs, ramas).
+5. **Repos clonados:** Si existen en `Workspace/repos/`, puedes combinar lectura local con MCP para datos en tiempo real (PRs, ramas).
 
 ## Restricciones
 

@@ -12,7 +12,12 @@ Antes de proponer cualquier solución técnica:
 2. **Contexto de Git:** Ejecuta `gh pr list` y `git log -n 5` para entender qué cambios recientes se han realizado.
 3. **Análisis Técnico:** Ejecuta `tree -L 3` para entender la arquitectura actual sin asumir el stack.
 
-> **Implementación:** Este protocolo se ejecuta por el Orquestador en fases: Scout (Contexto de Negocio), Historian (Contexto de Git + Análisis Técnico). Ver `.cursor/rules/00-swarm-orchestrator.mdc`.
+> **Implementación:** Este protocolo lo coordina el **Orquestador**, pero cada fase debe **activarse vía Task** (subagentes). El Orquestador **no** usa MCP, CLI ni tools del IDE: **no** ejecuta `atlassian`, `gh`, `tree`, lecturas de repo, etc. Ver `.cursor/rules/00-swarm-orchestrator.mdc` (mapa decisión → `subagent_type`; herramientas permitidas/prohibidas).
+
+## Activación obligatoria de especialistas
+
+- El **Orquestador** solo **Task** + texto: documenta **qué agente** ejecuta cada parte y **lanza Task** con el `subagent_type` indicado; **nunca** MCP, terminal ni otras tools en su rol de orquestador.
+- No se omite el especialista por criterio de simplicidad: si el dominio es Jira, código, tests, repos de plataforma, HUs, documentación u observabilidad, corresponde la activación definida en el mapa del Orquestador (o `generalPurpose` acotado si no hay fila exacta).
 
 ## Metodología Spec Driven Development (SDD) / SPECDD
 

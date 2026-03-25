@@ -59,6 +59,7 @@ Para editar y guardar cambios: abre el `.html`, en Draw.io usa **File → Save a
 | [esquema-proyecto-completo.mmd](./esquema-proyecto-completo.mmd) | [esquema-proyecto-completo.html](./esquema-proyecto-completo.html) | Esquema general del proyecto |
 | [esquema-funcionamiento-agnostico.mmd](./esquema-funcionamiento-agnostico.mmd) | [esquema-funcionamiento-agnostico.html](./esquema-funcionamiento-agnostico.html) | Funcionamiento transversal del proyecto agnóstico |
 | [esquema-acciones-particulares.mmd](./esquema-acciones-particulares.mmd) | [esquema-acciones-particulares.html](./esquema-acciones-particulares.html) | Acciones particulares del proyecto (Ciencuadras) |
+| — | [agentes-mcps-cli-skills-actividades.html](./agentes-mcps-cli-skills-actividades.html) | Vista HTML (no Mermaid): agentes ↔ MCP/CLI/skills + actividades; alinear con [6-inventario-agentes.md](../architecture/6-inventario-agentes.md) |
 
 ---
 
@@ -71,7 +72,7 @@ Para editar y guardar cambios: abre el `.html`, en Draw.io usa **File → Save a
 | `../architecture/4-workspace.md` | `diagrams/flujo-workspace.html` |
 | `../architecture/0-overview.md` | `diagrams/codigo-vs-artefactos.html` |
 | `../architecture/5-agents-functional-architecture.md` | `diagrams/equipo-agentes.html`, `diagrams/4-fases-protocolo.html` |
-| `../architecture/6-inventario-agentes.md` | Todos los diagramas de agentes |
+| `../architecture/6-inventario-agentes.md` | Todos los diagramas de agentes; [agentes-mcps-cli-skills-actividades.html](./agentes-mcps-cli-skills-actividades.html) |
 | `../runbook/github-pages.md` | `diagrams/flujo-github-pages.html` |
 | `../runbook/automation-datadog-alert.md` | `diagrams/flujo-automation-datadog-alert.html` |
 | `../esquema-proyecto.md` | `diagrams/esquema-proyecto-completo.mmd` |

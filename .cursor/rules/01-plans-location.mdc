@@ -5,6 +5,6 @@ alwaysApply: true
 ---
 # Ubicación de planes
 
-Los planes generados por agentes se guardan en **`Workspace/plans/`**, no en `.cursor/plans/`.
+Los planes generados por agentes se guardan en **`{WORKSPACE_ROOT}/plans/`** (por defecto `Workspace/ciencuadras/plans/`), no en `.cursor/plans/`.
 
-Workspace almacena los resultados del trabajo de cada agente, separando código fuente de artefactos generados.
+El directorio activo lo define `WORKSPACE_ROOT` (ver `scripts/workspace-root.js` y `docs/architecture/4-workspace.md`). Workspace almacena artefactos separados del código fuente.
